@@ -88,8 +88,8 @@
 //         {projectData.map((project, index) => (
 //           <motion.div
 //             key={project.id}
-//             className={`relative overflow-hidden rounded-tl-4xl rounded-br-4xl group 
-//       h-[250px] sm:h-[320px] md:h-[450px] 
+//             className={`relative overflow-hidden rounded-tl-4xl rounded-br-4xl group
+//       h-[250px] sm:h-[320px] md:h-[450px]
 //       ${index === 0 ? "sm:col-span-2 md:col-span-2" : ""}`}
 //             variants={cardVariants}
 //           >
@@ -98,8 +98,8 @@
 //                 src={project.img}
 //                 alt={project.title}
 //                 loading="lazy"
-//                 className="w-full h-full object-cover object-center brightness-75 
-//         transform transition duration-500 
+//                 className="w-full h-full object-cover object-center brightness-75
+//         transform transition duration-500
 //         group-hover:scale-110 active:scale-110"
 //               />
 //             </div>
@@ -136,8 +136,6 @@
 // };
 
 // export default Projects;
-
-
 
 import React from "react";
 import { Link } from "react-router-dom";
@@ -245,10 +243,12 @@ const Projects = () => {
 
             {/* Title Below Image */}
             <div className="py-4 px-3 text-left">
-              <h3 className="text-lg sm:text-xl md:text-2xl font-semibold text-[#0B3558]">
-                {project.title}
-              </h3>
-              <div className="w-10 h-[3px] bg-[#F37021] mt-2 rounded-full"></div>
+              <div className="inline-block">
+                <h3 className="text-lg sm:text-xl md:text-2xl font-semibold text-[#0B3558]">
+                  {project.title}
+                </h3>
+                <div className="w-10 h-[3px] bg-[#F37021] mt-2 mx-auto rounded-full"></div>
+              </div>
             </div>
           </motion.div>
         ))}

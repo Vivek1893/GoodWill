@@ -173,8 +173,16 @@ const Residential = () => {
 
   return (
     <div className="w-full min-h-screen -mt-5 bg-gray-50">
+    {/* Logo Branding - Top Right */}
+        <div className="absolute top-25 right-6 z-30">
+          <img
+            src="/logo.png" 
+            alt="The Goodwill Facades Logo"
+            className="h-18 md:h-25  w-auto"
+          />
+        </div>
       {/* Top banner */}
-      <div className="relative w-full h-[50vh] sm:h-[60vh] md:h-[80vh]">
+      <div className="relative w-full h-[45vh] sm:h-[60vh] md:h-[75vh]">
         <motion.img
           src="/project.png"
           alt="Projects"

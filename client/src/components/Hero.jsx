@@ -826,10 +826,6 @@
 //   );
 // };
 
-
-
-
-
 ///===============================================================================================
 // export default Hero;
 
@@ -1036,16 +1032,7 @@
 
 // export default Hero;
 
-
 ////old one uper hai==================================================
-
-
-
-
-
-
-
-
 
 // import React, { useState, useEffect } from "react";
 // import { motion } from "framer-motion";
@@ -1212,18 +1199,6 @@
 
 // export default Hero;
 
-
-
-
-
-
-
-
-
-
-
-
-
 import React, { useState, useEffect, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -1231,47 +1206,50 @@ const Hero = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [preloadedImages, setPreloadedImages] = useState({});
 
-  const slides = useMemo(() => [
-    {
-      leftImage: "/hero2.jpg",
-      rightImage: "/hero1.jpg",
-      mobileImage: "/hero2.jpg",
-      leftTitle: "Hum",
-      rightTitle: "WINDOW STRUCTURE",
-    },
-    {
-      leftImage: "/hero4.jpg",
-      rightImage: "/hero5.jpg",
-      mobileImage: "/hero5.jpg",
-      leftTitle: "GOYAL ASPIRE",
-      rightTitle: "AMBIT",
-    },
-    {
-      leftImage: "/hero3.webp",
-      rightImage: "/hero7.jpg",
-      mobileImage: "/hero3.webp",
-      leftTitle: "ZIRCON ARENA",
-      rightTitle: "CANAL POINT",
-    },
-    {
-      leftImage: "/hero6.jpg",
-      rightImage: "/hero8.jpg",
-      mobileImage: "/hero8.jpg",
-      leftTitle: "SKY RISE",
-      rightTitle: "VELOCITY",
-    },
-  ], []);
+  const slides = useMemo(
+    () => [
+      {
+        leftImage: "/hero2.jpg",
+        rightImage: "/hero1.jpg",
+        mobileImage: "/hero2.jpg",
+        leftTitle: "HUM SOLARIS - KANDIVALI(W) ",
+        rightTitle: "USD -UNIQUE REGALIA - BORIVALI(W)",
+      },
+      {
+        leftImage: "/hero4.jpg",
+        rightImage: "/hero5.jpg",
+        mobileImage: "/hero5.jpg",
+        leftTitle: "GOYAL ASPIRE - KANDIVALI(W)",
+        rightTitle: "AMBIT- KANDIVALI(W)",
+      },
+      {
+        leftImage: "/hero3.webp",
+        rightImage: "/hero7.jpg",
+        mobileImage: "/hero3.webp",
+        leftTitle: "ZIRCON ARENA - PAL - SURAT",
+        rightTitle: "CANAL POINT - SURAT",
+      },
+      {
+        leftImage: "/hero6.jpg",
+        rightImage: "/hero8.jpg",
+        mobileImage: "/hero8.jpg",
+        leftTitle: "SKY RISE - SURAT",
+        rightTitle: "VELOCITY - PAL - SURAT",
+      },
+    ],
+    []
+  );
 
   // Preload images
   useEffect(() => {
     const imageUrls = [];
-    slides.forEach(slide => {
+    slides.forEach((slide) => {
       imageUrls.push(slide.leftImage, slide.rightImage, slide.mobileImage);
     });
-    
+
     const uniqueUrls = [...new Set(imageUrls)];
-    
-    const preloadPromises = uniqueUrls.map(url => {
+
+    const preloadPromises = uniqueUrls.map((url) => {
       return new Promise((resolve, reject) => {
         const img = new Image();
         img.src = url;
@@ -1279,10 +1257,10 @@ const Hero = () => {
         img.onerror = () => resolve({ [url]: false });
       });
     });
-    
-    Promise.all(preloadPromises).then(results => {
+
+    Promise.all(preloadPromises).then((results) => {
       const preloaded = {};
-      results.forEach(result => {
+      results.forEach((result) => {
         Object.assign(preloaded, result);
       });
       setPreloadedImages(preloaded);
@@ -1304,17 +1282,17 @@ const Hero = () => {
 
   return (
     <div className="relative w-full h-screen overflow-hidden -mt-7 max-w-full bg-black">
-
       {/* ✅ Desktop / Tablet View */}
       <div className="hidden sm:flex absolute inset-0">
-
         {/* Left Half */}
         <div className="w-1/2 h-full flex flex-col items-center relative overflow-hidden">
           <AnimatePresence mode="popLayout">
             <motion.div
               key={slides[currentSlide].leftImage}
               className="absolute inset-0 w-full h-full bg-cover bg-center"
-              style={{ backgroundImage: `url(${slides[currentSlide].leftImage})` }}
+              style={{
+                backgroundImage: `url(${slides[currentSlide].leftImage})`,
+              }}
               initial={{ opacity: 0, scale: 1.05 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 1 }}
@@ -1324,15 +1302,22 @@ const Hero = () => {
 
           {/* Text at Bottom Center */}
           <div className="absolute bottom-0 w-full flex justify-center z-20">
-            <h3 className="text-white text-lg font-semibold drop-shadow-lg text-center bg-black/40 backdrop-blur-sm px-4 py-2 rounded-lg">
-              {slides[currentSlide].leftTitle}
-            </h3>
+            <div className="bg-white backdrop-blur-sm px-4 py-2 rounded-lg drop-shadow-lg text-center inline-block">
+              <h3 className="font-semibold text-[#0B3558] text-lg">
+                {slides[currentSlide].leftTitle}
+              </h3>
+              <div className="w-10 h-[3px] bg-[#F37021] mx-auto mt-1 rounded-full"></div>
+            </div>
           </div>
         </div>
 
         {/* ✅ Logo Top Right */}
         <div className="absolute top-6 right-6 z-30">
-          <img src="/logo.png" alt="The Goodwill Facades" className="h-18 md:h-25 w-auto" />
+          <img
+            src="/logo.png"
+            alt="The Goodwill Facades"
+            className="h-18 md:h-25 w-auto"
+          />
         </div>
 
         {/* Right Half */}
@@ -1341,7 +1326,9 @@ const Hero = () => {
             <motion.div
               key={slides[currentSlide].rightImage}
               className="absolute inset-0 w-full h-full bg-cover bg-center"
-              style={{ backgroundImage: `url(${slides[currentSlide].rightImage})` }}
+              style={{
+                backgroundImage: `url(${slides[currentSlide].rightImage})`,
+              }}
               initial={{ opacity: 0, scale: 1.05 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 1 }}
@@ -1351,9 +1338,12 @@ const Hero = () => {
 
           {/* Text at Bottom Center */}
           <div className="absolute bottom-0 w-full flex justify-center z-20">
-            <h3 className="text-white text-lg font-semibold drop-shadow-lg text-center bg-black/40 backdrop-blur-sm px-4 py-2 rounded-lg">
-              {slides[currentSlide].rightTitle}
-            </h3>
+            <div className="bg-white backdrop-blur-sm px-4 py-2 rounded-lg drop-shadow-lg text-center inline-block">
+              <h3 className="text-[#0B3558] text-lg font-semibold">
+                {slides[currentSlide].rightTitle}
+              </h3>
+              <div className="w-10 h-[3px] bg-[#F37021] mx-auto mt-1 rounded-full"></div>
+            </div>
           </div>
         </div>
 
@@ -1367,7 +1357,9 @@ const Hero = () => {
           <motion.div
             key={slides[currentSlide].mobileImage}
             className="absolute inset-0 w-full h-full bg-cover bg-center"
-            style={{ backgroundImage: `url(${slides[currentSlide].mobileImage})` }}
+            style={{
+              backgroundImage: `url(${slides[currentSlide].mobileImage})`,
+            }}
             initial={{ opacity: 0, scale: 1.05 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 1 }}
@@ -1385,20 +1377,50 @@ const Hero = () => {
 
       {/* Navigation Arrows */}
       <div className="absolute bottom-16 md:bottom-20 left-1/2 transform -translate-x-1/2 z-30 flex items-center space-x-8">
-        <button onClick={prevSlide} className="text-white hover:text-[#F37021] transition-colors">
+        <button
+          onClick={prevSlide}
+          className="text-white hover:text-[#F37021] transition-colors"
+        >
           <div className="flex items-center space-x-2 bg-black/60 backdrop-blur-sm px-4 py-3 rounded-full border border-white/30">
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+            <svg
+              className="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M15 19l-7-7 7-7"
+              />
             </svg>
-            <span className="text-sm hidden sm:block font-medium tracking-wider">PREV</span>
+            <span className="text-sm hidden sm:block font-medium tracking-wider">
+              PREV
+            </span>
           </div>
         </button>
 
-        <button onClick={nextSlide} className="text-white hover:text-[#F37021] transition-colors">
+        <button
+          onClick={nextSlide}
+          className="text-white hover:text-[#F37021] transition-colors"
+        >
           <div className="flex items-center space-x-2 bg-black/60 backdrop-blur-sm px-4 py-3 rounded-full border border-white/30">
-            <span className="text-sm hidden sm:block font-medium tracking-wider">NEXT</span>
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            <span className="text-sm hidden sm:block font-medium tracking-wider">
+              NEXT
+            </span>
+            <svg
+              className="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M9 5l7 7-7 7"
+              />
             </svg>
           </div>
         </button>
@@ -1412,7 +1434,9 @@ const Hero = () => {
               key={index}
               onClick={() => setCurrentSlide(index)}
               className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                index === currentSlide ? "bg-[#F37021] scale-110" : "bg-white/50 hover:bg-white/80"
+                index === currentSlide
+                  ? "bg-[#F37021] scale-110"
+                  : "bg-white/50 hover:bg-white/80"
               }`}
             />
           ))}

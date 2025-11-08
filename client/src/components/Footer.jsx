@@ -128,7 +128,7 @@ const Footer = () => {
 
           {/* MENU LINKS */}
           <nav className="flex gap-8 text-lg font-medium text-black">
-            Leading providers of premium ACP cladding solutions, we transform spaces with innovative designs and exceptional craftsmanship, delivering durable, weather-resistant, and aesthetically striking finishes that redefine modern architectural possibilities for both exterior facades and interior applications.
+            Leading providers of premium Facade cladding solutions, we transform spaces with innovative designs and exceptional craftsmanship, delivering durable, weather-resistant, and aesthetically striking finishes that redefine modern architectural possibilities for both exterior facades and interior applications.
           </nav>
 
           {/* SOCIAL ICONS */}
