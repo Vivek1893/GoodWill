@@ -258,12 +258,8 @@
 
 // export default Aluminum_Windows;
 
-
-
 import React, { useState } from "react";
-import {
-  FaCheck,
-} from "react-icons/fa";
+import { FaCheck } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
 
 const Aluminum_Windows = () => {
@@ -281,8 +277,8 @@ const Aluminum_Windows = () => {
   const projectData = [
     {
       id: 1,
-      title: "VELOCITY - NIGHT VIEW",
-      img: "/servicesimg/acp_img/project1.jpg",
+      title: "SPERANZA",
+      img: "/servicesimg/aluminum_img/SPERANZA - SURAT.webp",
     },
     {
       id: 2,
@@ -361,8 +357,8 @@ const Aluminum_Windows = () => {
             transition={{ delay: 0.3, duration: 0.5 }}
             className="text-base text-white/90 max-w-xl mx-auto mb-8"
           >
-            Premium architectural solutions with innovative Aluminu Windows composite
-            panels
+            Premium architectural solutions with innovative Aluminu Windows
+            composite panels
           </motion.p>
           <motion.div
             initial={{ scaleX: 0 }}
@@ -383,7 +379,8 @@ const Aluminum_Windows = () => {
             viewport={{ once: true }}
             className="text-3xl md:text-4xl font-bold text-center mb-16 text-gray-900"
           >
-            Why Choose <span className="text-orange-600">Aluminum Windows?</span>
+            Why Choose{" "}
+            <span className="text-orange-600">Aluminum Windows?</span>
           </motion.h2>
 
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -424,7 +421,7 @@ const Aluminum_Windows = () => {
             >
               <div className="relative rounded-tl-4xl rounded-br-4xl overflow-hidden">
                 <img
-                  src="/servicesimg/acp_img/VELOCITY - NIGHT VIEW 1.jpg"
+                  src="/servicesimg/aluminum_img/Warm-and-cold-aluminium-profiles-Aluprof-MB79N-MB-45.webp"
                   alt="ACP Example"
                   className="w-full h-[600px] object-fill transition-transform duration-700 group-hover:scale-105"
                 />
