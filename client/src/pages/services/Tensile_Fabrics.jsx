@@ -164,28 +164,28 @@ const Tensile_Fabrics = () => {
   const projectData = [
     {
       id: 1,
-      title: "VELOCITY - NIGHT VIEW",
-      img: "/servicesimg/acp_img/project1.jpg",
+      title: "Spider-Glazing",
+      img: "/servicesimg/tensile_img/Spider-Glazing1.webp",
     },
     {
       id: 2,
       title: "CORPORATE FACADE",
-      img: "/servicesimg/acp_img/project2.JPG",
+      img: "/servicesimg/tensile_img/Spider-Glazing-7-qz4i79fhb5jauuul8azngckxnptr5cecxd8uslcd0g.jpg",
     },
     {
       id: 3,
       title: "COMMERCIAL BUILDING",
-      img: "/servicesimg/acp_img/project3.jpg",
+      img: "/servicesimg/tensile_img/Spider-Glazing5.webp",
     },
     {
       id: 4,
       title: "RESIDENTIAL DESIGN",
-      img: "/servicesimg/acp_img/project4.jpg",
+      img: "/servicesimg/tensile_img/SPYDER 2.jpeg",
     },
     {
       id: 5,
       title: "SHOP FRONT CLADDING",
-      img: "/servicesimg/acp_img/project5.jpg",
+      img: "/servicesimg/tensile_img/tensile1.jpg",
     },
   ];
 
@@ -235,7 +235,7 @@ const Tensile_Fabrics = () => {
             transition={{ duration: 0.7 }}
             className="text-3xl md:text-3xl font-bold text-white mb-4 tracking-wide"
           >
-            <span className="text-white"> Tensile</span>{" "}
+            <span className="text-white"> Spider </span>{" "}
             <span className="text-orange-400"> Fabrics</span>
           </motion.h1>
           <motion.p
@@ -244,7 +244,7 @@ const Tensile_Fabrics = () => {
             transition={{ delay: 0.3, duration: 0.5 }}
             className="text-base text-white/90 max-w-xl mx-auto mb-8"
           >
-            Premium architectural solutions with innovative Tensile Fabrics composite
+            Premium architectural solutions with innovative Spider Fabrics composite
             panels
           </motion.p>
           <motion.div
@@ -266,7 +266,7 @@ const Tensile_Fabrics = () => {
             viewport={{ once: true }}
             className="text-3xl md:text-4xl font-bold text-center mb-16 text-gray-900"
           >
-            Why Choose <span className="text-orange-600">Tensile Fabrics?</span>
+            Why Choose <span className="text-orange-600">Spider Fabrics?</span>
           </motion.h2>
 
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -307,13 +307,13 @@ const Tensile_Fabrics = () => {
             >
               <div className="relative rounded-tl-4xl rounded-br-4xl overflow-hidden">
                 <img
-                  src="/servicesimg/acp_img/VELOCITY - NIGHT VIEW 1.jpg"
+                  src="/servicesimg/tensile_img/SPYDER 1.jpg"
                   alt="Stone Cladding"
                   className="w-full h-[600px] object-fill transition-transform duration-700 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
                   <p className="text-white font-medium text-lg">
-                    Modern Tensile Fabrics Installation
+                    Modern Spider Fabrics Installation
                   </p>
                 </div>
               </div>
@@ -337,10 +337,10 @@ const Tensile_Fabrics = () => {
               color: "transparent",
             }}
           >
-            Tensile Fabrics
+            Spider Fabrics
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto mt-4">
-            Explore our range of modern architectural Tensile Fabrics
+            Explore our range of modern architectural Spider Fabrics
             installations.
           </p>
         </div>
@@ -374,14 +374,14 @@ const Tensile_Fabrics = () => {
               </div>
 
               {/* Title BELOW image — TEXT + UNDERLINE */}
-              <div className="py-4 px-3 text-left">
+              {/* <div className="py-4 px-3 text-left">
                 <div className="inline-block">
                   <h3 className="text-lg sm:text-xl md:text-2xl font-semibold text-[#0B3558]">
                     {project.title}
                   </h3>
                   <div className="w-10 h-[3px] bg-[#F37021] mt-2 mx-auto rounded-full"></div>
                 </div>
-              </div>
+              </div> */}
             </motion.div>
           ))}
         </motion.div>
@@ -411,7 +411,7 @@ const Tensile_Fabrics = () => {
               />
               <button
                 onClick={closeImageModal}
-                className="absolute top-4 right-4 bg-white/10 hover:bg-white/20 text-white p-2 rounded-full backdrop-blur-sm transition-colors"
+                className="absolute top-4 right-4 bg-white hover:bg-white/20 text-black p-2 rounded-full backdrop-blur-sm transition-colors"
               >
                 ✕
               </button>

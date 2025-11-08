@@ -285,28 +285,28 @@ const MS_Structure = () => {
   const projectData = [
     {
       id: 1,
-      title: "VELOCITY - NIGHT VIEW",
-      img: "/servicesimg/acp_img/project1.jpg",
+      title: "CITY CENTRE ",
+      img: "/servicesimg/ms_img/CITY CENTRE - BHARUCH.jpg",
     },
     {
       id: 2,
       title: "CORPORATE FACADE",
-      img: "/servicesimg/acp_img/project2.JPG",
+      img: "/servicesimg/ms_img/MS 1.jpg",
     },
     {
       id: 3,
       title: "COMMERCIAL BUILDING",
-      img: "/servicesimg/acp_img/project3.jpg",
+      img: "/servicesimg/ms_img/MS 3.webp",
     },
     {
       id: 4,
       title: "RESIDENTIAL DESIGN",
-      img: "/servicesimg/acp_img/project4.jpg",
+      img: "/servicesimg/ms_img/MS 2.jpg",
     },
     {
       id: 5,
       title: "SHOP FRONT CLADDING",
-      img: "/servicesimg/acp_img/project5.jpg",
+      img: "/servicesimg/ms_img/MS 4.webp",
     },
   ];
 
@@ -357,7 +357,7 @@ const MS_Structure = () => {
             className="text-3xl md:text-3xl font-bold text-white mb-4 tracking-wide"
           >
             <span className="text-white"> MS</span>{" "}
-            <span className="text-orange-400">/Structure</span>
+            <span className="text-orange-400">Structure</span>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0 }}
@@ -428,7 +428,7 @@ const MS_Structure = () => {
             >
               <div className="relative rounded-tl-4xl rounded-br-4xl overflow-hidden">
                 <img
-                  src="/servicesimg/acp_img/VELOCITY - NIGHT VIEW 1.jpg"
+                  src="/servicesimg/ms_img/MS 2.jpg"
                   alt="MS_Structure"
                   className="w-full h-[600px] object-fill transition-transform duration-700 group-hover:scale-105"
                 />
@@ -495,14 +495,14 @@ const MS_Structure = () => {
               </div>
 
               {/* Title BELOW image — TEXT + UNDERLINE */}
-              <div className="py-4 px-3 text-left">
+              {/* <div className="py-4 px-3 text-left">
                 <div className="inline-block">
                   <h3 className="text-lg sm:text-xl md:text-2xl font-semibold text-[#0B3558]">
                     {project.title}
                   </h3>
                   <div className="w-10 h-[3px] bg-[#F37021] mt-2 mx-auto rounded-full"></div>
                 </div>
-              </div>
+              </div> */}
             </motion.div>
           ))}
         </motion.div>
@@ -532,7 +532,7 @@ const MS_Structure = () => {
               />
               <button
                 onClick={closeImageModal}
-                className="absolute top-4 right-4 bg-white/10 hover:bg-white/20 text-white p-2 rounded-full backdrop-blur-sm transition-colors"
+                className="absolute top-4 right-4 bg-white hover:bg-white/20 text-black p-2 rounded-full backdrop-blur-sm transition-colors"
               >
                 ✕
               </button>

@@ -282,23 +282,23 @@ const Aluminum_Windows = () => {
     },
     {
       id: 2,
-      title: "CORPORATE FACADE",
-      img: "/servicesimg/acp_img/project2.JPG",
+      title: "AMBIT VISTA ",
+      img: "/servicesimg/aluminum_img/AMBIT VISTA - SANTACRUZ (E).jpg",
     },
     {
       id: 3,
-      title: "COMMERCIAL BUILDING",
-      img: "/servicesimg/acp_img/project3.jpg",
+      title: "PARLE POINT A  ",
+       img: "/servicesimg/aluminum_img/PARLE POINT A  - BHARUCH 1.jpg",
     },
     {
       id: 4,
-      title: "RESIDENTIAL DESIGN",
-      img: "/servicesimg/acp_img/project4.jpg",
+      title: "POLO ELEVATE",
+       img: "/servicesimg/aluminum_img/POLO ELEVATE - BORIVALI (W).webp",
     },
     {
       id: 5,
-      title: "SHOP FRONT CLADDING",
-      img: "/servicesimg/acp_img/project5.jpg",
+      title: "SKY RISE ",
+       img: "/servicesimg/aluminum_img/SKY RISE - SURAT.webp",
     },
   ];
 
@@ -349,7 +349,7 @@ const Aluminum_Windows = () => {
             className="text-3xl md:text-3xl font-bold text-white mb-4 tracking-wide"
           >
             <span className="text-white"> Aluminum </span>{" "}
-            <span className="text-orange-400">/Windows</span>
+            <span className="text-orange-400">Windows</span>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0 }}
@@ -488,14 +488,14 @@ const Aluminum_Windows = () => {
               </div>
 
               {/* Title BELOW image — TEXT + UNDERLINE */}
-              <div className="py-4 px-3 text-left">
+              {/* <div className="py-4 px-3 text-left">
                 <div className="inline-block">
                   <h3 className="text-lg sm:text-xl md:text-2xl font-semibold text-[#0B3558]">
                     {project.title}
                   </h3>
                   <div className="w-10 h-[3px] bg-[#F37021] mt-2 mx-auto rounded-full"></div>
                 </div>
-              </div>
+              </div> */}
             </motion.div>
           ))}
         </motion.div>
@@ -525,7 +525,7 @@ const Aluminum_Windows = () => {
               />
               <button
                 onClick={closeImageModal}
-                className="absolute top-4 right-4 bg-white/10 hover:bg-white/20 text-white p-2 rounded-full backdrop-blur-sm transition-colors"
+                className="absolute top-4 right-4 bg-white hover:bg-white/20 text-black p-2 rounded-full backdrop-blur-sm transition-colors"
               >
                 ✕
               </button>

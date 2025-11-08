@@ -226,14 +226,14 @@ const ACPCladding = () => {
               </div>
 
               {/* Title BELOW image — TEXT + UNDERLINE */}
-              <div className="py-4 px-3 text-left">
+              {/* <div className="py-4 px-3 text-left">
                 <div className="inline-block">
                   <h3 className="text-lg sm:text-xl md:text-2xl font-semibold text-[#0B3558]">
                     {project.title}
                   </h3>
                   <div className="w-10 h-[3px] bg-[#F37021] mt-2 mx-auto rounded-full"></div>
                 </div>
-              </div>
+              </div> */}
             </motion.div>
           ))}
         </motion.div>
@@ -263,7 +263,7 @@ const ACPCladding = () => {
               />
               <button
                 onClick={closeImageModal}
-                className="absolute top-4 right-4 bg-white/10 hover:bg-white/20 text-white p-2 rounded-full backdrop-blur-sm transition-colors"
+                className="absolute top-4 right-4 bg-white hover:bg-white/20 text-black p-2 rounded-full backdrop-blur-sm transition-colors"
               >
                 ✕
               </button>

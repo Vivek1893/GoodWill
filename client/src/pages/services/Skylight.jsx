@@ -267,28 +267,28 @@ const Skylight = () => {
   const projectData = [
     {
       id: 1,
-      title: "VELOCITY - NIGHT VIEW",
-      img: "/servicesimg/acp_img/project1.jpg",
+      title: "SKYLIGHT ",
+      img: "/servicesimg/skylight/skylight 2.jpg",
     },
     {
       id: 2,
-      title: "CORPORATE FACADE",
-      img: "/servicesimg/acp_img/project2.JPG",
+      title: "ALUMINIUM FINS",
+      img: "/servicesimg/skylight/aluminium fins 1.jpg",
     },
     {
       id: 3,
-      title: "COMMERCIAL BUILDING",
-      img: "/servicesimg/acp_img/project3.jpg",
+       title: "ALUMINIUM FINS",
+      img: "/servicesimg/skylight/aluminium fins 2.jpg",
     },
     {
       id: 4,
-      title: "RESIDENTIAL DESIGN",
-      img: "/servicesimg/acp_img/project4.jpg",
+        title: "ALUMINIUM FINS",
+      img: "/servicesimg/skylight/aluminium fins 3.jpg",
     },
     {
       id: 5,
-      title: "SHOP FRONT CLADDING",
-      img: "/servicesimg/acp_img/project5.jpg",
+      title: "SKYLIGHT ",
+      img: "/servicesimg/skylight/skylight 1.jpg",
     },
   ];
 
@@ -347,7 +347,7 @@ const Skylight = () => {
             transition={{ delay: 0.3, duration: 0.5 }}
             className="text-base text-white/90 max-w-xl mx-auto mb-8"
           >
-            Premium architectural solutions with innovative Railings composite
+            Premium architectural solutions with innovative Skylight composite
             panels
           </motion.p>
           <motion.div
@@ -410,7 +410,7 @@ const Skylight = () => {
             >
               <div className="relative rounded-tl-4xl rounded-br-4xl overflow-hidden">
                 <img
-                  src="/servicesimg/acp_img/VELOCITY - NIGHT VIEW 1.jpg"
+                  src="/servicesimg/skylight/skylight.jpg"
                   alt="MS_Structure"
                   className="w-full h-[600px] object-fill transition-transform duration-700 group-hover:scale-105"
                 />
@@ -477,14 +477,14 @@ const Skylight = () => {
               </div>
 
               {/* Title BELOW image — TEXT + UNDERLINE */}
-              <div className="py-4 px-3 text-left">
+              {/* <div className="py-4 px-3 text-left">
                 <div className="inline-block">
                   <h3 className="text-lg sm:text-xl md:text-2xl font-semibold text-[#0B3558]">
                     {project.title}
                   </h3>
                   <div className="w-10 h-[3px] bg-[#F37021] mt-2 mx-auto rounded-full"></div>
                 </div>
-              </div>
+              </div> */}
             </motion.div>
           ))}
         </motion.div>
@@ -514,7 +514,7 @@ const Skylight = () => {
               />
               <button
                 onClick={closeImageModal}
-                className="absolute top-4 right-4 bg-white/10 hover:bg-white/20 text-white p-2 rounded-full backdrop-blur-sm transition-colors"
+                className="absolute top-4 right-4 bg-white hover:bg-white/20 text-black p-2 rounded-full backdrop-blur-sm transition-colors"
               >
                 ✕
               </button>
