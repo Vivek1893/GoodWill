@@ -87,38 +87,38 @@ const Marquee = ({ logos, direction = "rtl" }) => {
   const animateClass = direction === "rtl" ? "animate-marquee-rtl" : "animate-marquee-ltr";
 
   return (
-    <div className="relative flex overflow-x-hidden h-32"> 
-      <div className={`${animateClass} flex gap-8 items-center`}> 
+    <div className="relative flex overflow-x-hidden h-24 sm:h-28 md:h-32"> 
+      <div className={`${animateClass} flex gap-4 sm:gap-6 md:gap-8 items-center`}> 
         {/* First set of logos */}
-        <div className="flex gap-8 items-center"> 
+        <div className="flex gap-4 sm:gap-6 md:gap-8 items-center"> 
           {logos.map((logo, idx) => (
             <div
               key={`first-${idx}`}
-              className={`flex-shrink-0 bg-white rounded-lg shadow-sm px-8 py-6 
-                         ${logo.width} h-28 flex items-center justify-center hover:shadow-md transition-shadow`}
+              className={`flex-shrink-0 bg-white rounded-lg shadow-sm px-4 sm:px-6 md:px-8 py-4 sm:py-5 md:py-6 
+                         ${logo.width} h-20 sm:h-24 md:h-28 flex items-center justify-center hover:shadow-md transition-shadow`}
             >
               <img
                 src={logo.src}
                 alt={logo.alt}
                 loading="lazy"
-                className="max-w-[120px] max-h-25 h-auto object-contain" 
+                className="max-w-[80px] sm:max-w-[100px] md:max-w-[120px] max-h-16 sm:max-h-20 md:max-h-24 h-auto object-contain" 
               />
             </div>
           ))}
         </div>
         {/* Duplicated set for seamless loop */}
-        <div className="flex gap-8 items-center"> 
+        <div className="flex gap-4 sm:gap-6 md:gap-8 items-center"> 
           {logos.map((logo, idx) => (
             <div
               key={`second-${idx}`}
-              className={`flex-shrink-0 bg-white rounded-lg shadow-sm px-8 py-6 
-                         ${logo.width} h-28 flex items-center justify-center hover:shadow-md transition-shadow`} 
+              className={`flex-shrink-0 bg-white rounded-lg shadow-sm px-4 sm:px-6 md:px-8 py-4 sm:py-5 md:py-6 
+                         ${logo.width} h-20 sm:h-24 md:h-28 flex items-center justify-center hover:shadow-md transition-shadow`} 
             >
               <img
                 src={logo.src}
                 alt={logo.alt}
                 loading="lazy"
-                className="max-w-[120px] max-h-25 h-auto object-contain" 
+                className="max-w-[80px] sm:max-w-[100px] md:max-w-[120px] max-h-16 sm:max-h-20 md:max-h-24 h-auto object-contain" 
               />
             </div>
           ))}
@@ -130,14 +130,14 @@ const Marquee = ({ logos, direction = "rtl" }) => {
 
 const HiringPartners = () => {
   return (
-    <div className="container mx-auto px-4 mb-12 overflow-x-hidden"> 
-      <div className="text-center max-w-4xl mx-auto mb-16">
-        <h2 className="text-4xl md:text-4xl font-bold mb-4">
+    <div className="container mx-auto px-4 sm:px-6 mb-8 sm:mb-12 overflow-x-hidden"> 
+      <div className="text-center max-w-4xl mx-auto mb-10 sm:mb-12 md:mb-16">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">
           Our Clients
         </h2>
       </div>
 
-      <div className="space-y-10"> 
+      <div className="space-y-6 sm:space-y-8 md:space-y-10"> 
         <Marquee logos={logosSet1} direction="rtl" />
         <Marquee logos={logosSet2} direction="ltr" />
         {/* <Marquee logos={logosSet3} direction="rtl" /> */}

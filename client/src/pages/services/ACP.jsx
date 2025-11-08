@@ -69,13 +69,9 @@ const ACPCladding = () => {
   return (
     <div className="w-full font-sans -mt-8 bg-white">
       {/* 🔹 Hero Section */}
-      <section className="relative w-full h-screen max-h-[75vh] overflow-hidden">
-        <div className="absolute top-6 right-6 z-30">
-          <img
-            src="/logo.png"
-            alt="The Goodwill Facades Logo"
-            className="h-18 md:h-25 w-auto"
-          />
+      <section className="relative w-full h-[50vh] sm:h-[60vh] md:h-screen max-h-[75vh] overflow-hidden">
+        <div className="absolute top-4 sm:top-6 right-4 sm:right-6 z-30">
+          <img src="/logo.png" alt="The Goodwill Facades Logo" className="h-12 sm:h-16 md:h-20 lg:h-24 w-auto" />
         </div>
         <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 to-blue-800/60 z-10"></div>
         <img
@@ -88,7 +84,7 @@ const ACPCladding = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
-            className="text-3xl md:text-3xl font-bold text-white mb-4 tracking-wide"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3 sm:mb-4 tracking-wide"
           >
             <span className="text-white"> ACP </span>{" "}
             <span className="text-orange-400">/Fundermax</span>
@@ -97,7 +93,7 @@ const ACPCladding = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3, duration: 0.5 }}
-            className="text-base text-white/90 max-w-xl mx-auto mb-8"
+            className="text-sm sm:text-base text-white/90 max-w-xl mx-auto mb-6 sm:mb-8 px-2"
           >
             Premium architectural solutions with innovative aluminum composite
             panels
@@ -112,26 +108,26 @@ const ACPCladding = () => {
       </section>
 
       {/* 🔹 Benefits Section */}
-      <section className="px-4 md:px-8 lg:px-16 py-20 bg-white">
+      <section className="px-4 sm:px-6 md:px-8 lg:px-16 py-10 sm:py-12 md:py-16 lg:py-20 bg-white">
         <div className="max-w-7xl mx-auto">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="text-3xl md:text-4xl font-bold text-center mb-16 text-gray-900"
+            className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-10 sm:mb-12 md:mb-16 text-gray-900"
           >
             Why Choose <span className="text-orange-600">ACP/Fundermax?</span>
           </motion.h2>
 
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12 items-center">
             {/* Benefits List */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5 }}
               viewport={{ once: true }}
-              className="space-y-6"
+              className="space-y-4 sm:space-y-6"
             >
               {benefits.map((benefit, i) => (
                 <motion.div
@@ -142,12 +138,10 @@ const ACPCladding = () => {
                   viewport={{ once: true }}
                   className="flex items-start"
                 >
-                  <div className="bg-blue-100 p-2 rounded-full mr-4 mt-1">
-                    <FaCheck className="text-blue-600 text-sm" />
+                  <div className="bg-blue-100 p-1.5 sm:p-2 rounded-full mr-3 sm:mr-4 mt-1 flex-shrink-0">
+                    <FaCheck className="text-blue-600 text-xs sm:text-sm" />
                   </div>
-                  <p className="text-gray-700 text-base sm:text-xl">
-                    {benefit}
-                  </p>
+                  <p className="text-gray-700 text-base sm:text-xl">{benefit}</p>
                 </motion.div>
               ))}
             </motion.div>
@@ -160,16 +154,14 @@ const ACPCladding = () => {
               viewport={{ once: true }}
               className="relative group"
             >
-              <div className="relative rounded-tl-4xl rounded-br-4xl overflow-hidden">
+              <div className="relative rounded-tl-2xl sm:rounded-tl-3xl md:rounded-tl-4xl rounded-br-2xl sm:rounded-br-3xl md:rounded-br-4xl overflow-hidden">
                 <img
                   src="/servicesimg/acp_img/VELOCITY - NIGHT VIEW 1.jpg"
                   alt="ACP Example"
-                  className="w-full h-[600px] object-fill transition-transform duration-700 group-hover:scale-105"
+                  className="w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] object-cover transition-transform duration-700 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
-                  <p className="text-white font-medium text-lg">
-                    Modern ACP Installation
-                  </p>
+                  <p className="text-white font-medium text-lg">Modern ACP Installation</p>
                 </div>
               </div>
             </motion.div>
@@ -178,11 +170,10 @@ const ACPCladding = () => {
       </section>
 
       {/* 🔹 Replaced Section — Projects Style Grid */}
-      {/* ✅ NEW — SAME AS Projects Page STYLE */}
       <section className="px-4 sm:px-6 md:px-12 lg:px-24 py-20 bg-gray-50 text-center">
         <div className="mb-12">
           <h2
-            className="text-3xl md:text-4xl font-bold tracking-tight leading-tight mb-4"
+            className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight leading-tight mb-3 sm:mb-4"
             style={{
               background:
                 "linear-gradient(90deg, #E86C0C 0%, #001F5F 70%, #C4C4C4 100%)",
@@ -195,14 +186,13 @@ const ACPCladding = () => {
             Our ACP / Fundermax Designs
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto mt-4">
-            Explore our range of modern architectural ACP & Fundermax
-            installations.
+            Explore our range of modern architectural ACP & Fundermax design installations.
           </p>
         </div>
 
         {/* ✅ SAME GRID STYLE AS PROJECT PAGE */}
         <motion.div
-          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-12"
+          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 mb-12"
           variants={containerVariants}
           initial="hidden"
           whileInView="show"
@@ -212,34 +202,75 @@ const ACPCladding = () => {
             <motion.div
               key={project.id}
               className={`relative overflow-hidden rounded-tl-4xl rounded-br-4xl group 
-        bg-white shadow-md hover:shadow-lg transition h-auto
-        ${index === 0 ? "sm:col-span-2 md:col-span-2" : ""}`}
+              h-[250px] sm:h-[320px] md:h-[450px] cursor-pointer
+              ${index === 0 ? "sm:col-span-2 md:col-span-2" : ""}`}
               variants={cardVariants}
               onClick={() => openImageModal(project.img)}
             >
-              {/* Image */}
-              <div className="w-full h-[250px] sm:h-[320px] md:h-[450px] overflow-hidden">
-                <img
-                  src={project.img}
-                  alt={project.title}
-                  loading="lazy"
-                  className="w-full h-full object-cover object-center brightness-90 
-            transform transition duration-500 group-hover:scale-110"
-                />
-              </div>
-
-              {/* Title BELOW image — TEXT + UNDERLINE */}
-              <div className="py-4 px-3 text-left">
-                <div className="inline-block">
-                  <h3 className="text-lg sm:text-xl md:text-2xl font-semibold text-[#0B3558]">
-                    {project.title}
-                  </h3>
-                  <div className="w-10 h-[3px] bg-[#F37021] mt-2 mx-auto rounded-full"></div>
-                </div>
+              <img
+                src={project.img}
+                alt={project.title}
+                className="w-full h-full object-cover object-center brightness-75 transform transition duration-500 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 flex items-end justify-start p-4">
+                <h3 className="text-lg sm:text-xl md:text-2xl font-medium text-white">
+                  {project.title}
+                </h3>
               </div>
             </motion.div>
           ))}
         </motion.div>
+      </section>
+
+      {/* 🔹 Reasons Section */}
+      <section className="px-4 md:px-8 lg:px-16 py-20 bg-gradient-to-br from-blue-900 via-blue-800 to-blue-950 text-white">
+        <div className="max-w-7xl mx-auto">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+            className="text-3xl md:text-4xl font-bold text-center mb-4"
+          >
+            <span className="text-white">Why Choose</span>{" "}
+            <span className="text-orange-400">The GOODWILL Facades?</span>
+          </motion.h2>
+          <p className="text-center text-blue-200 max-w-3xl mx-auto mb-12">
+            Delivering excellence in every project with innovative solutions and premium materials
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {reasons.map((reason, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: i * 0.1, duration: 0.5 }}
+                viewport={{ once: true }}
+                whileHover={{ y: -5 }}
+                className="bg-white/10 rounded-xl p-6 backdrop-blur-sm border border-white/10 hover:border-white/20 transition-all duration-300 group"
+              >
+                <div className="flex items-center mb-4">
+                  <div className="text-2xl mr-3">{reason.icon}</div>
+                  <h3 className="font-semibold text-lg">{reason.title}</h3>
+                </div>
+
+                {reason.items ? (
+                  <ul className="space-y-2">
+                    {reason.items.map((item, idx) => (
+                      <li key={idx} className="flex items-center text-sm text-blue-100">
+                        <FaArrowRight className="mr-2 text-orange-400 text-xs" />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                ) : (
+                  <p className="text-sm text-blue-100">{reason.description}</p>
+                )}
+              </motion.div>
+            ))}
+          </div>
+        </div>
       </section>
 
       {/* Image Modal */}

@@ -335,27 +335,27 @@ const ServicesAllInOne = () => {
     <div>
       <section
         id="services"
-        className="py-16 md:py-24 bg-white relative overflow-hidden"
+        className="py-8 sm:py-12 md:py-16 lg:py-24 bg-white relative overflow-hidden"
       >
         {/* Background Pattern */}
         <div className="absolute inset-0 bg-[linear-gradient(45deg,#f8fafc_25%,transparent_25%),linear-gradient(-45deg,#f8fafc_25%,transparent_25%),linear-gradient(45deg,transparent_75%,#f8fafc_75%),linear-gradient(-45deg,transparent_75%,#f8fafc_75%)] bg-[size:20px_20px] bg-[position:0_0,0_10px,10px_-10px,-10px_0px] opacity-30"></div>
 
         <div className="container mx-auto px-4 sm:px-6 relative z-10">
           {/* Header */}
-          <div className="text-center mb-16 md:mb-20">
+          <div className="text-center mb-10 sm:mb-12 md:mb-16 lg:mb-20">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="inline-block mb-6"
+              className="inline-block mb-4 sm:mb-6"
             >
-              <div className="flex items-center justify-center space-x-4 mb-6">
-                <div className="w-12 h-px bg-gray-300"></div>
-                <span className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-orange-500 uppercase tracking-widest">
+              <div className="flex items-center justify-center space-x-2 sm:space-x-4 mb-4 sm:mb-6">
+                <div className="w-8 sm:w-12 h-px bg-gray-300"></div>
+                <span className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-orange-500 uppercase tracking-wider sm:tracking-widest">
                   Our Services
                 </span>
-                <div className="w-12 h-px bg-gray-300"></div>
+                <div className="w-8 sm:w-12 h-px bg-gray-300"></div>
               </div>
 
               
@@ -366,7 +366,7 @@ const ServicesAllInOne = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
               viewport={{ once: true }}
-              className="text-lg text-gray-600 max-w-2xl mx-auto text-left leading-relaxed"
+              className="text-sm sm:text-base md:text-lg text-gray-600 max-w-2xl mx-auto text-center sm:text-left leading-relaxed px-2"
             >
               Delivering precision-engineered architectural solutions that
               combine innovative design with uncompromising quality and
@@ -376,7 +376,7 @@ const ServicesAllInOne = () => {
 
           {/* Grid Layout */}
           <motion.div
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8"
             variants={containerVariants}
             initial="hidden"
             whileInView="show"
@@ -385,18 +385,18 @@ const ServicesAllInOne = () => {
             {servicesIcons.map((service, index) => (
               <motion.div
                 key={index}
-                className="group relative bg-white rounded-xl p-6 transition-all duration-500 hover:shadow-xl cursor-pointer"
+                className="group relative bg-white rounded-xl p-4 sm:p-6 transition-all duration-500 hover:shadow-xl cursor-pointer"
                 variants={cardVariants}
                 whileHover={{ y: -5, transition: { duration: 0.3 } }}
                 style={{
-                  borderTopLeftRadius: "2rem",
-                  borderBottomRightRadius: "2rem",
+                  borderTopLeftRadius: "1.5rem",
+                  borderBottomRightRadius: "1.5rem",
                   overflow: "hidden",
                 }}
               >
                 {/* Gradient Border Effect */}
                 <div
-                  className="absolute inset-0 rounded-tl-[2rem] rounded-br-[2rem] p-[3px]"
+                  className="absolute inset-0 rounded-tl-[1.5rem] rounded-br-[1.5rem] p-[3px]"
                   style={{
                     background: "linear-gradient(135deg, #0B3558, #F37021)",
                     WebkitMask:
@@ -408,18 +408,18 @@ const ServicesAllInOne = () => {
 
                 {/* Content */}
                 <div className="relative z-10">
-                  <div className="mb-6 p-3  rounded-lg w-16 h-16 flex items-center justify-center group-hover:from-blue-100 group-hover:to-orange-100 transition-all duration-500">
+                  <div className="mb-4 sm:mb-6 p-2 sm:p-3 rounded-lg w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center group-hover:from-blue-100 group-hover:to-orange-100 transition-all duration-500">
                     <div className="text-blue-900 group-hover:scale-110 transition-transform duration-500">
                       {service.icon}
                     </div>
                   </div>
 
-                  <div className="space-y-4">
-                    <h3 className="text-xl font-semibold text-gray-900 group-hover:text-blue-900 transition-colors duration-300">
+                  <div className="space-y-3 sm:space-y-4">
+                    <h3 className="text-lg sm:text-xl font-semibold text-gray-900 group-hover:text-blue-900 transition-colors duration-300">
                       {service.title}
                     </h3>
 
-                    <p className="text-gray-900 text-lg leading-relaxed group-hover:text-gray-700 transition-colors duration-300">
+                    <p className="text-gray-900 text-sm sm:text-base md:text-lg leading-relaxed group-hover:text-gray-700 transition-colors duration-300">
                       {service.description}
                     </p>
 

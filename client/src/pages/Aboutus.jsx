@@ -6,13 +6,13 @@ const About = () => {
   return (
     <>
       {/* 🔹 About Banner */}
-      <section className="relative w-full h-screen max-h-[75vh] -mt-8 overflow-hidden">
+      <section className="relative w-full h-[50vh] sm:h-[60vh] md:h-screen max-h-[75vh] -mt-8 overflow-hidden">
         {/* Logo Branding - Top Right */}
-        <div className="absolute top-6 right-6 z-30">
+        <div className="absolute top-4 sm:top-6 right-4 sm:right-6 z-30">
           <img
             src="/logo.png" 
             alt="The Goodwill Facades Logo"
-            className="h-18 md:h-25 w-auto"
+            className="h-12 sm:h-16 md:h-20 lg:h-24 w-auto"
           />
         </div>
         
@@ -27,7 +27,7 @@ const About = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
-            className="text-3xl md:text-3xl font-bold text-white mb-4 tracking-wide"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3 sm:mb-4 tracking-wide"
           >
             <span className="text-white"> About </span>{" "}
             <span className="text-orange-400">The Goodwill Facades</span>
@@ -44,30 +44,30 @@ const About = () => {
 
       {/* 🔹 WHO WE ARE */}
       <section
-        className="relative bg-cover bg-center py-16 px-6 md:px-12 lg:px-20"
+        className="relative bg-cover bg-center py-8 sm:py-12 md:py-16 px-4 sm:px-6 md:px-12 lg:px-20"
         style={{ backgroundImage: `url('/images/about-bg.jpg')` }}
       >
         {/* Overlay */}
         <div className="absolute inset-0 bg-white/80"></div>
 
-        <div className="relative max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10">
+        <div className="relative max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-6 sm:gap-8 md:gap-10">
           {/* Left Side - Image */}
           <div className="md:w-1/2 w-full flex justify-center">
             <div className="relative group w-full max-w-md">
               <img
                 src="/Structural-Glazing-Works.webp"
                 alt="Who We Are"
-                className="rounded-2xl object-cover w-full h-auto"
+                className="rounded-xl sm:rounded-2xl object-cover w-full h-auto"
               />
             </div>
           </div>
 
           {/* Right Side - Content */}
-          <div className="md:w-1/2 w-full text-gray-700 space-y-6">
-            <h2 className="text-3xl md:text-5xl font-extrabold text-[#171755] leading-tight">
+          <div className="md:w-1/2 w-full text-gray-700 space-y-4 sm:space-y-6">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#171755] leading-tight">
               About Us
             </h2>
-            <p className="text-base md:text-lg leading-relaxed">
+            <p className="text-sm sm:text-base md:text-lg leading-relaxed">
               Welcome to{" "}
               <span className="font-semibold text-[#EC7310]">
                 THE GOODWILL FACADE
@@ -77,14 +77,14 @@ const About = () => {
               And Main Contactor In The Field Of Architectural Facades &
               Building Maintenance Solutions.
             </p>
-            <p className="text-base md:text-lg leading-relaxed">
+            <p className="text-sm sm:text-base md:text-lg leading-relaxed">
               Our team brings together innovation, precision, and global
               expertise to deliver high-performance façade systems. We focus on
               design excellence and engineering accuracy to create sustainable,
               durable, and visually striking building envelopes.{" "}
               <span className="font-medium"></span>{" "}
             </p>
-            <p className="text-base md:text-lg leading-relaxed">
+            <p className="text-sm sm:text-base md:text-lg leading-relaxed">
               With a client-centric approach, we provide end-to-end solutions —
               from concept design to execution.{" "}
               <span className="font-medium">
@@ -102,22 +102,22 @@ const About = () => {
       </section>
 
       {/* 🔹 OUR STORY */}
-      <section className="bg-gray-50 py-16">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12">
-          <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center mb-12">
-            <h2 className="text-3xl md:text-5xl font-bold text-gray-900">
+      <section className="bg-gray-50 py-8 sm:py-12 md:py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
+          <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center mb-8 sm:mb-10 md:mb-12">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900">
               Our Story
             </h2>
-            <p className="mt-4 lg:mt-0 max-w-xl text-gray-600 text-base md:text-lg">
+            <p className="mt-4 lg:mt-0 max-w-xl text-gray-600 text-sm sm:text-base md:text-lg">
               At THE GOODWILL FACADE, we redefine architectural elegance with
               cutting-edge façade engineering and design solutions.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 md:gap-10 items-center">
             {/* Left Text */}
-            <div className="space-y-8">
-              <p className="text-gray-700 text-base md:text-lg leading-relaxed">
+            <div className="space-y-4 sm:space-y-6 md:space-y-8">
+              <p className="text-gray-700 text-sm sm:text-base md:text-lg leading-relaxed">
                 Founded with a vision to transform skylines, THE GOODWILL FACADE
                 brings together innovation, craftsmanship, and engineering
                 precision. Our team specializes in delivering sustainable and
@@ -151,16 +151,16 @@ const About = () => {
             </div>
 
             {/* Right Images */}
-            <div className="grid grid-cols-2 gap-4 md:gap-6 ">
+            <div className="grid grid-cols-2 gap-3 sm:gap-4 md:gap-6">
               <img
                 src="/ourstory1.jpg"
                 alt="Team discussion"
-                className=" object-cover w-full h-48 md:h-80 lg:h-[400px] rounded-tl-4xl rounded-br-4xl"
+                className="object-cover w-full h-32 sm:h-40 md:h-64 lg:h-80 xl:h-[400px] rounded-tl-2xl sm:rounded-tl-3xl md:rounded-tl-4xl rounded-br-2xl sm:rounded-br-3xl md:rounded-br-4xl"
               />
               <img
                 src="/ourstory2.jpg"
                 alt="Financial planning meeting"
-                className=" object-cover w-full h-48 md:h-80 lg:h-[400px] mt-6 md:mt-12 lg:mt-20 rounded-tl-4xl rounded-br-4xl"
+                className="object-cover w-full h-32 sm:h-40 md:h-64 lg:h-80 xl:h-[400px] mt-4 sm:mt-6 md:mt-12 lg:mt-20 rounded-tl-2xl sm:rounded-tl-3xl md:rounded-tl-4xl rounded-br-2xl sm:rounded-br-3xl md:rounded-br-4xl"
               />
             </div>
           </div>
@@ -168,21 +168,21 @@ const About = () => {
       </section>
 
       {/* 🔹 Vision | Mission | Values */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
+      <section className="py-8 sm:py-12 md:py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 md:gap-12 text-center">
             {/* Vision */}
-            <div className="space-y-6">
+            <div className="space-y-4 sm:space-y-6">
               <img
                 src="/Our-Vision.jpg"
                 alt="Vision"
-                className="w-full h-48 sm:h-64 lg:h-72 object-cover shadow-md rounded-tl-4xl rounded-br-4xl"
+                className="w-full h-40 sm:h-48 md:h-56 lg:h-64 xl:h-72 object-cover shadow-md rounded-tl-2xl sm:rounded-tl-3xl md:rounded-tl-4xl rounded-br-2xl sm:rounded-br-3xl md:rounded-br-4xl"
               />
-              <h3 className="text-xl md:text-2xl font-bold text-blue-800 uppercase tracking-wide">
+              <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-blue-800 uppercase tracking-wide">
                 Our Vision
               </h3>
               <div className="w-12 h-[2px] bg-blue-600 mx-auto"></div>
-              <p className="text-gray-700 text-base md:text-lg text-left leading-relaxed">
+              <p className="text-gray-700 text-sm sm:text-base md:text-lg text-left leading-relaxed px-2">
                 See Farther To Seek Out Competitive Business Advantages For Our
                 Clients Through The Innovative Use Of Technology And To Help
                 Them Achieve Long-term Success And Prosperity
@@ -190,17 +190,17 @@ const About = () => {
             </div>
 
             {/* Mission */}
-            <div className="space-y-6">
+            <div className="space-y-4 sm:space-y-6">
               <img
                 src="/ourmission.jpg"
                 alt="Mission"
-                className="w-full h-48 sm:h-64 lg:h-72 object-cover shadow-md rounded-tl-4xl rounded-br-4xl"
+                className="w-full h-40 sm:h-48 md:h-56 lg:h-64 xl:h-72 object-cover shadow-md rounded-tl-2xl sm:rounded-tl-3xl md:rounded-tl-4xl rounded-br-2xl sm:rounded-br-3xl md:rounded-br-4xl"
               />
-              <h3 className="text-xl md:text-2xl font-bold text-blue-800 uppercase tracking-wide">
+              <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-blue-800 uppercase tracking-wide">
                 Our Mission
               </h3>
               <div className="w-12 h-[2px] bg-blue-600 mx-auto"></div>
-              <p className="text-gray-700 text-base md:text-lg text-left leading-relaxed">
+              <p className="text-gray-700 text-sm sm:text-base md:text-lg text-left leading-relaxed px-2">
                 To Deliver Best To The Our Clients Through Innovative Use Of New
                 Technologies, Support, Services And Customer Referrals; And Also
                 To Be The Best Facade Company In Our Markets
@@ -208,17 +208,17 @@ const About = () => {
             </div>
 
             {/* Core Values */}
-            <div className="space-y-6">
+            <div className="space-y-4 sm:space-y-6">
               <img
                 src="/ourvalue.jpg"
                 alt="Core Values"
-                className="w-full h-48 sm:h-64 lg:h-72 object-cover shadow-md rounded-tl-4xl rounded-br-4xl"
+                className="w-full h-40 sm:h-48 md:h-56 lg:h-64 xl:h-72 object-cover shadow-md rounded-tl-2xl sm:rounded-tl-3xl md:rounded-tl-4xl rounded-br-2xl sm:rounded-br-3xl md:rounded-br-4xl"
               />
-              <h3 className="text-xl md:text-2xl font-bold text-blue-800 uppercase tracking-wide">
+              <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-blue-800 uppercase tracking-wide">
                 Core Values
               </h3>
-              <div className="w-12 h-[2px] bg-blue-600  mx-auto"></div>
-              <p className="text-gray-700 text-base md:text-lg text-left leading-relaxed">
+              <div className="w-12 h-[2px] bg-blue-600 mx-auto"></div>
+              <p className="text-gray-700 text-sm sm:text-base md:text-lg text-left leading-relaxed px-2">
                 Our growth and success are based upon ethical practices,
                 integrity, respect, responsibility, safety, and trust.
               </p>

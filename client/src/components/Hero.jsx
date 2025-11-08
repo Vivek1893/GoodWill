@@ -1283,7 +1283,8 @@ const Hero = () => {
   return (
     <div className="relative w-full h-screen overflow-hidden -mt-7 max-w-full bg-black">
       {/* ✅ Desktop / Tablet View */}
-      <div className="hidden sm:flex absolute inset-0">
+      <div className="hidden md:flex absolute inset-0">
+
         {/* Left Half */}
         <div className="w-1/2 h-full flex flex-col items-center relative overflow-hidden">
           <AnimatePresence mode="popLayout">
@@ -1301,23 +1302,16 @@ const Hero = () => {
           </AnimatePresence>
 
           {/* Text at Bottom Center */}
-          <div className="absolute bottom-0 w-full flex justify-center z-20">
-            <div className="bg-white backdrop-blur-sm px-4 py-2 rounded-lg drop-shadow-lg text-center inline-block">
-              <h3 className="font-semibold text-[#0B3558] text-lg">
-                {slides[currentSlide].leftTitle}
-              </h3>
-              <div className="w-10 h-[3px] bg-[#F37021] mx-auto mt-1 rounded-full"></div>
-            </div>
+          <div className="absolute bottom-2 md:bottom-4 w-full flex justify-center z-20 px-2">
+            <h3 className="text-white text-sm md:text-base lg:text-lg font-semibold drop-shadow-lg text-center bg-black/40 backdrop-blur-sm px-3 md:px-4 py-1 md:py-2 rounded-lg">
+              {slides[currentSlide].leftTitle}
+            </h3>
           </div>
         </div>
 
         {/* ✅ Logo Top Right */}
-        <div className="absolute top-6 right-6 z-30">
-          <img
-            src="/logo.png"
-            alt="The Goodwill Facades"
-            className="h-18 md:h-25 w-auto"
-          />
+        <div className="absolute top-4 md:top-6 right-4 md:right-6 z-30">
+          <img src="/logo.png" alt="The Goodwill Facades" className="h-12 md:h-16 lg:h-20 w-auto" />
         </div>
 
         {/* Right Half */}
@@ -1337,13 +1331,10 @@ const Hero = () => {
           </AnimatePresence>
 
           {/* Text at Bottom Center */}
-          <div className="absolute bottom-0 w-full flex justify-center z-20">
-            <div className="bg-white backdrop-blur-sm px-4 py-2 rounded-lg drop-shadow-lg text-center inline-block">
-              <h3 className="text-[#0B3558] text-lg font-semibold">
-                {slides[currentSlide].rightTitle}
-              </h3>
-              <div className="w-10 h-[3px] bg-[#F37021] mx-auto mt-1 rounded-full"></div>
-            </div>
+          <div className="absolute bottom-2 md:bottom-4 w-full flex justify-center z-20 px-2">
+            <h3 className="text-white text-sm md:text-base lg:text-lg font-semibold drop-shadow-lg text-center bg-black/40 backdrop-blur-sm px-3 md:px-4 py-1 md:py-2 rounded-lg">
+              {slides[currentSlide].rightTitle}
+            </h3>
           </div>
         </div>
 
@@ -1352,7 +1343,7 @@ const Hero = () => {
       </div>
 
       {/* ✅ Mobile View */}
-      <div className="flex sm:hidden absolute inset-0  overflow-hidden">
+      <div className="flex md:hidden absolute inset-0 overflow-hidden">
         <AnimatePresence mode="popLayout">
           <motion.div
             key={slides[currentSlide].mobileImage}
@@ -1366,77 +1357,38 @@ const Hero = () => {
             transition={{ duration: 1.2, ease: "easeInOut" }}
           />
         </AnimatePresence>
-
-        {/* Text at Bottom Center */}
-        {/* <div className="absolute bottom-8 w-full flex justify-center z-20">
-          <h2 className="text-white text-lg font-semibold drop-shadow-lg text-center bg-black/40 backdrop-blur-sm px-4 py-20 rounded-lg">
-            {slides[currentSlide].leftTitle}
-          </h2>
-        </div> */}
       </div>
 
       {/* Navigation Arrows */}
       <div className="absolute bottom-16 md:bottom-20 left-1/2 transform -translate-x-1/2 z-30 flex items-center space-x-8">
-        <button
-          onClick={prevSlide}
-          className="text-white hover:text-[#F37021] transition-colors"
-        >
+        <button onClick={prevSlide} className="text-white hover:text-[#F37021] transition-colors">
           <div className="flex items-center space-x-2 bg-black/60 backdrop-blur-sm px-4 py-3 rounded-full border border-white/30">
-            <svg
-              className="w-5 h-5"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M15 19l-7-7 7-7"
-              />
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
             </svg>
-            <span className="text-sm hidden sm:block font-medium tracking-wider">
-              PREV
-            </span>
+            <span className="text-sm hidden sm:block font-medium tracking-wider">PREV</span>
           </div>
         </button>
 
-        <button
-          onClick={nextSlide}
-          className="text-white hover:text-[#F37021] transition-colors"
-        >
+        <button onClick={nextSlide} className="text-white hover:text-[#F37021] transition-colors">
           <div className="flex items-center space-x-2 bg-black/60 backdrop-blur-sm px-4 py-3 rounded-full border border-white/30">
-            <span className="text-sm hidden sm:block font-medium tracking-wider">
-              NEXT
-            </span>
-            <svg
-              className="w-5 h-5"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M9 5l7 7-7 7"
-              />
+            <span className="text-sm hidden sm:block font-medium tracking-wider">NEXT</span>
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
           </div>
         </button>
       </div>
 
       {/* Slide Indicators */}
-      <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 z-30">
-        <div className="flex space-x-3">
+      <div className="absolute bottom-4 sm:bottom-6 left-1/2 transform -translate-x-1/2 z-30">
+        <div className="flex space-x-2 sm:space-x-3">
           {slides.map((_, index) => (
             <button
               key={index}
               onClick={() => setCurrentSlide(index)}
               className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                index === currentSlide
-                  ? "bg-[#F37021] scale-110"
-                  : "bg-white/50 hover:bg-white/80"
+                index === currentSlide ? "bg-[#F37021] scale-110" : "bg-white/50 hover:bg-white/80"
               }`}
             />
           ))}

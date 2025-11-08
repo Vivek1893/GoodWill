@@ -78,13 +78,13 @@ const ContactSection = () => {
   return (
     <section id="contact" className="bg-gradient-to-br from-gray-50 -mt-8 to-blue-50/30 ">
       {/* Hero Banner */}
-      <div className="relative w-full h-[60vh] min-h-[75vh] overflow-hidden">
+      <div className="relative w-full h-[50vh] sm:h-[60vh] md:h-[70vh] min-h-[400px] sm:min-h-[500px] md:min-h-[600px] overflow-hidden">
         {/* Logo Branding - Top Right */}
-        <div className="absolute top-6 right-6 z-30">
+        <div className="absolute top-4 sm:top-6 right-4 sm:right-6 z-30">
           <img
             src="/logo.png"
             alt="The Goodwill Facades Logo"
-            className="h-18 md:h-25  w-auto"
+            className="h-12 sm:h-16 md:h-20 lg:h-24 w-auto"
           />
         </div>
         <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 to-purple-900/60 z-10" />
@@ -101,21 +101,21 @@ const ContactSection = () => {
         </div>
 
         {/* Centered Content */}
-        <div className="absolute inset-0 z-20 flex flex-col items-center justify-center text-center px-6">
+        <div className="absolute inset-0 z-20 flex flex-col items-center justify-center text-center px-4 sm:px-6">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="max-w-3xl"
           >
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 tracking-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6 tracking-tight">
               Get In <span className="text-orange-400">Touch</span>
             </h1>
             <motion.p
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.3, duration: 0.8 }}
-              className="text-xl md:text-2xl text-blue-100 mb-8 max-w-2xl mx-auto leading-relaxed"
+              className="text-base sm:text-lg md:text-xl lg:text-2xl text-blue-100 mb-6 sm:mb-8 max-w-2xl mx-auto leading-relaxed px-2"
             >
               Let's discuss your project and bring your vision to life
             </motion.p>
@@ -148,14 +148,14 @@ const ContactSection = () => {
       </div>
 
       {/* Main Content */}
-      <div className="max-w-7xl mx-auto px-6 py-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-16 md:py-20">
         {/* Contact Methods */}
         <motion.div
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12 sm:mb-16 md:mb-20"
         >
           {contactMethods.map((method, index) => (
             <motion.a
@@ -171,7 +171,7 @@ const ContactSection = () => {
                 scale: 1.02,
                 transition: { duration: 0.2 },
               }}
-              className={`bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 text-center block border-2 ${method.borderColor} ${method.hoverColor} group relative overflow-hidden`}
+              className={`bg-white p-6 sm:p-8 rounded-2xl sm:rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 text-center block border-2 ${method.borderColor} ${method.hoverColor} group relative overflow-hidden`}
             >
               {/* Background Effect */}
               <div
@@ -179,17 +179,17 @@ const ContactSection = () => {
               ></div>
 
               <div className="relative z-10">
-                <div className="flex justify-center mb-6">
+                <div className="flex justify-center mb-4 sm:mb-6">
                   <div
-                    className={`w-20 h-20 ${method.color} rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-md`}
+                    className={`w-16 h-16 sm:w-20 sm:h-20 ${method.color} rounded-xl sm:rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-md`}
                   >
-                    <method.icon className={`${method.iconColor} w-10 h-10`} />
+                    <method.icon className={`${method.iconColor} w-8 h-8 sm:w-10 sm:h-10`} />
                   </div>
                 </div>
-                <h3 className="text-2xl font-bold mb-4 text-gray-800 group-hover:text-gray-900 transition-colors">
+                <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-gray-800 group-hover:text-gray-900 transition-colors">
                   {method.title}
                 </h3>
-                <p className="text-gray-600 text-lg mb-6 group-hover:text-gray-700 transition-colors">
+                <p className="text-gray-600 text-base sm:text-lg mb-4 sm:mb-6 group-hover:text-gray-700 transition-colors">
                   {method.description}
                 </p>
                 <div className="mt-4">
@@ -218,7 +218,7 @@ const ContactSection = () => {
         </motion.div>
 
         {/* Offices & Hours Section */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-20">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8 mb-12 sm:mb-16 md:mb-20">
           {/* Offices */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -227,12 +227,12 @@ const ContactSection = () => {
             viewport={{ once: true }}
             className="lg:col-span-2"
           >
-            <div className="bg-gradient-to-br from-white to-blue-50 p-8 rounded-3xl shadow-lg border border-blue-100">
-              <h3 className="text-3xl font-bold text-gray-800 mb-8 text-center md:text-left">
+            <div className="bg-gradient-to-br from-white to-blue-50 p-6 sm:p-8 rounded-2xl sm:rounded-3xl shadow-lg border border-blue-100">
+              <h3 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-6 sm:mb-8 text-center md:text-left">
                 Our <span className="text-blue-600">Offices</span>
               </h3>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
                 {offices.map((office, index) => (
                   <motion.a
                     key={index}
@@ -240,17 +240,17 @@ const ContactSection = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     whileHover={{ y: -4, scale: 1.02 }}
-                    className="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 border-2 border-gray-100 hover:border-blue-200 group"
+                    className="bg-white p-4 sm:p-6 rounded-xl sm:rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 border-2 border-gray-100 hover:border-blue-200 group"
                   >
-                    <div className="flex items-start space-x-4">
-                      <div className="w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg group-hover:scale-110 transition-transform duration-300">
-                        <MapPin className="h-7 w-7 text-white" />
+                    <div className="flex items-start space-x-3 sm:space-x-4">
+                      <div className="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl sm:rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg group-hover:scale-110 transition-transform duration-300">
+                        <MapPin className="h-5 w-5 sm:h-7 sm:w-7 text-white" />
                       </div>
                       <div className="flex-1">
-                        <h4 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-blue-700 transition-colors">
+                        <h4 className="text-lg sm:text-xl font-bold text-gray-800 mb-2 sm:mb-3 group-hover:text-blue-700 transition-colors">
                           {office.city}
                         </h4>
-                        <p className="text-gray-600 leading-relaxed text-sm">
+                        <p className="text-gray-600 leading-relaxed text-xs sm:text-sm">
                           {office.address}
                         </p>
                         <div className="mt-4">
@@ -287,32 +287,32 @@ const ContactSection = () => {
             viewport={{ once: true }}
             className="lg:col-span-1"
           >
-            <div className="bg-gradient-to-br from-orange-50 to-red-50 p-8 rounded-3xl shadow-lg border border-orange-100 h-full">
-              <div className="text-center mb-6">
-                <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-500 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
-                  <Clock className="h-8 w-8 text-white" />
+            <div className="bg-gradient-to-br from-orange-50 to-red-50 p-6 sm:p-8 rounded-2xl sm:rounded-3xl shadow-lg border border-orange-100 h-full">
+              <div className="text-center mb-4 sm:mb-6">
+                <div className="w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-br from-orange-500 to-red-500 rounded-xl sm:rounded-2xl flex items-center justify-center mx-auto mb-3 sm:mb-4 shadow-lg">
+                  <Clock className="h-6 w-6 sm:h-8 sm:w-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-800 mb-2">
+                <h3 className="text-lg sm:text-xl font-bold text-gray-800 mb-2">
                   Opening Hours
                 </h3>
-                <p className="text-gray-600">We're here when you need us</p>
+                <p className="text-sm sm:text-base text-gray-600">We're here when you need us</p>
               </div>
 
-              <div className="space-y-4">
-                <div className="bg-white/50 pt-4 pb-4 rounded-xl shadow-sm border border-orange-100">
-                  <div className="flex justify-between items-center">
-                    <span className="font-semibold text-gray-800">
+              <div className="space-y-3 sm:space-y-4">
+                <div className="bg-white/50 pt-3 pb-3 sm:pt-4 sm:pb-4 rounded-lg sm:rounded-xl shadow-sm border border-orange-100 px-3 sm:px-4">
+                  <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
+                    <span className="font-semibold text-gray-800 text-sm sm:text-base">
                       Monday – Saturday
                     </span>
-                    <span className="text-orange-600 font-bold">
+                    <span className="text-orange-600 font-bold text-sm sm:text-base">
                       9:30 AM – 6:30 PM
                     </span>
                   </div>
                 </div>
-                <div className="bg-white/80 p-4 rounded-xl shadow-sm border border-red-100">
-                  <div className="flex justify-between items-center">
-                    <span className="font-semibold text-gray-800">Sunday</span>
-                    <span className="text-red-500 font-bold">Closed</span>
+                <div className="bg-white/80 p-3 sm:p-4 rounded-lg sm:rounded-xl shadow-sm border border-red-100">
+                  <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
+                    <span className="font-semibold text-gray-800 text-sm sm:text-base">Sunday</span>
+                    <span className="text-red-500 font-bold text-sm sm:text-base">Closed</span>
                   </div>
                 </div>
               </div>
@@ -334,7 +334,7 @@ const ContactSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
           viewport={{ once: true }}
-          className="relative w-full h-[600px] overflow-hidden"
+          className="relative w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] overflow-hidden"
         >
           <iframe
             title="Google Map - AKASH CHSL, Kandivali West"
@@ -347,20 +347,20 @@ const ContactSection = () => {
             referrerPolicy="no-referrer-when-downgrade"
           ></iframe>
 
-          {/* Map Pins/Overlays for Addresses */}
-          <div className="absolute top-1/4 left-1/4 z-20">
+          {/* Map Pins/Overlays for Addresses - Hidden on mobile, shown on tablet+ */}
+          <div className="absolute top-1/4 left-1/4 z-20 hidden md:block">
             <motion.div
               initial={{ scale: 0, opacity: 0 }}
               whileInView={{ scale: 1, opacity: 1 }}
               transition={{ delay: 0.5, duration: 0.5 }}
-              className="bg-white/95 backdrop-blur-sm px-4 py-3 rounded-xl shadow-2xl border border-blue-200 max-w-xs"
+              className="bg-white/95 backdrop-blur-sm px-3 sm:px-4 py-2 sm:py-3 rounded-lg sm:rounded-xl shadow-2xl border border-blue-200 max-w-[200px] sm:max-w-xs"
             >
               <div className="flex items-start space-x-2">
-                <div className="w-8 h-8 bg-red-500 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg">
-                  <MapPin className="h-4 w-4 text-white" />
+                <div className="w-6 h-6 sm:w-8 sm:h-8 bg-red-500 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg">
+                  <MapPin className="h-3 w-3 sm:h-4 sm:w-4 text-white" />
                 </div>
                 <div>
-                  <h4 className="font-bold text-gray-800 text-sm mb-1">
+                  <h4 className="font-bold text-gray-800 text-xs sm:text-sm mb-1">
                     Mumbai Office
                   </h4>
 
@@ -377,19 +377,19 @@ const ContactSection = () => {
             </motion.div>
           </div>
 
-          <div className="absolute bottom-1/3 right-1/3 z-20">
+          <div className="absolute bottom-1/3 right-1/3 z-20 hidden md:block">
             <motion.div
               initial={{ scale: 0, opacity: 0 }}
               whileInView={{ scale: 1, opacity: 1 }}
               transition={{ delay: 0.7, duration: 0.5 }}
-              className="bg-white/95 backdrop-blur-sm px-4 py-3 rounded-xl shadow-2xl border border-green-200 max-w-xs"
+              className="bg-white/95 backdrop-blur-sm px-3 sm:px-4 py-2 sm:py-3 rounded-lg sm:rounded-xl shadow-2xl border border-green-200 max-w-[200px] sm:max-w-xs"
             >
               <div className="flex items-start space-x-2">
-                <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg">
-                  <MapPin className="h-4 w-4 text-white" />
+                <div className="w-6 h-6 sm:w-8 sm:h-8 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg">
+                  <MapPin className="h-3 w-3 sm:h-4 sm:w-4 text-white" />
                 </div>
                 <div>
-                  <h4 className="font-bold text-gray-800 text-sm mb-1">
+                  <h4 className="font-bold text-gray-800 text-xs sm:text-sm mb-1">
                     Surat Office
                   </h4>
 
@@ -407,11 +407,11 @@ const ContactSection = () => {
           </div>
 
           {/* Map Controls Overlay */}
-          <div className="absolute top-6 left-6 z-20">
-            <div className="bg-white/95 backdrop-blur-sm px-4 py-3 rounded-2xl shadow-lg border border-gray-200">
+          <div className="absolute top-4 sm:top-6 left-4 sm:left-6 z-20">
+            <div className="bg-white/95 backdrop-blur-sm px-3 sm:px-4 py-2 sm:py-3 rounded-xl sm:rounded-2xl shadow-lg border border-gray-200">
               <div className="flex items-center space-x-2">
-                <MapPin className="h-5 w-5 text-blue-600" />
-                <span className="font-semibold text-gray-800">
+                <MapPin className="h-4 w-4 sm:h-5 sm:w-5 text-blue-600" />
+                <span className="font-semibold text-gray-800 text-sm sm:text-base">
                   Our Locations
                 </span>
               </div>

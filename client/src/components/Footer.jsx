@@ -116,18 +116,18 @@ const Footer = () => {
 
       {/* ✅ TOP FOOTER (Black section like screenshot) */}
       <div
-        className="w-full  text-white py-8 px-6 
-        border-t-4 border-[#F37021] rounded-tl-[40px] rounded-tr-[40px]"
+        className="w-full text-white py-6 sm:py-8 px-4 sm:px-6 
+        border-t-4 border-[#F37021] rounded-tl-[30px] sm:rounded-tl-[40px] rounded-tr-[30px] sm:rounded-tr-[40px]"
       >
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6 sm:gap-8">
 
           {/* LOGO */}
-          <div>
-            <img src="/logo.png" alt="Goodwill Logo" className="w-70" />
+          <div className="flex justify-center md:justify-start">
+            <img src="/logo.png" alt="Goodwill Logo" className="w-40 sm:w-48 md:w-56 lg:w-64 h-auto" />
           </div>
 
           {/* MENU LINKS */}
-          <nav className="flex gap-8 text-lg font-medium text-black">
+          <nav className="flex gap-4 sm:gap-6 md:gap-8 text-sm sm:text-base md:text-lg font-medium text-black text-center md:text-left max-w-2xl">
             Leading providers of premium Facade cladding solutions, we transform spaces with innovative designs and exceptional craftsmanship, delivering durable, weather-resistant, and aesthetically striking finishes that redefine modern architectural possibilities for both exterior facades and interior applications.
           </nav>
 
@@ -148,27 +148,27 @@ const Footer = () => {
       </div>
 
       {/* ✅ BOTTOM BLUE COPYRIGHT STRIP (exact like image) */}
-      <div className="bg-[#0E2C4C] py-6 ">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center px-6 text-white text-lg gap-3">
+      <div className="bg-[#0E2C4C] py-4 sm:py-6">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center px-4 sm:px-6 text-white text-sm sm:text-base md:text-lg gap-3 sm:gap-4">
 
           {/* COPYRIGHT */}
-          <span>© 2025 The Goodwill Facade. All Rights Reserved.</span>
+          <span className="text-center md:text-left">© 2025 The Goodwill Facade. All Rights Reserved.</span>
 
           {/* EMAIL */}
           <a
             href="mailto:thegoodwillfacade@gmail.com"
-            className="flex items-center gap-2 hover:text-white duration-300"
+            className="flex items-center gap-2 hover:text-white duration-300 text-center"
           >
-            <MdEmail className="text-lg text-[#dd671d]" />
-            thegoodwillfacade@gmail.com
+            <MdEmail className="text-base sm:text-lg text-[#dd671d] flex-shrink-0" />
+            <span className="break-all sm:break-normal">thegoodwillfacade@gmail.com</span>
           </a>
 
           {/* PHONE */}
           <a
             href="tel:+919892118052"
-            className="flex items-center gap-2 hover:text-white duration-300"
+            className="flex items-center gap-2 hover:text-white duration-300 text-center"
           >
-            <MdCall className="text-lg text-[#dd671d]" />
+            <MdCall className="text-base sm:text-lg text-[#dd671d] flex-shrink-0" />
             +91 9892118052
           </a>
         </div>
