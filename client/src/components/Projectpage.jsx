@@ -242,10 +242,13 @@ const Projects = () => {
             </div>
 
             {/* Title Below Image */}
-            <div className="py-3 sm:py-4 px-3 text-left">
-              <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl font-semibold text-[#0B3558]">
+            {/* Title Below Image */}
+            <div className="py-3 sm:py-4 px-3 flex flex-col items-center">
+              <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl font-semibold text-[#0B3558] text-center">
                 {project.title}
               </h3>
+
+              {/* underline centered */}
               <div className="w-8 sm:w-10 h-[2px] sm:h-[3px] bg-[#F37021] mt-2 rounded-full"></div>
             </div>
           </motion.div>

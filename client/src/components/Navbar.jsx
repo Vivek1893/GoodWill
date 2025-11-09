@@ -914,7 +914,7 @@ const Navbar = () => {
                       ["Stone Cladding", "/services/Stone_Cladding"],
                       ["Aluminum Windows", "/services/Aluminum_Windows"],
                       ["Railings", "/services/Railings"],
-                      ["Skylight", "/services/Skylight"],
+                      ["Skylight & Aluminium Fins", "/services/Skylight"],
                       ["MS Structure", "/services/MS_Structure"],
                       ["Spider facade", "/services/Tensile_Fabrics"],
                     ].map(([label, path]) => (
@@ -1089,7 +1089,7 @@ const Navbar = () => {
                     ["Stone Cladding", "/services/Stone_Cladding"],
                     ["Aluminum Windows", "/services/Aluminum_Windows"],
                     ["Railings", "/services/Railings"],
-                    ["Skylight", "/services/Skylight"],
+                    ["Skylight & Aluminium Fins", "/services/Skylight"],
                     ["MS Structure", "/services/MS_Structure"],
                     ["Spider facade", "/services/Tensile_Fabrics"],
                   ].map(([label, path]) => (

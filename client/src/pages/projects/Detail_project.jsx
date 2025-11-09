@@ -215,7 +215,7 @@ const Residential = () => {
                   <motion.img
                     src={project.img}
                     alt={project.name}
-                    className="w-full h-72 object-cover rounded-md"
+                    className="w-full h-98 object-cover rounded-md"
                     loading="lazy"
                     onError={(e) => (e.target.src = "/fallback.jpg")}
                     initial={{ opacity: 0, scale: 1.05 }}

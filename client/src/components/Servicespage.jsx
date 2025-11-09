@@ -277,7 +277,7 @@ const ServicesAllInOne = () => {
           className="h-14 w-14 object-contain"
         />
       ),
-      title: "Skylight",
+      title: "Skylight & Aluminium Fins",
       description:
         "A skylight brings natural sunlight into spaces, making rooms brighter and more open while reducing artificial lighting needs.",
       path: "/services/Skylight",

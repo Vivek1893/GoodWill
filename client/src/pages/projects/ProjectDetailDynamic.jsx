@@ -421,7 +421,7 @@ const ProjectDetailDynamic = () => {
           initial={{ scaleX: 0 }}
           animate={{ scaleX: 1 }}
           transition={{ duration: 0.6 }}
-          className="w-20 h-1 bg-gradient-to-r from-blue-500 to-blue-700 mx-auto rounded-full"
+          className="w-20 h-1 bg-[#ff8c00] mx-auto rounded-full"
         />
       </div>
 

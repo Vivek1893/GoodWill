@@ -1220,7 +1220,7 @@ const Hero = () => {
         rightImage: "/hero5.jpg",
         mobileImage: "/hero5.jpg",
         leftTitle: "GOYAL ASPIRE - KANDIVALI(W)",
-        rightTitle: "AMBIT- KANDIVALI(W)",
+        rightTitle: "AMBIT PRIMORIS - KANDIVALI(W)",
       },
       {
         leftImage: "/hero3.webp",
@@ -1284,7 +1284,6 @@ const Hero = () => {
     <div className="relative w-full h-screen overflow-hidden -mt-7 max-w-full bg-black">
       {/* ✅ Desktop / Tablet View */}
       <div className="hidden md:flex absolute inset-0">
-
         {/* Left Half */}
         <div className="w-1/2 h-full flex flex-col items-center relative overflow-hidden">
           <AnimatePresence mode="popLayout">
@@ -1302,16 +1301,25 @@ const Hero = () => {
           </AnimatePresence>
 
           {/* Text at Bottom Center */}
-          <div className="absolute bottom-2 md:bottom-4 w-full flex justify-center z-20 px-2">
-            <h3 className="text-white text-sm md:text-base lg:text-lg font-semibold drop-shadow-lg text-center bg-black/40 backdrop-blur-sm px-3 md:px-4 py-1 md:py-2 rounded-lg">
-              {slides[currentSlide].leftTitle}
-            </h3>
+          <div className="absolute -bottom-1 w-full flex justify-center z-20 px-2">
+            <div className="bg-white backdrop-blur-sm px-3 md:px-4 py-2 rounded-lg flex flex-col items-center">
+              <h3 className="text-[#171755] text-sm md:text-base lg:text-lg font-semibold drop-shadow-lg text-center">
+                {slides[currentSlide].leftTitle}
+              </h3>
+
+              {/* underline INSIDE the white box */}
+              <div className="w-12 h-[3px] bg-[#ff8c00] mt-1 rounded-full"></div>
+            </div>
           </div>
         </div>
 
         {/* ✅ Logo Top Right */}
         <div className="absolute top-4 md:top-6 right-4 md:right-6 z-30">
-          <img src="/logo.png" alt="The Goodwill Facades" className="h-12 md:h-16 lg:h-20 w-auto" />
+          <img
+            src="/logo.png"
+            alt="The Goodwill Facades"
+            className="h-12 md:h-16 lg:h-20 w-auto"
+          />
         </div>
 
         {/* Right Half */}
@@ -1331,10 +1339,15 @@ const Hero = () => {
           </AnimatePresence>
 
           {/* Text at Bottom Center */}
-          <div className="absolute bottom-2 md:bottom-4 w-full flex justify-center z-20 px-2">
-            <h3 className="text-white text-sm md:text-base lg:text-lg font-semibold drop-shadow-lg text-center bg-black/40 backdrop-blur-sm px-3 md:px-4 py-1 md:py-2 rounded-lg">
-              {slides[currentSlide].rightTitle}
-            </h3>
+          <div className="absolute -bottom-1 w-full flex justify-center z-20 px-2">
+            <div className="bg-white backdrop-blur-sm px-3 md:px-4 py-2 rounded-lg flex flex-col items-center">
+              <h3 className="text-[#171755] text-sm md:text-base lg:text-lg font-semibold drop-shadow-lg text-center">
+                {slides[currentSlide].rightTitle}
+              </h3>
+
+              {/* underline inside the box */}
+              <div className="w-12 h-[3px] bg-[#ff8c00] mt-1 rounded-full"></div>
+            </div>
           </div>
         </div>
 
@@ -1361,20 +1374,50 @@ const Hero = () => {
 
       {/* Navigation Arrows */}
       <div className="absolute bottom-16 md:bottom-20 left-1/2 transform -translate-x-1/2 z-30 flex items-center space-x-8">
-        <button onClick={prevSlide} className="text-white hover:text-[#F37021] transition-colors">
+        <button
+          onClick={prevSlide}
+          className="text-white hover:text-[#F37021] transition-colors"
+        >
           <div className="flex items-center space-x-2 bg-black/60 backdrop-blur-sm px-4 py-3 rounded-full border border-white/30">
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+            <svg
+              className="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M15 19l-7-7 7-7"
+              />
             </svg>
-            <span className="text-sm hidden sm:block font-medium tracking-wider">PREV</span>
+            <span className="text-sm hidden sm:block font-medium tracking-wider">
+              PREV
+            </span>
           </div>
         </button>
 
-        <button onClick={nextSlide} className="text-white hover:text-[#F37021] transition-colors">
+        <button
+          onClick={nextSlide}
+          className="text-white hover:text-[#F37021] transition-colors"
+        >
           <div className="flex items-center space-x-2 bg-black/60 backdrop-blur-sm px-4 py-3 rounded-full border border-white/30">
-            <span className="text-sm hidden sm:block font-medium tracking-wider">NEXT</span>
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            <span className="text-sm hidden sm:block font-medium tracking-wider">
+              NEXT
+            </span>
+            <svg
+              className="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M9 5l7 7-7 7"
+              />
             </svg>
           </div>
         </button>
@@ -1388,7 +1431,9 @@ const Hero = () => {
               key={index}
               onClick={() => setCurrentSlide(index)}
               className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                index === currentSlide ? "bg-[#F37021] scale-110" : "bg-white/50 hover:bg-white/80"
+                index === currentSlide
+                  ? "bg-[#F37021] scale-110"
+                  : "bg-white/50 hover:bg-white/80"
               }`}
             />
           ))}

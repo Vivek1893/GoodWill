@@ -123,12 +123,12 @@ const Footer = () => {
 
           {/* LOGO */}
           <div className="flex justify-center md:justify-start">
-            <img src="/logo.png" alt="Goodwill Logo" className="w-40 sm:w-48 md:w-56 lg:w-64 h-auto" />
+            <img src="/logo.png" alt="Goodwill Logo" className="w-35 sm:w-40 md:w-46 lg:w-54 h-auto" />
           </div>
 
           {/* MENU LINKS */}
           <nav className="flex gap-4 sm:gap-6 md:gap-8 text-sm sm:text-base md:text-lg font-medium text-black text-center md:text-left max-w-2xl">
-            Leading providers of premium Facade cladding solutions, we transform spaces with innovative designs and exceptional craftsmanship, delivering durable, weather-resistant, and aesthetically striking finishes that redefine modern architectural possibilities for both exterior facades and interior applications.
+            Leading providers of premium Facade solutions, we transform spaces with innovative designs and exceptional craftsmanship, delivering durable, weather-resistant, and aesthetically striking finishes that redefine modern architectural possibilities for both exterior facades and interior applications.
           </nav>
 
           {/* SOCIAL ICONS */}

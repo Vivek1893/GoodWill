@@ -338,8 +338,8 @@ const Skylight = () => {
             transition={{ duration: 0.7 }}
             className="text-3xl md:text-3xl font-bold text-white mb-4 tracking-wide"
           >
-            <span className="text-white"> Sky</span>{" "}
-            <span className="text-orange-400">light</span>
+            <span className="text-white"> Skylight</span>{" "}
+            <span className="text-orange-400">& Aluminium Fins</span>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0 }}
@@ -347,7 +347,7 @@ const Skylight = () => {
             transition={{ delay: 0.3, duration: 0.5 }}
             className="text-base text-white/90 max-w-xl mx-auto mb-8"
           >
-            Premium architectural solutions with innovative Skylight composite
+            Premium architectural solutions with innovative Skylight & Aluminium Fins composite
             panels
           </motion.p>
           <motion.div
@@ -369,7 +369,7 @@ const Skylight = () => {
             viewport={{ once: true }}
             className="text-3xl md:text-4xl font-bold text-center mb-16 text-gray-900"
           >
-            Why Choose <span className="text-orange-600">Skylight?</span>
+            Why Choose <span className="text-orange-600">Skylight & Aluminium Fins?</span>
           </motion.h2>
 
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -416,7 +416,7 @@ const Skylight = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
                   <p className="text-white font-medium text-lg">
-                    Modern Skylight Installation
+                    Modern Skylight & Aluminium Fins Installation
                   </p>
                 </div>
               </div>
@@ -440,10 +440,10 @@ const Skylight = () => {
               color: "transparent",
             }}
           >
-            Skylight
+            Skylight & Aluminium Fins
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto mt-4">
-            Explore our range of modern architectural Skylight
+            Explore our range of modern architectural Skylight & Aluminium Fins
             installations.
           </p>
         </div>
