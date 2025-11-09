@@ -87,7 +87,7 @@ const ContactSection = () => {
             className="h-12 sm:h-16 md:h-20 lg:h-24 w-auto"
           />
         </div>
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 to-purple-900/60 z-10" />
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/50 to-purple-900/40 z-10" />
         <img
           src="/contact us.jpg"
           alt="Glass Railing System"

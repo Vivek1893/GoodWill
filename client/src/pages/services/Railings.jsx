@@ -167,15 +167,10 @@
 
 // export default Railings;
 
-
-
-
-
 import React, { useState } from "react";
-import {
-  FaCheck,
-} from "react-icons/fa";
+import { FaCheck } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const Railings = () => {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -368,8 +363,7 @@ const Railings = () => {
             Railings
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto mt-4">
-            Explore our range of modern architectural Railings
-            installations.
+            Explore our range of modern architectural Railings installations.
           </p>
         </div>
 
@@ -413,6 +407,15 @@ const Railings = () => {
             </motion.div>
           ))}
         </motion.div>
+        {/* 🔹 View All Projects Button */}
+        <div className="flex justify-center mt-10">
+          <Link
+            to="/projects/project_list"
+            className="px-6 sm:px-8 py-3 text-lg font-semibold rounded-full bg-gradient-to-r from-[#F37021] to-[#001F5F] text-white shadow-lg hover:scale-105 transition-all duration-300"
+          >
+            View All Projects
+          </Link>
+        </div>
       </section>
 
       {/* Image Modal */}

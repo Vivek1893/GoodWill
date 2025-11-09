@@ -140,14 +140,10 @@
 
 // export default Tensile_Fabrics;
 
-
-
-
 import React, { useState } from "react";
-import {
-  FaCheck,
-} from "react-icons/fa";
+import { FaCheck } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const Tensile_Fabrics = () => {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -244,8 +240,8 @@ const Tensile_Fabrics = () => {
             transition={{ delay: 0.3, duration: 0.5 }}
             className="text-base text-white/90 max-w-xl mx-auto mb-8"
           >
-            Premium architectural solutions with innovative Spider Fabrics composite
-            panels
+            Premium architectural solutions with innovative Spider Fabrics
+            composite panels
           </motion.p>
           <motion.div
             initial={{ scaleX: 0 }}
@@ -385,6 +381,15 @@ const Tensile_Fabrics = () => {
             </motion.div>
           ))}
         </motion.div>
+        {/* 🔹 View All Projects Button */}
+        <div className="flex justify-center mt-10">
+          <Link
+            to="/projects/project_list"
+            className="px-6 sm:px-8 py-3 text-lg font-semibold rounded-full bg-gradient-to-r from-[#F37021] to-[#001F5F] text-white shadow-lg hover:scale-105 transition-all duration-300"
+          >
+            View All Projects
+          </Link>
+        </div>
       </section>
 
       {/* Image Modal */}

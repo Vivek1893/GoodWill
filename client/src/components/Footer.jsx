@@ -123,7 +123,7 @@ const Footer = () => {
 
           {/* LOGO */}
           <div className="flex justify-center md:justify-start">
-            <img src="/logo.png" alt="Goodwill Logo" className="w-35 sm:w-40 md:w-46 lg:w-54 h-auto" />
+            <img src="/logo.png" alt="Goodwill Logo" className="w-5 sm:w-10 md:w-16 lg:w-30 h-auto" />
           </div>
 
           {/* MENU LINKS */}

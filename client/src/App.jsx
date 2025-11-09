@@ -84,6 +84,8 @@ function App() {
           <Route path="/projects/Detail_project" element={<Detail_project />} />
           <Route path="/projects/Project_list" element={<Project_list />} />
           <Route path="/projects/detail/:projectId" element={<ProjectDetailDynamic />} />
+          
+          
 
           {/* Components pages */}
           <Route path="/about" element={<About />} />

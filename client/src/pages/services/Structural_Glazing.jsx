@@ -189,16 +189,10 @@
 
 // export default Structural_glazing;
 
-
-
-
-
-
 import React, { useState } from "react";
-import {
-  FaCheck,
-} from "react-icons/fa";
+import { FaCheck } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const Structural_Glazing = () => {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -295,8 +289,8 @@ const Structural_Glazing = () => {
             transition={{ delay: 0.3, duration: 0.5 }}
             className="text-base text-white/90 max-w-xl mx-auto mb-8"
           >
-            Premium architectural solutions with innovative Structural Glazing composite
-            panels
+            Premium architectural solutions with innovative Structural Glazing
+            composite panels
           </motion.p>
           <motion.div
             initial={{ scaleX: 0 }}
@@ -317,7 +311,8 @@ const Structural_Glazing = () => {
             viewport={{ once: true }}
             className="text-3xl md:text-4xl font-bold text-center mb-16 text-gray-900"
           >
-            Why Choose <span className="text-orange-600">Structural Glazing?</span>
+            Why Choose{" "}
+            <span className="text-orange-600">Structural Glazing?</span>
           </motion.h2>
 
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -436,6 +431,15 @@ const Structural_Glazing = () => {
             </motion.div>
           ))}
         </motion.div>
+        {/* 🔹 View All Projects Button */}
+        <div className="flex justify-center mt-10">
+          <Link
+            to="/projects/project_list"
+            className="px-6 sm:px-8 py-3 text-lg font-semibold rounded-full bg-gradient-to-r from-[#F37021] to-[#001F5F] text-white shadow-lg hover:scale-105 transition-all duration-300"
+          >
+            View All Projects
+          </Link>
+        </div>
       </section>
 
       {/* Image Modal */}

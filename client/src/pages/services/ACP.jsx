@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { FaCheck } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const ACPCladding = () => {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -81,24 +82,25 @@ const ACPCladding = () => {
           alt="ACP Cladding"
           className="w-full h-full object-cover"
         />
+
         <div className="absolute inset-0 z-20 flex flex-col items-center justify-center text-center px-4">
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
-            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3 sm:mb-4 tracking-wide"
+            className="text-3xl md:text-3xl font-bold text-white mb-4 tracking-wide"
           >
             <span className="text-white"> ACP </span>{" "}
-            <span className="text-orange-400">/Fundermax</span>
+            <span className="text-orange-400">Fundermax</span>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3, duration: 0.5 }}
-            className="text-sm sm:text-base text-white/90 max-w-xl mx-auto mb-6 sm:mb-8 px-2"
+            className="text-base text-white/90 max-w-xl mx-auto mb-8"
           >
-            Premium architectural solutions with innovative aluminum composite
-            panels
+            Premium architectural solutions with innovative ACP Fundermax
+            composite panels
           </motion.p>
           <motion.div
             initial={{ scaleX: 0 }}
@@ -237,6 +239,16 @@ const ACPCladding = () => {
             </motion.div>
           ))}
         </motion.div>
+
+        {/* 🔹 View All Projects Button */}
+        <div className="flex justify-center mt-10">
+          <Link
+            to="/projects/project_list"
+            className="px-6 sm:px-8 py-3 text-lg font-semibold rounded-full bg-gradient-to-r from-[#F37021] to-[#001F5F] text-white shadow-lg hover:scale-105 transition-all duration-300"
+          >
+            View All Projects
+          </Link>
+        </div>
       </section>
 
       {/* Image Modal */}
