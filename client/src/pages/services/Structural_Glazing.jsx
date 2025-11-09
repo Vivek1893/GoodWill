@@ -275,7 +275,7 @@ const Structural_Glazing = () => {
         </div>
         <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 to-blue-800/60 z-10"></div>
         <img
-          src="/servicesimg/tensile_img/tensile.png"
+          src="/servicesimg/structural_img/Structural-Glazing-side-bg.jpg"
           alt="Structural_Glazing"
           className="w-full h-full object-cover"
         />
