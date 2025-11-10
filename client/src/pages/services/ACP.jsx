@@ -10,7 +10,7 @@ const ACPCladding = () => {
     "Lightweight, rigid, and durable for modern structures.",
     "Ideal for building exteriors & signage with sleek designs.",
     "Weatherproof, fade-resistant & highly economical.",
-    "Available in metallic, wood, and marble finishes.",
+    "Available in metallic, wood,  marble finishes.",
     "Excellent heat & sound insulation properties.",
     "High fire resistance for enhanced safety.",
   ];
