@@ -434,7 +434,7 @@ const Structural_Glazing = () => {
         {/* 🔹 View All Projects Button */}
         <div className="flex justify-center mt-10">
           <Link
-            to="/projects/project_list"
+            to="/projects/detail_project"
             className="px-6 sm:px-8 py-3 text-lg font-semibold rounded-full bg-gradient-to-r from-[#F37021] to-[#001F5F] text-white shadow-lg hover:scale-105 transition-all duration-300"
           >
             View All Projects

@@ -87,9 +87,9 @@ const ContactSection = () => {
             className="h-12 sm:h-16 md:h-20 lg:h-24 w-auto"
           />
         </div>
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/50 to-purple-900/40 z-10" />
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 to-purple-900/40 z-10" />
         <img
-          src="/contact us.jpg"
+          src="/contactus.jpg"
           alt="Glass Railing System"
           className="w-full h-full object-cover"
         />
@@ -101,32 +101,32 @@ const ContactSection = () => {
         </div>
 
         {/* Centered Content */}
-        <div className="absolute inset-0 z-20 flex flex-col items-center justify-center text-center px-4 sm:px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="max-w-3xl"
-          >
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6 tracking-tight">
-              Get In <span className="text-orange-400">Touch</span>
-            </h1>
-            <motion.p
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.3, duration: 0.8 }}
-              className="text-base sm:text-lg md:text-xl lg:text-2xl text-blue-100 mb-6 sm:mb-8 max-w-2xl mx-auto leading-relaxed px-2"
-            >
-              Let's discuss your project and bring your vision to life
-            </motion.p>
-            <motion.div
-              initial={{ scaleX: 0 }}
-              animate={{ scaleX: 1 }}
-              transition={{ delay: 0.6, duration: 1 }}
-              className="w-32 h-1.5 bg-gradient-to-r from-orange-400 to-orange-600 rounded-full mx-auto"
-            ></motion.div>
-          </motion.div>
-        </div>
+        <div className="absolute inset-0 z-20 flex flex-col items-center justify-center text-center px-4">
+                 <motion.h1
+                   initial={{ opacity: 0, y: 20 }}
+                   animate={{ opacity: 1, y: 0 }}
+                   transition={{ duration: 0.7 }}
+                   className="text-3xl md:text-3xl font-bold text-white mb-4 tracking-wide"
+                 >
+                   <span className="text-white"> ACP </span>{" "}
+                   <span className="text-orange-400">Fundermax</span>
+                 </motion.h1>
+                 <motion.p
+                   initial={{ opacity: 0 }}
+                   animate={{ opacity: 1 }}
+                   transition={{ delay: 0.3, duration: 0.5 }}
+                   className="text-base text-white/90 max-w-xl mx-auto mb-8"
+                 >
+                   Premium architectural solutions with innovative ACP Fundermax
+                   composite panels
+                 </motion.p>
+                 <motion.div
+                   initial={{ scaleX: 0 }}
+                   animate={{ scaleX: 1 }}
+                   transition={{ delay: 0.5, duration: 0.8 }}
+                   className="w-24 h-1 bg-gradient-to-r from-orange-400 to-orange-600 rounded-full"
+                 ></motion.div>
+               </div>
 
         {/* Scroll Indicator */}
         {/* <motion.div
