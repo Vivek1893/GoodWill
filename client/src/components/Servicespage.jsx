@@ -1,5 +1,3 @@
-
-
 import React from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
@@ -9,7 +7,7 @@ const ServicesAllInOne = () => {
     {
       icon: (
         <img
-          src="/lo.webp"
+          src="/images/lo.webp"
           alt="ACP Cladding"
           className="h-14 w-14 object-contain"
         />
@@ -23,7 +21,7 @@ const ServicesAllInOne = () => {
     {
       icon: (
         <img
-          src="/lo.webp"
+          src="/images/lo.webp"
           alt="Structural Glazing"
           className="h-14 w-14 object-contain"
         />
@@ -36,7 +34,7 @@ const ServicesAllInOne = () => {
     {
       icon: (
         <img
-          src="/lo.webp"
+          src="/images/lo.webp"
           alt="Stone Cladding"
           className="h-14 w-14 object-contain"
         />
@@ -49,7 +47,7 @@ const ServicesAllInOne = () => {
     {
       icon: (
         <img
-          src="/lo.webp"
+          src="/images/lo.webp"
           alt="Aluminum Windows"
           className="h-14 w-14 object-contain"
         />
@@ -62,7 +60,7 @@ const ServicesAllInOne = () => {
     {
       icon: (
         <img
-          src="/lo.webp"
+          src="/images/lo.webp"
           alt="Railings"
           className="h-14 w-14 object-contain"
         />
@@ -75,7 +73,7 @@ const ServicesAllInOne = () => {
     {
       icon: (
         <img
-          src="/lo.webp"
+          src="/images/lo.webp"
           alt="Skylight"
           className="h-14 w-14 object-contain"
         />
@@ -88,7 +86,7 @@ const ServicesAllInOne = () => {
     {
       icon: (
         <img
-          src="/lo.webp"
+          src="/images/lo.webp"
           alt="MS Structure"
           className="h-14 w-14 object-contain"
         />
@@ -102,7 +100,7 @@ const ServicesAllInOne = () => {
     {
       icon: (
         <img
-          src="/lo.webp"
+          src="/images/lo.webp"
           alt="Tensile Fabrics"
           className="h-14 w-14 object-contain"
         />
@@ -160,8 +158,6 @@ const ServicesAllInOne = () => {
                 </span>
                 <div className="w-8 sm:w-12 h-px bg-gray-300"></div>
               </div>
-
-              
             </motion.div>
 
             <motion.p
@@ -171,7 +167,8 @@ const ServicesAllInOne = () => {
               viewport={{ once: true }}
               className="text-sm sm:text-base md:text-lg text-gray-900 max-w-4xl mx-auto text-center sm:text-left leading-relaxed px-2 -mt-6"
             >
-            Delivering precision-engineered architectural solutions with innovative design and lasting quality.
+              Delivering precision-engineered architectural solutions with
+              innovative design and lasting quality.
             </motion.p>
           </div>
 

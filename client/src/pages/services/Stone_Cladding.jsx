@@ -1,8 +1,6 @@
-
-
 import React, { useState } from "react";
 
-import { FaStar, FaShieldAlt} from "react-icons/fa";
+import { FaStar, FaShieldAlt } from "react-icons/fa";
 import { GiBroom, GiSoundWaves, GiPaintBrush } from "react-icons/gi"; // from game-icons pack
 import { AiOutlineDollar } from "react-icons/ai"; // from Ant Design icons
 
@@ -13,32 +11,31 @@ const Stone_Cladding = () => {
   const [selectedImage, setSelectedImage] = useState(null);
 
   const benefits = [
-  {
-    text: "Premium Natural Look — Achieve a luxurious stone finish that enhances the elegance and aesthetic appeal of any space.",
-    icon: <FaStar className="text-[#F37021] text-xl sm:text-lg" />,
-  },
-  {
-    text: "Lightweight & Cost-Effective — Enjoy the beauty of stone without the heavy weight or high cost of solid stone construction.",
-    icon: <AiOutlineDollar className="text-[#F37021] text-xl sm:text-lg" />,
-  },
-  {
-    text: "Durable & Long-Lasting — Resistant to heat, moisture, and harsh weather conditions, ensuring long-term performance.",
-    icon: <FaShieldAlt className="text-[#F37021] text-xl sm:text-lg" />,
-  },
-  {
-    text: "Low Maintenance — Does not fade, peel, or crack easily, and requires minimal cleaning or upkeep over time.",
-    icon: <GiBroom className="text-[#F37021] text-xl sm:text-lg" />,
-  },
-  {
-    text: "Thermal & Acoustic Insulation — Helps maintain indoor temperature and reduces external noise, improving comfort.",
-    icon: <GiSoundWaves className="text-[#F37021] text-xl sm:text-lg" />,
-  },
-  {
-    text: "Versatile Design Options — Available in various textures, colors, and finishes for both interior and exterior applications.",
-    icon: <GiPaintBrush className="text-[#F37021] text-xl sm:text-lg" />,
-  },
-];
-
+    {
+      text: "Premium Natural Look — Achieve a luxurious stone finish that enhances the elegance and aesthetic appeal of any space.",
+      icon: <FaStar className="text-[#F37021] text-xl sm:text-lg" />,
+    },
+    {
+      text: "Lightweight & Cost-Effective — Enjoy the beauty of stone without the heavy weight or high cost of solid stone construction.",
+      icon: <AiOutlineDollar className="text-[#F37021] text-xl sm:text-lg" />,
+    },
+    {
+      text: "Durable & Long-Lasting — Resistant to heat, moisture, and harsh weather conditions, ensuring long-term performance.",
+      icon: <FaShieldAlt className="text-[#F37021] text-xl sm:text-lg" />,
+    },
+    {
+      text: "Low Maintenance — Does not fade, peel, or crack easily, and requires minimal cleaning or upkeep over time.",
+      icon: <GiBroom className="text-[#F37021] text-xl sm:text-lg" />,
+    },
+    {
+      text: "Thermal & Acoustic Insulation — Helps maintain indoor temperature and reduces external noise, improving comfort.",
+      icon: <GiSoundWaves className="text-[#F37021] text-xl sm:text-lg" />,
+    },
+    {
+      text: "Versatile Design Options — Available in various textures, colors, and finishes for both interior and exterior applications.",
+      icon: <GiPaintBrush className="text-[#F37021] text-xl sm:text-lg" />,
+    },
+  ];
 
   const projectData = [
     {
@@ -96,7 +93,7 @@ const Stone_Cladding = () => {
       <section className="relative w-full h-screen max-h-[75vh] overflow-hidden">
         <div className="absolute top-6 right-6 z-30">
           <img
-            src="/logo1.webp"
+            src="/images/logo1.webp"
             alt="The Goodwill Facades Logo"
             className="h-18 md:h-25 w-auto"
           />

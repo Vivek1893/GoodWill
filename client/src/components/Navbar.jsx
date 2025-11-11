@@ -1,5 +1,3 @@
-
-
 import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { FaFacebookF, FaInstagram, FaWhatsapp } from "react-icons/fa";
@@ -72,7 +70,7 @@ const Navbar = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center">
             <img
-              src="/logo1.webp"
+              src="/images/logo1.webp"
               alt="Goodwill Facade"
               className="h-8 sm:h-10 md:h-12 w-auto transition-all duration-300"
             />

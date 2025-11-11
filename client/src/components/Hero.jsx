@@ -1,5 +1,3 @@
-
-
 import React, { useState, useEffect, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -10,37 +8,37 @@ const Hero = () => {
   const slides = useMemo(
     () => [
       {
-        leftImage: "/hero10.webp",
-        rightImage: "/hero9.webp",
-        mobileImage: "/hero2.webp",
+        leftImage: "/images/hero10.webp",
+        rightImage: "/images/hero9.webp",
+        mobileImage: "/images/hero2.webp",
         leftTitle: "VIMAL LAXMI - BORIVALI(W) ",
         rightTitle: "SHREE VARDHMAN - BORIVALI(W)",
       },
       {
-        leftImage: "/hero2.webp",
-        rightImage: "/hero1.webp",
-        mobileImage: "/hero2.webp",
+        leftImage: "/images/hero2.webp",
+        rightImage: "/images/hero1.webp",
+        mobileImage: "/images/hero2.webp",
         leftTitle: "HUM SOLARIS - KANDIVALI(W) ",
         rightTitle: "USD -UNIQUE REGALIA - BORIVALI(W)",
       },
       {
-        leftImage: "/hero4.webp",
-        rightImage: "/hero5.webp",
-        mobileImage: "/hero5.webp",
+        leftImage: "/images/hero4.webp",
+        rightImage: "/images/hero5.webp",
+        mobileImage: "/images/hero5.webp",
         leftTitle: "GOYAL ASPIRE - KANDIVALI(W)",
         rightTitle: "AMBIT PRIMORIS - KANDIVALI(W)",
       },
       {
-        leftImage: "/hero3.webp",
-        rightImage: "/hero7.webp",
-        mobileImage: "/hero3.webp",
+        leftImage: "/images/hero3.webp",
+        rightImage: "/images/hero7.webp",
+        mobileImage: "/images/hero3.webp",
         leftTitle: "ZIRCON ARENA - PAL - SURAT",
         rightTitle: "CANAL POINT - SURAT",
       },
       {
         leftImage: "/hero6.jpg",
-        rightImage: "/hero8.webp",
-        mobileImage: "/hero8.webp",
+        rightImage: "/images/hero8.webp",
+        mobileImage: "/images/hero8.webp",
         leftTitle: "SKY RISE - SURAT",
         rightTitle: "VELOCITY - PAL - SURAT",
       },
@@ -125,14 +123,14 @@ const Hero = () => {
         {/* ✅ Logo Top Right */}
         <div className="absolute top-4 md:top-6 right-4 md:right-6 z-30">
           <img
-            src="/logo1.webp"
+            src="/images/logo1.webp"
             alt="The Goodwill Facades"
             className="h-12 md:h-16 lg:h-20 w-auto"
           />
         </div>
 
         {/* Right Half */}
-         <div className="w-1/2 h-full flex flex-col items-center relative overflow-hidden group">
+        <div className="w-1/2 h-full flex flex-col items-center relative overflow-hidden group">
           {/* IMAGE */}
           <AnimatePresence mode="popLayout">
             <motion.div
@@ -184,20 +182,50 @@ const Hero = () => {
 
       {/* Navigation Arrows */}
       <div className="absolute bottom-16 md:bottom-20 left-1/2 transform -translate-x-1/2 z-30 flex items-center space-x-8">
-        <button onClick={prevSlide} className="text-white hover:text-[#F37021] transition-colors">
+        <button
+          onClick={prevSlide}
+          className="text-white hover:text-[#F37021] transition-colors"
+        >
           <div className="flex items-center space-x-2 bg-black/60 backdrop-blur-sm px-4 py-3 rounded-full border border-white/30">
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+            <svg
+              className="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M15 19l-7-7 7-7"
+              />
             </svg>
-            <span className="text-sm hidden sm:block font-medium tracking-wider">PREV</span>
+            <span className="text-sm hidden sm:block font-medium tracking-wider">
+              PREV
+            </span>
           </div>
         </button>
 
-        <button onClick={nextSlide} className="text-white hover:text-[#F37021] transition-colors">
+        <button
+          onClick={nextSlide}
+          className="text-white hover:text-[#F37021] transition-colors"
+        >
           <div className="flex items-center space-x-2 bg-black/60 backdrop-blur-sm px-4 py-3 rounded-full border border-white/30">
-            <span className="text-sm hidden sm:block font-medium tracking-wider">NEXT</span>
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            <span className="text-sm hidden sm:block font-medium tracking-wider">
+              NEXT
+            </span>
+            <svg
+              className="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M9 5l7 7-7 7"
+              />
             </svg>
           </div>
         </button>
@@ -211,7 +239,9 @@ const Hero = () => {
               key={index}
               onClick={() => setCurrentSlide(index)}
               className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                index === currentSlide ? "bg-[#F37021] scale-110" : "bg-white/50 hover:bg-white/80"
+                index === currentSlide
+                  ? "bg-[#F37021] scale-110"
+                  : "bg-white/50 hover:bg-white/80"
               }`}
             />
           ))}

@@ -1,6 +1,3 @@
-
-
-
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -52,18 +49,18 @@ const Residential = () => {
 
   return (
     <div className="w-full min-h-screen -mt-5 bg-gray-50">
-    {/* Logo Branding - Top Right */}
-        <div className="absolute top-25 right-6 z-30">
-          <img
-            src="/logo1.webp" 
-            alt="The Goodwill Facades Logo"
-            className="h-18 md:h-25  w-auto"
-          />
-        </div>
+      {/* Logo Branding - Top Right */}
+      <div className="absolute top-25 right-6 z-30">
+        <img
+          src="/images/logo1.webp"
+          alt="The Goodwill Facades Logo"
+          className="h-18 md:h-25  w-auto"
+        />
+      </div>
       {/* Top banner */}
       <div className="relative w-full h-[45vh] sm:h-[60vh] md:h-[75vh]">
         <motion.img
-          src="/project.png"
+          src="/images/project.png"
           alt="Projects"
           className="w-full h-full object-cover"
           loading="eager"
@@ -77,7 +74,9 @@ const Residential = () => {
       <div className="max-w-7xl mx-auto px-4 py-12">
         {projects.length === 0 ? (
           <div className="text-center py-12">
-            <p className="text-gray-600 text-lg">No completed projects found.</p>
+            <p className="text-gray-600 text-lg">
+              No completed projects found.
+            </p>
             <p className="text-gray-500">
               Please add some projects in Contentful with status "completed".
             </p>

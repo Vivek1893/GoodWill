@@ -1,5 +1,3 @@
-
-
 import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -10,28 +8,28 @@ const Projects = () => {
     {
       id: 1,
       title: "SHIVEN ARISE",
-      img: "./SHIVEN ARISE.webp",
+      img: "./images/SHIVEN ARISE.webp",
       path: "/projects/Detail_project/GodrejPlatinum",
     },
     {
       id: 2,
       title: "ATHARV HEIGHTS",
-      img: "./project1.jpg",
+      img: "./images/project1.jpg",
     },
     {
       id: 3,
       title: "MILESTONE INDIGO",
-      img: "./project3.jpg",
+      img: "./images/project3.jpg",
     },
     {
       id: 4,
       title: "EVOQ",
-      img: "./project4.png",
+      img: "./images/project4.png",
     },
     {
       id: 5,
       title: "VIVIANA VESU",
-      img: "./project2.png",
+      img: "./images/project2.png",
     },
   ];
 

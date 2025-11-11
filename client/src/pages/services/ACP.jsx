@@ -1,7 +1,3 @@
-
-
-
-
 import React, { useState } from "react";
 import {
   FaCheck,
@@ -101,7 +97,7 @@ const ACPCladding = () => {
       <section className="relative w-full h-[50vh] sm:h-[60vh] md:h-screen max-h-[75vh] overflow-hidden">
         <div className="absolute top-4 sm:top-6 right-4 sm:right-6 z-30">
           <img
-            src="/logo1.webp"
+            src="/images/logo1.webp"
             alt="The Goodwill Facades Logo"
             className="h-12 sm:h-16 md:h-20 lg:h-24 w-auto"
           />

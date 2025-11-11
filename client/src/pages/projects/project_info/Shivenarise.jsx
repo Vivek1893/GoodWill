@@ -9,7 +9,7 @@ import {
   FaChevronDown,
   FaChevronUp,
   FaExpand,
-  FaInfoCircle
+  FaInfoCircle,
 } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -18,18 +18,42 @@ const shivenarise = () => {
   const [selectedImage, setSelectedImage] = useState(null);
 
   const designImages = [
-   "/project_detail_img/SHIVEN ARISE.webp",
+    "/project_detail_img/images/SHIVEN ARISE.webp",
     "/project_detail_img/SHIVEN ARISE11.webp",
-    "/project_detail_img/SHIVEN ARISE.webp",
+    "/project_detail_img/images/SHIVEN ARISE.webp",
   ];
 
   const features = [
-    { icon: <FaTools />, title: "EASY INSTALLATION", description: "Quick setup process with minimal tools required" },
-    { icon: <FaBroom />, title: "EASY CLEANING", description: "Non-porous surface resists stains and wipes clean easily" },
-    { icon: <FaLeaf />, title: "MAINTENANCE FREE", description: "No periodic treatments or special care needed" },
-    { icon: <FaCloudSun />, title: "WEATHER PROOF", description: "Withstands extreme temperatures and conditions" },
-    { icon: <FaRecycle />, title: "100% RECYCLABLE", description: "Environmentally friendly and sustainable material" },
-    { icon: <FaShieldAlt />, title: "CORROSION RESISTANCE", description: "Special coating prevents rust and deterioration" },
+    {
+      icon: <FaTools />,
+      title: "EASY INSTALLATION",
+      description: "Quick setup process with minimal tools required",
+    },
+    {
+      icon: <FaBroom />,
+      title: "EASY CLEANING",
+      description: "Non-porous surface resists stains and wipes clean easily",
+    },
+    {
+      icon: <FaLeaf />,
+      title: "MAINTENANCE FREE",
+      description: "No periodic treatments or special care needed",
+    },
+    {
+      icon: <FaCloudSun />,
+      title: "WEATHER PROOF",
+      description: "Withstands extreme temperatures and conditions",
+    },
+    {
+      icon: <FaRecycle />,
+      title: "100% RECYCLABLE",
+      description: "Environmentally friendly and sustainable material",
+    },
+    {
+      icon: <FaShieldAlt />,
+      title: "CORROSION RESISTANCE",
+      description: "Special coating prevents rust and deterioration",
+    },
   ];
 
   const openImageModal = (img) => {
@@ -52,7 +76,7 @@ const shivenarise = () => {
         >
           SHIVEN <span className="text-blue-600">ARISE</span>
         </motion.h1>
-        <motion.p 
+        <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3, duration: 0.5 }}
@@ -72,15 +96,17 @@ const shivenarise = () => {
       <div className="flex flex-col lg:flex-row items-start justify-center gap-8 px-4 md:px-8 lg:px-16 max-w-7xl mx-auto mb-20">
         {/* Left: Image Gallery */}
         <div className="w-full lg:w-1/2 flex flex-col">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
             className="relative rounded-xl overflow-hidden shadow-lg mb-4 cursor-pointer"
-            onClick={() => openImageModal( "/project_detail_img/SHIVEN ARISE.webp")}
+            onClick={() =>
+              openImageModal("/project_detail_img/images/SHIVEN ARISE.webp")
+            }
           >
             <img
-              src= "/project_detail_img/SHIVEN ARISE.webp"
+              src="/project_detail_img/images/SHIVEN ARISE.webp"
               alt="Godrej Platinum"
               className="w-full h-180 object-cover transition-all duration-300 hover:scale-105"
             />
@@ -88,11 +114,11 @@ const shivenarise = () => {
               <FaExpand className="text-gray-700 text-sm" />
             </div>
           </motion.div>
-          
+
           {/* Thumbnail Gallery */}
           <div className="grid grid-cols-3 gap-3">
             {designImages.map((img, i) => (
-              <motion.div 
+              <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -120,7 +146,7 @@ const shivenarise = () => {
           {/* Info Panel Header */}
           <div className="bg-gradient-to-r from-blue-600 to-blue-800 text-white p-5 flex justify-between items-center">
             <h5 className="text-xl  font-semibold">PROJECT DETAILS</h5>
-            <button 
+            <button
               onClick={() => setShowInfo(!showInfo)}
               className="flex items-center text-sm bg-white/20 hover:bg-white/30 px-3 py-1 rounded-md transition-colors"
             >
@@ -137,7 +163,7 @@ const shivenarise = () => {
               )}
             </button>
           </div>
-          
+
           {/* Basic Info */}
           <div className="p-5 border-b border-gray-100">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -147,7 +173,9 @@ const shivenarise = () => {
                   <p className="text-gray-900 font-semibold">Godrej Platinum</p>
                 </div>
                 <div>
-                  <h5 className="font-medium text-gray-500 text-sm">Location</h5>
+                  <h5 className="font-medium text-gray-500 text-sm">
+                    Location
+                  </h5>
                   <p className="text-gray-900">Mumbai, India</p>
                 </div>
                 <div>
@@ -155,10 +183,12 @@ const shivenarise = () => {
                   <p className="text-gray-900">Godrej & Boyce MFG. Co. Ltd.</p>
                 </div>
               </div>
-              
+
               <div className="space-y-4">
                 <div>
-                  <h5 className="font-medium text-gray-500 text-sm">Architect</h5>
+                  <h5 className="font-medium text-gray-500 text-sm">
+                    Architect
+                  </h5>
                   <p className="text-gray-900">T. Khareghat & Associates</p>
                 </div>
                 <div>
@@ -166,13 +196,15 @@ const shivenarise = () => {
                   <p className="text-gray-900">Residential</p>
                 </div>
                 <div>
-                  <h5 className="font-medium text-gray-500 text-sm">Total Area</h5>
+                  <h5 className="font-medium text-gray-500 text-sm">
+                    Total Area
+                  </h5>
                   <p className="text-gray-900">60,000 Sqm</p>
                 </div>
               </div>
             </div>
           </div>
-          
+
           {/* Expandable Detailed Info */}
           <AnimatePresence>
             {showInfo && (
@@ -185,15 +217,19 @@ const shivenarise = () => {
               >
                 <div className="p-5 space-y-5">
                   <div>
-                    <h5 className="font-medium text-gray-500 text-sm mb-2">Consultant</h5>
+                    <h5 className="font-medium text-gray-500 text-sm mb-2">
+                      Consultant
+                    </h5>
                     <p className="text-gray-900">Saicone</p>
                   </div>
-                  
+
                   <div>
-                    <h5 className="font-medium text-gray-500 text-sm mb-2">Floors</h5>
+                    <h5 className="font-medium text-gray-500 text-sm mb-2">
+                      Floors
+                    </h5>
                     <p className="text-gray-900">28</p>
                   </div>
-                  
+
                   <div>
                     <h5 className="font-medium text-gray-700 mb-2 flex items-center">
                       <FaInfoCircle className="mr-2 text-blue-500" />
@@ -214,8 +250,6 @@ const shivenarise = () => {
           </AnimatePresence>
         </motion.div>
       </div>
-
-      
 
       {/* Design Gallery */}
       {/* <section className="py-16 px-4 md:px-8 bg-gray-50">
@@ -268,7 +302,6 @@ const shivenarise = () => {
         </div>
       </section> */}
 
-     
       <AnimatePresence>
         {selectedImage && (
           <motion.div
@@ -294,8 +327,19 @@ const shivenarise = () => {
                 onClick={closeImageModal}
                 className="absolute top-4 right-4 bg-white/10 hover:bg-white/20 text-white p-2 rounded-full backdrop-blur-sm transition-colors"
               >
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M6 18L18 6M6 6l12 12"
+                  />
                 </svg>
               </button>
             </motion.div>
@@ -305,7 +349,7 @@ const shivenarise = () => {
       {/* Features Section */}
       <div className="bg-white py-16 px-4 md:px-8">
         <div className="max-w-7xl mx-auto">
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
@@ -314,16 +358,17 @@ const shivenarise = () => {
           >
             Product <span className="text-blue-600">Features</span>
           </motion.h2>
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ delay: 0.2, duration: 0.5 }}
             viewport={{ once: true }}
             className="text-center text-gray-600 max-w-3xl mx-auto mb-12"
           >
-            Engineered for excellence with premium materials and innovative design
+            Engineered for excellence with premium materials and innovative
+            design
           </motion.p>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {features.map((feature, i) => (
               <motion.div
@@ -340,7 +385,9 @@ const shivenarise = () => {
                     <div className="text-blue-600 text-xl">{feature.icon}</div>
                   </div>
                 </div>
-                <h3 className="font-semibold text-gray-900 text-lg mb-2">{feature.title}</h3>
+                <h3 className="font-semibold text-gray-900 text-lg mb-2">
+                  {feature.title}
+                </h3>
                 <p className="text-gray-600 text-sm">{feature.description}</p>
               </motion.div>
             ))}

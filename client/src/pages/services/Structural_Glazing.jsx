@@ -1,8 +1,3 @@
-
-
-
-
-
 import React, { useState } from "react";
 import {
   FaCheck,
@@ -82,7 +77,12 @@ const Structural_Glazing = () => {
 
   const cardVariants = {
     hidden: { opacity: 0, scale: 0.9, y: 40 },
-    show: { opacity: 1, scale: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+    show: {
+      opacity: 1,
+      scale: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut" },
+    },
   };
 
   const openImageModal = (img) => setSelectedImage(img);
@@ -93,7 +93,11 @@ const Structural_Glazing = () => {
       {/* 🔹 Hero Section */}
       <section className="relative w-full h-screen max-h-[75vh] overflow-hidden">
         <div className="absolute top-6 right-6 z-30">
-          <img src="/logo1.webp" alt="Logo" className="h-18 md:h-25 w-auto" />
+          <img
+            src="/images/logo1.webp"
+            alt="Logo"
+            className="h-18 md:h-25 w-auto"
+          />
         </div>
         <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 to-blue-800/60 z-10"></div>
         <img
@@ -117,7 +121,8 @@ const Structural_Glazing = () => {
             transition={{ delay: 0.3, duration: 0.5 }}
             className="text-base text-white/90 max-w-xl mx-auto mb-8"
           >
-            Premium architectural solutions with innovative Structural Glazing composite panels
+            Premium architectural solutions with innovative Structural Glazing
+            composite panels
           </motion.p>
           <motion.div
             initial={{ scaleX: 0 }}
@@ -138,7 +143,8 @@ const Structural_Glazing = () => {
             viewport={{ once: true }}
             className="text-3xl md:text-4xl font-bold text-center mb-16 text-gray-900"
           >
-            Why Choose <span className="text-orange-600">Structural Glazing?</span>
+            Why Choose{" "}
+            <span className="text-orange-600">Structural Glazing?</span>
           </motion.h2>
 
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -162,7 +168,9 @@ const Structural_Glazing = () => {
                   <div className="bg-blue-100 p-2 rounded-full mr-4 mt-1 flex-shrink-0">
                     {benefit.icon}
                   </div>
-                  <p className="text-gray-700 text-base sm:text-xl">{benefit.text}</p>
+                  <p className="text-gray-700 text-base sm:text-xl">
+                    {benefit.text}
+                  </p>
                 </motion.div>
               ))}
             </motion.div>
@@ -198,7 +206,8 @@ const Structural_Glazing = () => {
           <h2
             className="text-3xl md:text-4xl font-bold tracking-tight leading-tight mb-4"
             style={{
-              background: "linear-gradient(90deg, #E86C0C 0%, #001F5F 70%, #C4C4C4 100%)",
+              background:
+                "linear-gradient(90deg, #E86C0C 0%, #001F5F 70%, #C4C4C4 100%)",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
               backgroundClip: "text",
@@ -208,7 +217,8 @@ const Structural_Glazing = () => {
             Structural Glazing
           </h2>
           <p className="text-lg text-gray-900 max-w-2xl mx-auto mt-4">
-            Explore our range of modern architectural Structural Glazing installations.
+            Explore our range of modern architectural Structural Glazing
+            installations.
           </p>
         </div>
 
@@ -288,4 +298,3 @@ const Structural_Glazing = () => {
 };
 
 export default Structural_Glazing;
-

@@ -1,14 +1,7 @@
-
-
-
-
-
-
 import React from "react";
 import { motion } from "framer-motion";
 
 const About = () => {
-  
   return (
     <>
       {/* 🔹 About Banner */}
@@ -16,15 +9,15 @@ const About = () => {
         {/* Logo Branding - Top Right */}
         <div className="absolute top-4 sm:top-6 right-4 sm:right-6 z-30">
           <img
-            src="/logo.png" 
+            src="/images/logo1.webp"
             alt="The Goodwill Facades Logo"
             className="h-12 sm:h-16 md:h-20 lg:h-24 w-auto"
           />
         </div>
-        
+
         <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 to-blue-800/60 z-10"></div>
         <img
-          src="/project7.webp"
+          src="/images/project7.webp"
           alt="ACP Cladding"
           className="w-full h-full object-cover"
         />
@@ -61,7 +54,7 @@ const About = () => {
           <div className="w-full lg:w-1/2 flex justify-center order-1 md:order-1 lg:order-1">
             <div className="relative group w-full max-w-md">
               <img
-                src="/Structural-Glazing-Works.webp"
+                src="/images/Structural-Glazing-Works.webp"
                 alt="Who We Are"
                 className="rounded-xl sm:rounded-2xl object-cover w-full h-auto"
               />
@@ -159,12 +152,12 @@ const About = () => {
             {/* Right Images */}
             <div className="grid grid-cols-2 gap-3 sm:gap-4 md:gap-6">
               <img
-                src="/ourstory1.jpg"
+                src="/images/ourstory1.jpg"
                 alt="Team discussion"
                 className="object-cover w-full h-32 sm:h-40 md:h-64 lg:h-80 xl:h-[400px] rounded-tl-2xl sm:rounded-tl-3xl md:rounded-tl-4xl rounded-br-2xl sm:rounded-br-3xl md:rounded-br-4xl"
               />
               <img
-                src="/ourstory2.jpg"
+                src="/images/ourstory2.jpg"
                 alt="Financial planning meeting"
                 className="object-cover w-full h-32 sm:h-40 md:h-64 lg:h-80 xl:h-[400px] mt-4 sm:mt-6 md:mt-12 lg:mt-20 rounded-tl-2xl sm:rounded-tl-3xl md:rounded-tl-4xl rounded-br-2xl sm:rounded-br-3xl md:rounded-br-4xl"
               />
@@ -180,7 +173,7 @@ const About = () => {
             {/* Vision */}
             <div className="space-y-4 sm:space-y-6 md:col-span-2 lg:col-span-1">
               <img
-                src="/Our-Vision.jpg"
+                src="/images/Our-Vision.jpg"
                 alt="Vision"
                 className="w-full h-40 sm:h-48 md:h-56 lg:h-64 xl:h-72 object-cover shadow-md rounded-tl-2xl sm:rounded-tl-3xl md:rounded-tl-4xl rounded-br-2xl sm:rounded-br-3xl md:rounded-br-4xl"
               />
@@ -198,7 +191,7 @@ const About = () => {
             {/* Mission */}
             <div className="space-y-4 sm:space-y-6 md:col-span-2 lg:col-span-1 md:order-last lg:order-none">
               <img
-                src="/ourmission.jpg"
+                src="/images/ourmission.jpg"
                 alt="Mission"
                 className="w-full h-40 sm:h-48 md:h-56 lg:h-64 xl:h-72 object-cover shadow-md rounded-tl-2xl sm:rounded-tl-3xl md:rounded-tl-4xl rounded-br-2xl sm:rounded-br-3xl md:rounded-br-4xl"
               />
@@ -216,7 +209,7 @@ const About = () => {
             {/* Core Values */}
             <div className="space-y-4 sm:space-y-6 md:col-span-2 lg:col-span-1">
               <img
-                src="/ourvalue.jpg"
+                src="/images/ourvalue.jpg"
                 alt="Core Values"
                 className="w-full h-40 sm:h-48 md:h-56 lg:h-64 xl:h-72 object-cover shadow-md rounded-tl-2xl sm:rounded-tl-3xl md:rounded-tl-4xl rounded-br-2xl sm:rounded-br-3xl md:rounded-br-4xl"
               />

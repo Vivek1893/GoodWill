@@ -1,8 +1,3 @@
-
-
-
-
-
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { getProjects } from "../../utils/contentful";
@@ -31,13 +26,12 @@ const Projects = () => {
 
   return (
     <div className="w-full">
-
       {/* 🔹 Hero Section (unchanged / original) */}
       <section className="relative w-full h-[50vh] sm:h-[60vh] md:h-screen max-h-[75vh] -mt-8 overflow-hidden">
         {/* Logo Branding - Top Right */}
         <div className="absolute top-4 sm:top-6 right-4 sm:right-6 z-30">
           <img
-            src="/logo1.webp"
+            src="/images/logo1.webp"
             alt="The Goodwill Facades Logo"
             className="h-12 sm:h-16 md:h-20 lg:h-24 w-auto"
           />
@@ -46,36 +40,36 @@ const Projects = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 to-blue-800/60 z-10"></div>
 
         <img
-          src="/project.webp"
+          src="/images/project.webp"
           alt="ACP Cladding"
           className="w-full h-full object-cover"
         />
 
-         <div className="absolute inset-0 z-20 flex flex-col items-center justify-center text-center px-4">
-                  <motion.h1
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.7 }}
-                    className="text-3xl md:text-3xl font-bold text-white mb-4 tracking-wide"
-                  >
-                    <span className="text-white"> Project </span>{" "}
-                    <span className="text-orange-400">Lists</span>
-                  </motion.h1>
-                  <motion.p
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ delay: 0.3, duration: 0.5 }}
-                    className="text-base text-white/90 max-w-xl mx-auto mb-8"
-                  >
-                    Find here our all lastest projects
-                  </motion.p>
-                  <motion.div
-                    initial={{ scaleX: 0 }}
-                    animate={{ scaleX: 1 }}
-                    transition={{ delay: 0.5, duration: 0.8 }}
-                    className="w-24 h-1 bg-gradient-to-r from-orange-400 to-orange-600 rounded-full"
-                  ></motion.div>
-                </div>
+        <div className="absolute inset-0 z-20 flex flex-col items-center justify-center text-center px-4">
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7 }}
+            className="text-3xl md:text-3xl font-bold text-white mb-4 tracking-wide"
+          >
+            <span className="text-white"> Project </span>{" "}
+            <span className="text-orange-400">Lists</span>
+          </motion.h1>
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.3, duration: 0.5 }}
+            className="text-base text-white/90 max-w-xl mx-auto mb-8"
+          >
+            Find here our all lastest projects
+          </motion.p>
+          <motion.div
+            initial={{ scaleX: 0 }}
+            animate={{ scaleX: 1 }}
+            transition={{ delay: 0.5, duration: 0.8 }}
+            className="w-24 h-1 bg-gradient-to-r from-orange-400 to-orange-600 rounded-full"
+          ></motion.div>
+        </div>
       </section>
 
       {/* 🔹 Ongoing Projects */}
@@ -84,7 +78,9 @@ const Projects = () => {
           <div className="flex items-center justify-center py-12">
             <div className="text-center">
               <div className="animate-spin rounded-full h-10 w-10 sm:h-12 sm:w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
-              <p className="text-gray-600 text-sm sm:text-base">Loading projects...</p>
+              <p className="text-gray-600 text-sm sm:text-base">
+                Loading projects...
+              </p>
             </div>
           </div>
         ) : error ? (
@@ -100,7 +96,9 @@ const Projects = () => {
           </div>
         ) : projectData.length === 0 ? (
           <div className="text-center py-12">
-            <p className="text-gray-600 text-base sm:text-lg">No ongoing projects found.</p>
+            <p className="text-gray-600 text-base sm:text-lg">
+              No ongoing projects found.
+            </p>
             <p className="text-gray-500 text-sm sm:text-base">
               Please add some projects in Contentful with status "ongoing".
             </p>

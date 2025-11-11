@@ -18,35 +18,35 @@ const SearchBar = () => {
     {
       id: "static-1",
       name: "SHIVEN ARISE",
-      img: "./project_detail_img/SHIVEN ARISE.webp",
+      img: "./project_detail_img/images/SHIVEN ARISE.webp",
       path: "/projects/shivenarise",
       status: "completed",
     },
     {
       id: "static-2",
       name: "ATHARV HEIGHTS",
-      img: "./project1.jpg",
+      img: "./images/project1.jpg",
       path: "/projects",
       status: "completed",
     },
     {
       id: "static-3",
       name: "MILESTONE INDIGO",
-      img: "./project3.jpg",
+      img: "./images/project3.jpg",
       path: "/projects",
       status: "completed",
     },
     {
       id: "static-4",
       name: "EVOQ",
-      img: "./project4.png",
+      img: "./images/project4.png",
       path: "/projects",
       status: "completed",
     },
     {
       id: "static-5",
       name: "VIVIANA VESU",
-      img: "./project2.png",
+      img: "./images/project2.png",
       path: "/projects/viviana",
       status: "completed",
     },
@@ -110,7 +110,9 @@ const SearchBar = () => {
         project.builder,
         project.subType,
         project.quantity,
-        typeof project.projectLocation === "string" ? project.projectLocation : "",
+        typeof project.projectLocation === "string"
+          ? project.projectLocation
+          : "",
       ]
         .filter(Boolean)
         .join(" ")
@@ -247,16 +249,23 @@ const SearchBar = () => {
       )}
 
       {/* No Results Message */}
-      {isOpen && searchQuery.trim().length > 0 && searchResults.length === 0 && !isLoading && (
-        <div
-          ref={resultsRef}
-          className="absolute top-full mt-2 left-0 w-72 sm:w-80 md:w-96 bg-white rounded-lg shadow-2xl border-2 border-[#0B3558] z-[60] p-4"
-        >
-          <p className="text-sm text-gray-600 text-center">
-            No projects found matching "<span className="font-semibold text-[#0B3558]">{searchQuery}</span>"
-          </p>
-        </div>
-      )}
+      {isOpen &&
+        searchQuery.trim().length > 0 &&
+        searchResults.length === 0 &&
+        !isLoading && (
+          <div
+            ref={resultsRef}
+            className="absolute top-full mt-2 left-0 w-72 sm:w-80 md:w-96 bg-white rounded-lg shadow-2xl border-2 border-[#0B3558] z-[60] p-4"
+          >
+            <p className="text-sm text-gray-600 text-center">
+              No projects found matching "
+              <span className="font-semibold text-[#0B3558]">
+                {searchQuery}
+              </span>
+              "
+            </p>
+          </div>
+        )}
 
       {/* Loading State */}
       {isLoading && searchQuery.trim().length > 0 && (
@@ -275,4 +284,3 @@ const SearchBar = () => {
 };
 
 export default SearchBar;
-

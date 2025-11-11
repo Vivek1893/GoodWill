@@ -1,13 +1,11 @@
-
-
 import React, { useState } from "react";
-import { 
-  FaWarehouse, 
-  FaShieldAlt, 
-  FaTools, 
-  FaRupeeSign, 
-  FaClock, 
-  FaFireExtinguisher 
+import {
+  FaWarehouse,
+  FaShieldAlt,
+  FaTools,
+  FaRupeeSign,
+  FaClock,
+  FaFireExtinguisher,
 } from "react-icons/fa";
 
 import { motion, AnimatePresence } from "framer-motion";
@@ -16,33 +14,34 @@ import { Link } from "react-router-dom";
 const MS_Structure = () => {
   const [selectedImage, setSelectedImage] = useState(null);
 
- const benefits = [
-  {
-    text: "High Strength & Stability — MS structures provide superior strength, ensuring strong load-bearing capacity for industrial and commercial projects.",
-    icon: <FaWarehouse className="text-[#F37021] text-xl sm:text-lg" />,
-  },
-  {
-    text: "Durable & Long-Lasting — Designed to withstand harsh weather, heavy loads, and long-term usage with minimal structural fatigue.",
-    icon: <FaShieldAlt className="text-[#F37021] text-xl sm:text-lg" />,
-  },
-  {
-    text: "Flexible Fabrication — Easy to cut, bend, weld, and shape, making it ideal for custom structures and innovative architectural designs.",
-    icon: <FaTools className="text-[#F37021] text-xl sm:text-lg" />,
-  },
-  {
-    text: "Cost-Effective Construction — Affordable material, fast fabrication, and low maintenance help reduce overall project cost.",
-    icon: <FaRupeeSign className="text-[#F37021] text-xl sm:text-lg" />,
-  },
-  {
-    text: "Fast Installation — Prefabricated MS components allow quick on-site assembly and faster project delivery.",
-    icon: <FaClock className="text-[#F37021] text-xl sm:text-lg" />,
-  },
-  {
-    text: "Fire & Termite Resistant — Safer and more reliable than wood structures, offering long-term protection and durability.",
-    icon: <FaFireExtinguisher className="text-[#F37021] text-xl sm:text-lg" />,
-  },
-];
-
+  const benefits = [
+    {
+      text: "High Strength & Stability — MS structures provide superior strength, ensuring strong load-bearing capacity for industrial and commercial projects.",
+      icon: <FaWarehouse className="text-[#F37021] text-xl sm:text-lg" />,
+    },
+    {
+      text: "Durable & Long-Lasting — Designed to withstand harsh weather, heavy loads, and long-term usage with minimal structural fatigue.",
+      icon: <FaShieldAlt className="text-[#F37021] text-xl sm:text-lg" />,
+    },
+    {
+      text: "Flexible Fabrication — Easy to cut, bend, weld, and shape, making it ideal for custom structures and innovative architectural designs.",
+      icon: <FaTools className="text-[#F37021] text-xl sm:text-lg" />,
+    },
+    {
+      text: "Cost-Effective Construction — Affordable material, fast fabrication, and low maintenance help reduce overall project cost.",
+      icon: <FaRupeeSign className="text-[#F37021] text-xl sm:text-lg" />,
+    },
+    {
+      text: "Fast Installation — Prefabricated MS components allow quick on-site assembly and faster project delivery.",
+      icon: <FaClock className="text-[#F37021] text-xl sm:text-lg" />,
+    },
+    {
+      text: "Fire & Termite Resistant — Safer and more reliable than wood structures, offering long-term protection and durability.",
+      icon: (
+        <FaFireExtinguisher className="text-[#F37021] text-xl sm:text-lg" />
+      ),
+    },
+  ];
 
   const projectData = [
     {
@@ -100,7 +99,7 @@ const MS_Structure = () => {
       <section className="relative w-full h-screen max-h-[75vh] overflow-hidden">
         <div className="absolute top-6 right-6 z-30">
           <img
-            src="/logo1.webp"
+            src="/images/logo1.webp"
             alt="The Goodwill Facades Logo"
             className="h-18 md:h-25 w-auto"
           />

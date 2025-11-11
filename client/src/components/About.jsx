@@ -7,7 +7,6 @@ const AboutUs = () => {
     <section className="w-full bg-white">
       {/* 🔹 About Company Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 md:py-16 lg:py-20 grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 md:gap-16 lg:gap-24 items-center">
-        
         {/* Left Side - Images */}
         <motion.div
           className="relative w-full flex justify-center md:justify-start"
@@ -17,7 +16,7 @@ const AboutUs = () => {
           viewport={{ once: true }}
         >
           <motion.img
-            src="./Structural-Glazing-Works.webp"
+            src="./images/Structural-Glazing-Works.webp"
             alt="Roof House"
             className="shadow-lg h-[250px] sm:h-[300px] md:h-[350px] lg:h-[450px] w-full max-w-[600px] object-cover transition-all duration-300 hover:scale-105"
             whileHover={{ scale: 1.05 }}
@@ -46,8 +45,8 @@ const AboutUs = () => {
             ABOUT US
           </p>
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-6">
-            Trusted Local <br className="hidden sm:block" /> Construction Partner in{" "}
-            <span className="text-orange-500">India.</span>
+            Trusted Local <br className="hidden sm:block" /> Construction
+            Partner in <span className="text-orange-500">India.</span>
           </h2>
           <p className="text-sm sm:text-base md:text-lg text-left text-gray-900 mb-6 sm:mb-8">
             THE GOODWILL FACADE is a specialist Facade Design & Engineering
