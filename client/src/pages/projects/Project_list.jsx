@@ -184,24 +184,31 @@ const Projects = () => {
           className="w-full h-full object-cover"
         />
 
-        <div className="absolute inset-0 z-20 flex flex-col items-center justify-center text-center px-4">
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7 }}
-            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3 sm:mb-4 tracking-wide"
-          >
-            <span className="text-white"> Project </span>{" "}
-            <span className="text-orange-400">Lists</span>
-          </motion.h1>
-
-          <motion.div
-            initial={{ scaleX: 0 }}
-            animate={{ scaleX: 1 }}
-            transition={{ delay: 0.5, duration: 0.8 }}
-            className="w-24 h-1 bg-gradient-to-r from-orange-400 to-orange-600 rounded-full"
-          ></motion.div>
-        </div>
+         <div className="absolute inset-0 z-20 flex flex-col items-center justify-center text-center px-4">
+                  <motion.h1
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.7 }}
+                    className="text-3xl md:text-3xl font-bold text-white mb-4 tracking-wide"
+                  >
+                    <span className="text-white"> Project </span>{" "}
+                    <span className="text-orange-400">Lists</span>
+                  </motion.h1>
+                  <motion.p
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 0.3, duration: 0.5 }}
+                    className="text-base text-white/90 max-w-xl mx-auto mb-8"
+                  >
+                    Find here our all lastest projects
+                  </motion.p>
+                  <motion.div
+                    initial={{ scaleX: 0 }}
+                    animate={{ scaleX: 1 }}
+                    transition={{ delay: 0.5, duration: 0.8 }}
+                    className="w-24 h-1 bg-gradient-to-r from-orange-400 to-orange-600 rounded-full"
+                  ></motion.div>
+                </div>
       </section>
 
       {/* 🔹 Ongoing Projects */}

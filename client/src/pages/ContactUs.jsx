@@ -76,7 +76,10 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="bg-gradient-to-br from-gray-50 -mt-8 to-blue-50/30 ">
+    <section
+      id="contact"
+      className="bg-gradient-to-br from-gray-50 -mt-8 to-blue-50/30 "
+    >
       {/* Hero Banner */}
       <div className="relative w-full h-[50vh] sm:h-[60vh] md:h-[70vh] min-h-[400px] sm:min-h-[500px] md:min-h-[600px] overflow-hidden">
         {/* Logo Branding - Top Right */}
@@ -87,7 +90,7 @@ const ContactSection = () => {
             className="h-12 sm:h-16 md:h-20 lg:h-24 w-auto"
           />
         </div>
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 to-purple-900/40 z-10" />
+        <div className="absolute inset-0  z-10" />
         <img
           src="/contactus.jpg"
           alt="Glass Railing System"
@@ -102,31 +105,31 @@ const ContactSection = () => {
 
         {/* Centered Content */}
         <div className="absolute inset-0 z-20 flex flex-col items-center justify-center text-center px-4">
-                 <motion.h1
-                   initial={{ opacity: 0, y: 20 }}
-                   animate={{ opacity: 1, y: 0 }}
-                   transition={{ duration: 0.7 }}
-                   className="text-3xl md:text-3xl font-bold text-white mb-4 tracking-wide"
-                 >
-                   <span className="text-white"> ACP </span>{" "}
-                   <span className="text-orange-400">Fundermax</span>
-                 </motion.h1>
-                 <motion.p
-                   initial={{ opacity: 0 }}
-                   animate={{ opacity: 1 }}
-                   transition={{ delay: 0.3, duration: 0.5 }}
-                   className="text-base text-white/90 max-w-xl mx-auto mb-8"
-                 >
-                   Premium architectural solutions with innovative ACP Fundermax
-                   composite panels
-                 </motion.p>
-                 <motion.div
-                   initial={{ scaleX: 0 }}
-                   animate={{ scaleX: 1 }}
-                   transition={{ delay: 0.5, duration: 0.8 }}
-                   className="w-24 h-1 bg-gradient-to-r from-orange-400 to-orange-600 rounded-full"
-                 ></motion.div>
-               </div>
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7 }}
+            className="text-3xl md:text-3xl font-bold text-white mb-4 tracking-wide"
+          >
+            <span className="text-blue"> Get </span>{" "}
+            <span className="text-orange-400">In Touch</span>
+          </motion.h1>
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.3, duration: 0.5 }}
+            className="text-base text-black max-w-xl mx-auto mb-8"
+          >
+        Whether it's façade design, cladding, or interior solutions — we are here to support you at every step.
+Submit your inquiry, and we will get back to you within 24 hours.
+          </motion.p>
+          <motion.div
+            initial={{ scaleX: 0 }}
+            animate={{ scaleX: 1 }}
+            transition={{ delay: 0.5, duration: 0.8 }}
+            className="w-24 h-1 bg-gradient-to-r from-orange-400 to-orange-600 rounded-full"
+          ></motion.div>
+        </div>
 
         {/* Scroll Indicator */}
         {/* <motion.div
@@ -183,7 +186,9 @@ const ContactSection = () => {
                   <div
                     className={`w-16 h-16 sm:w-20 sm:h-20 ${method.color} rounded-xl sm:rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-md`}
                   >
-                    <method.icon className={`${method.iconColor} w-8 h-8 sm:w-10 sm:h-10`} />
+                    <method.icon
+                      className={`${method.iconColor} w-8 h-8 sm:w-10 sm:h-10`}
+                    />
                   </div>
                 </div>
                 <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-gray-800 group-hover:text-gray-900 transition-colors">
@@ -295,7 +300,9 @@ const ContactSection = () => {
                 <h3 className="text-lg sm:text-xl font-bold text-gray-800 mb-2">
                   Opening Hours
                 </h3>
-                <p className="text-sm sm:text-base text-gray-600">We're here when you need us</p>
+                <p className="text-sm sm:text-base text-gray-600">
+                  We're here when you need us
+                </p>
               </div>
 
               <div className="space-y-3 sm:space-y-4">
@@ -311,8 +318,12 @@ const ContactSection = () => {
                 </div>
                 <div className="bg-white/80 p-3 sm:p-4 rounded-lg sm:rounded-xl shadow-sm border border-red-100">
                   <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
-                    <span className="font-semibold text-gray-800 text-sm sm:text-base">Sunday</span>
-                    <span className="text-red-500 font-bold text-sm sm:text-base">Closed</span>
+                    <span className="font-semibold text-gray-800 text-sm sm:text-base">
+                      Sunday
+                    </span>
+                    <span className="text-red-500 font-bold text-sm sm:text-base">
+                      Closed
+                    </span>
                   </div>
                 </div>
               </div>

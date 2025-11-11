@@ -179,7 +179,7 @@ const SearchBar = () => {
                 setIsOpen(true);
               }
             }}
-            className="w-32 sm:w-40 md:w-48 lg:w-56 pl-9 sm:pl-10 pr-8 sm:pr-10 py-1.5 sm:py-2 text-sm sm:text-base border-2 border-[#0B3558] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#F37021] focus:border-[#F37021] bg-white text-gray-800 placeholder-gray-400 transition-all duration-200"
+            className="w-32 sm:w-40 md:w-48 lg:w-56 pl-9 sm:pl-10 pr-8 sm:pr-10 py-1.5 sm:py-2 text-sm sm:text-base border-1 border-[#0B3558] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#F37021] focus:border-[#F37021] bg-white text-gray-800 placeholder-gray-400 transition-all duration-200"
           />
           {searchQuery && (
             <button
