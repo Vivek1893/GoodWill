@@ -2,6 +2,7 @@ import React from "react";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet-async";
 
 const ContactSection = () => {
   const contactMethods = [
@@ -76,6 +77,85 @@ const ContactSection = () => {
   };
 
   return (
+    <>
+
+     {/* ✅ SEO TAGS */}
+      <Helmet>
+        <title>
+          Contact Us | The Goodwill Facades | Facade Glazing & ACP Cladding
+          Company
+        </title>
+
+        <meta
+          name="description"
+          content="Contact The Goodwill Facades — India's leading facade glazing and ACP cladding company. Reach us via phone, WhatsApp, email, or visit our Mumbai and Surat offices."
+        />
+
+        <meta
+          name="keywords"
+          content="Facade glazing contact, ACP cladding company, structural glazing contractors, aluminium facade system contact, facade company Mumbai, facade company Surat, The Goodwill Facades contact"
+        />
+
+        <link rel="canonical" href="https://thegoodwillfacade.com/ContactUs" />
+
+        {/* Open Graph */}
+        <meta
+          property="og:title"
+          content="Contact The Goodwill Facades | Facade Glazing Company"
+        />
+        <meta
+          property="og:description"
+          content="Call, WhatsApp, or Email us for facade glazing, ACP cladding, structural glazing and architectural facade solutions."
+        />
+        <meta
+          property="og:image"
+          content="https://thegoodwillfacade.com/images/contactus.webp"
+        />
+        <meta property="og:url" content="https://thegoodwillfacade.com/ContactUs" />
+        <meta property="og:type" content="website" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+
+        {/* Robots */}
+        <meta name="robots" content="index, follow" />
+      </Helmet>
+
+      {/* ✅ Schema Markup */}
+      <script type="application/ld+json">
+        {`
+        {
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          "name": "The Goodwill Facades",
+          "url": "https://thegoodwillfacade.com/ContactUs",
+          "logo": "https://thegoodwillfacade.com/images/logo1.webp",
+          "image": "https://thegoodwillfacade.com/images/contactus.webp",
+          "email": "thegoodwillfacade@gmail.com",
+          "telephone": "+919892118052",
+          "address": [
+            {
+              "@type": "PostalAddress",
+              "addressLocality": "Kandivali West",
+              "addressRegion": "Mumbai",
+              "postalCode": "400067",
+              "streetAddress": "Society No 374, Gala D45, Akash CHSL, Sector 3, Punjab National Bank Lane"
+            },
+            {
+              "@type": "PostalAddress",
+              "addressLocality": "Pal",
+              "addressRegion": "Surat",
+              "postalCode": "395009",
+              "streetAddress": "55, The Galleria Shopping Hub, Near Sanjivkumar Auditorium"
+            }
+          ],
+          "openingHours": "Mo-Sa 09:30-18:30"
+        }
+      `}
+      </script>
+
+
+
     <section
       id="contact"
       className="bg-gradient-to-br from-gray-50 -mt-8 to-blue-50/30 "
@@ -133,23 +213,7 @@ const ContactSection = () => {
           ></motion.div>
         </div>
 
-        {/* Scroll Indicator */}
-        {/* <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1.2 }}
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20"
-        >
-          <div className="animate-bounce">
-            <div className="w-6 h-10 border-2 border-white rounded-full flex justify-center">
-              <motion.div
-                animate={{ y: [0, 12, 0] }}
-                transition={{ duration: 1.5, repeat: Infinity }}
-                className="w-1 h-3 bg-white rounded-full mt-2"
-              ></motion.div>
-            </div>
-          </div>
-        </motion.div> */}
+        
       </div>
 
       {/* Main Content */}
@@ -433,6 +497,7 @@ const ContactSection = () => {
         </motion.div>
       </div>
     </section>
+    </>
   );
 };
 

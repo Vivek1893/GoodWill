@@ -1,9 +1,53 @@
 import React from "react";
+import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
+
 
 const About = () => {
   return (
     <>
+      <Helmet>
+        <title>
+          About Us | The Goodwill Facades | Best Facade Glazing Company
+        </title>
+
+        <meta
+          name="description"
+          content="Learn about The Goodwill Facades — India's leading facade glazing company specializing in ACP cladding, structural glazing, curtain wall systems, spider glazing and aluminium facade solutions."
+        />
+
+        <meta
+          name="keywords"
+          content="Facade Glazing Company, ACP Cladding, Structural Glazing, Spider Glazing, Curtain Wall Glazing, Aluminium Facade Systems, Best Facade Company India, Architectural Facade Engineering, Facade Contractors, Façade Design Consultants"
+        />
+
+        <link rel="canonical" href="https://thegoodwillfacade.com/Aboutus" />
+
+        {/* Open Graph / Preview tags */}
+        <meta
+          property="og:title"
+          content="About The Goodwill Facades | Best Facade Glazing Company"
+        />
+        <meta
+          property="og:description"
+          content="We deliver premium facade engineering, glazing, aluminium systems and architectural facade solutions across India."
+        />
+        <meta property="og:url" content="https://thegoodwillfacade.com/Aboutus" />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:image"
+          content="https://thegoodwillfacade.com/images/project7.webp"
+        />
+
+        {/* For Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+
+        {/* Robot instructions */}
+        <meta name="robots" content="index, follow" />
+      </Helmet>
+
+
+
       {/* 🔹 About Banner */}
       <section className="relative w-full h-[50vh] sm:h-[60vh] md:h-screen max-h-[75vh] -mt-8 overflow-hidden">
         {/* Logo Branding - Top Right */}
@@ -152,12 +196,12 @@ const About = () => {
             {/* Right Images */}
             <div className="grid grid-cols-2 gap-3 sm:gap-4 md:gap-6">
               <img
-                src="/images/ourstory1.jpg"
+                src="/images/ourstory1.webp"
                 alt="Team discussion"
                 className="object-cover w-full h-32 sm:h-40 md:h-64 lg:h-80 xl:h-[400px] rounded-tl-2xl sm:rounded-tl-3xl md:rounded-tl-4xl rounded-br-2xl sm:rounded-br-3xl md:rounded-br-4xl"
               />
               <img
-                src="/images/ourstory2.jpg"
+                src="/images/ourstory2.webp"
                 alt="Financial planning meeting"
                 className="object-cover w-full h-32 sm:h-40 md:h-64 lg:h-80 xl:h-[400px] mt-4 sm:mt-6 md:mt-12 lg:mt-20 rounded-tl-2xl sm:rounded-tl-3xl md:rounded-tl-4xl rounded-br-2xl sm:rounded-br-3xl md:rounded-br-4xl"
               />
@@ -173,7 +217,7 @@ const About = () => {
             {/* Vision */}
             <div className="space-y-4 sm:space-y-6 md:col-span-2 lg:col-span-1">
               <img
-                src="/images/Our-Vision.jpg"
+                src="/images/Our-Vision.webp"
                 alt="Vision"
                 className="w-full h-40 sm:h-48 md:h-56 lg:h-64 xl:h-72 object-cover shadow-md rounded-tl-2xl sm:rounded-tl-3xl md:rounded-tl-4xl rounded-br-2xl sm:rounded-br-3xl md:rounded-br-4xl"
               />
@@ -191,7 +235,7 @@ const About = () => {
             {/* Mission */}
             <div className="space-y-4 sm:space-y-6 md:col-span-2 lg:col-span-1 md:order-last lg:order-none">
               <img
-                src="/images/ourmission.jpg"
+                src="/images/ourmission.webp"
                 alt="Mission"
                 className="w-full h-40 sm:h-48 md:h-56 lg:h-64 xl:h-72 object-cover shadow-md rounded-tl-2xl sm:rounded-tl-3xl md:rounded-tl-4xl rounded-br-2xl sm:rounded-br-3xl md:rounded-br-4xl"
               />
@@ -209,7 +253,7 @@ const About = () => {
             {/* Core Values */}
             <div className="space-y-4 sm:space-y-6 md:col-span-2 lg:col-span-1">
               <img
-                src="/images/ourvalue.jpg"
+                src="/images/ourvalue.webp"
                 alt="Core Values"
                 className="w-full h-40 sm:h-48 md:h-56 lg:h-64 xl:h-72 object-cover shadow-md rounded-tl-2xl sm:rounded-tl-3xl md:rounded-tl-4xl rounded-br-2xl sm:rounded-br-3xl md:rounded-br-4xl"
               />

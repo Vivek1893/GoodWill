@@ -2,11 +2,12 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 
-// https://vite.dev/config/
+// https://vitejs.dev/config/
 export default defineConfig({
+  base: '/', // ✅ Ensures assets load correctly from root domain
   plugins: [
     react(),
-   tailwindcss()
+    tailwindcss(),
   ],
   theme: {
     extend: {
@@ -23,8 +24,7 @@ export default defineConfig({
           '0%': { transform: 'translateX(-50%)' },
           '100%': { transform: 'translateX(0)' },
         },
-      }
-    }
-  }
+      },
+    },
+  },
 })
-

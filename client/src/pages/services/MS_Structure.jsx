@@ -10,6 +10,8 @@ import {
 
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
+
 
 const MS_Structure = () => {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -47,12 +49,12 @@ const MS_Structure = () => {
     {
       id: 1,
       title: "CITY CENTRE ",
-      img: "/servicesimg/ms_img/CITY CENTRE - BHARUCH.jpg",
+      img: "/servicesimg/ms_img/CITY CENTRE - BHARUCH.webp",
     },
     {
       id: 2,
       title: "CORPORATE FACADE",
-      img: "/servicesimg/ms_img/MS 1.jpg",
+      img: "/servicesimg/ms_img/MS 1.webp",
     },
     {
       id: 3,
@@ -62,7 +64,7 @@ const MS_Structure = () => {
     {
       id: 4,
       title: "RESIDENTIAL DESIGN",
-      img: "/servicesimg/ms_img/MS 2.jpg",
+      img: "/servicesimg/ms_img/MS 2.webp",
     },
     {
       id: 5,
@@ -95,6 +97,70 @@ const MS_Structure = () => {
 
   return (
     <div className="w-full font-sans -mt-8 bg-white">
+    
+    <Helmet>
+  {/* ✅ SEO TITLE */}
+  <title>MS Structure | Industrial & Commercial Steel Structure | The Goodwill Facades</title>
+
+  {/* ✅ SEO META DESCRIPTION */}
+  <meta
+    name="description"
+    content="MS Structure fabrication for commercial, industrial, and architectural projects. We provide high-strength, durable, cost-effective steel structures with fast installation."
+  />
+
+  {/* ✅ SEO KEYWORDS */}
+  <meta
+    name="keywords"
+    content="MS Structure, Steel Fabrication, Industrial Steel Structure, Commercial MS Structure, MS Cladding, Metal Structure Contractors, MS Fabrication Service"
+  />
+
+  {/* ✅ Canonical URL */}
+  <link rel="canonical" href="https://thegoodwillfacade.com/services/MS_Structure" />
+
+  {/* ✅ Open Graph (for Facebook / LinkedIn sharing) */}
+  <meta property="og:title" content="MS Structure | The Goodwill Facades" />
+  <meta
+    property="og:description"
+    content="Expert MS Structure services offering high strength, durability, and modern architecture solutions."
+  />
+  <meta property="og:image" content="/servicesimg/ms_img/ms structure.webp" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://thegoodwillfacade.com/services/MS_Structure" />
+
+  {/* ✅ Twitter cards */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="MS Structure | The Goodwill Facades" />
+  <meta
+    name="twitter:description"
+    content="High-strength, cost-effective, and durable MS Structure fabrication services."
+  />
+  <meta name="twitter:image" content="/servicesimg/ms_img/ms structure.webp" />
+
+  {/* ✅ Indexing instruction */}
+  <meta name="robots" content="index, follow" />
+
+  {/* ✅ Structured Data (Schema.org) */}
+  <script type="application/ld+json">
+    {`
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "MS Structure Fabrication",
+        "provider": {
+          "@type": "Organization",
+          "name": "The Goodwill Facades",
+          "url": "https://thegoodwillfacade.com/services/MS_Structure,
+          "logo": "https://www.thegoodwillfacade.com/images/logo1.webp"
+        },
+        "description": "MS structural steel fabrication for commercial and architectural buildings.",
+        "areaServed": "India",
+        "serviceType": "MS Structure Fabrication",
+        "image": "https://www.thegoodwillfacade.com/servicesimg/ms_img/ms structure.webp"
+      }
+    `}
+  </script>
+</Helmet>
+
       {/* 🔹 Hero Section */}
       <section className="relative w-full h-screen max-h-[75vh] overflow-hidden">
         <div className="absolute top-6 right-6 z-30">
@@ -106,7 +172,7 @@ const MS_Structure = () => {
         </div>
         <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 to-blue-800/60 z-10"></div>
         <img
-          src="/servicesimg/ms_img/ms structure.jpg"
+          src="/servicesimg/ms_img/ms structure.webp"
           alt="MS_Structure"
           className="w-full h-full object-cover"
         />

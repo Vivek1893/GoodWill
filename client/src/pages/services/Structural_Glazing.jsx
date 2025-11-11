@@ -9,6 +9,8 @@ import {
 } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
+
 
 const Structural_Glazing = () => {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -45,17 +47,17 @@ const Structural_Glazing = () => {
     {
       id: 1,
       title: "MAPLE SQUARE",
-      img: "/servicesimg/structural_img/MAPLE SQUARE - BHARUCH.jpg",
+      img: "/servicesimg/structural_img/MAPLE SQUARE - BHARUCH.webp",
     },
     {
       id: 2,
       title: "CANAL POINT",
-      img: "/servicesimg/structural_img/CANAL POINT - SURAT.jpg",
+      img: "/servicesimg/structural_img/CANAL POINT - SURAT.webp",
     },
     {
       id: 3,
       title: "MILESTONE INDIGO",
-      img: "/servicesimg/structural_img/MILESTONE INDIGO - SURAT.jpg",
+      img: "/servicesimg/structural_img/MILESTONE INDIGO - SURAT.webp",
     },
     {
       id: 4,
@@ -90,6 +92,49 @@ const Structural_Glazing = () => {
 
   return (
     <div className="w-full font-sans -mt-8 bg-white">
+
+    <Helmet>
+  <title>Structural Glazing | Modern Facade Glazing Systems | The Goodwill Facades</title>
+
+  <meta
+    name="description"
+    content="We specialize in premium structural glazing systems for commercial and residential projects. Seamless modern architectural glazing, energy efficient, weather-resistant, and durable facade solutions."
+  />
+
+  <meta
+    name="keywords"
+    content="structural glazing, glazing systems, facade glazing, glass facade, frameless structural glazing, exterior glazing, high rise glazing, architectural facade company, The Goodwill Facades, facade contractor"
+  />
+
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="The Goodwill Facades" />
+
+  {/* ✅ Canonical URL for SEO */}
+  <link rel="canonical" href="https://thegoodwillfacade.com/services/Structural_Glazing" />
+
+  {/* ✅ OpenGraph (Social Sharing) */}
+  <meta property="og:title" content="Structural Glazing | Facade Glazing Experts" />
+  <meta
+    property="og:description"
+    content="Premium structural glazing façade solutions — modern, seamless, durable and energy efficient."
+  />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://thegoodwillfacade.com/services/Structural_Glazing" />
+  <meta
+    property="og:image"
+    content="https://thegoodwillfacade.com/services/Structural_Glazing"
+  />
+
+  {/* ✅ Image Preload for faster loading */}
+  <link
+    rel="preload"
+    as="image"
+    href="/servicesimg/structural_img/Structural-Glazing-side-bg.webp"
+  />
+</Helmet>
+
+
+
       {/* 🔹 Hero Section */}
       <section className="relative w-full h-screen max-h-[75vh] overflow-hidden">
         <div className="absolute top-6 right-6 z-30">
@@ -101,7 +146,7 @@ const Structural_Glazing = () => {
         </div>
         <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 to-blue-800/60 z-10"></div>
         <img
-          src="/servicesimg/structural_img/Structural-Glazing-side-bg.jpg"
+          src="/servicesimg/structural_img/Structural-Glazing-side-bg.webp"
           alt="Structural Glazing"
           className="w-full h-full object-cover"
         />
@@ -185,7 +230,7 @@ const Structural_Glazing = () => {
             >
               <div className="relative rounded-tl-4xl rounded-br-4xl overflow-hidden">
                 <img
-                  src="/servicesimg/structural_img/Structural-Glazing-side-bg.jpg"
+                  src="/servicesimg/structural_img/Structural-Glazing-side-bg.webp"
                   alt="Structural Glazing Installation"
                   className="w-full h-[600px] object-fill transition-transform duration-700 group-hover:scale-105"
                 />

@@ -11,6 +11,8 @@ import {
 
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
+
 
 const Skylight = () => {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -46,27 +48,27 @@ const Skylight = () => {
     {
       id: 1,
       title: "SKYLIGHT ",
-      img: "/servicesimg/skylight/skylight 2.jpg",
+      img: "/servicesimg/skylight/skylight 2.webp",
     },
     {
       id: 2,
       title: "ALUMINIUM FINS",
-      img: "/servicesimg/skylight/aluminium fins 1.jpg",
+      img: "/servicesimg/skylight/aluminium fins 1.webp",
     },
     {
       id: 3,
       title: "ALUMINIUM FINS",
-      img: "/servicesimg/skylight/aluminium fins 2.jpg",
+      img: "/servicesimg/skylight/aluminium fins 2.webp",
     },
     {
       id: 4,
       title: "ALUMINIUM FINS",
-      img: "/servicesimg/skylight/aluminium fins 3.jpg",
+      img: "/servicesimg/skylight/aluminium fins 3.webp",
     },
     {
       id: 5,
       title: "SKYLIGHT ",
-      img: "/servicesimg/skylight/skylight 1.jpg",
+      img: "/servicesimg/skylight/skylight 1.webp",
     },
   ];
 
@@ -94,6 +96,47 @@ const Skylight = () => {
 
   return (
     <div className="w-full font-sans -mt-8 bg-white">
+
+    
+  <Helmet>
+    {/* ✅ Primary SEO */}
+    <title>Skylight & Aluminium Fins | Modern Architectural Skylight Systems</title>
+
+    <meta
+      name="description"
+      content="Premium Skylight and Aluminium Fins solutions for modern architecture. Enhance natural lighting, energy efficiency, ventilation, and heat control with durable, low-maintenance skylight systems."
+    />
+
+    <meta
+      name="keywords"
+      content="Skylight, Aluminium Fins, Architectural Skylight, Glass skylight, Modern skylight design, ventilation skylight, sun control fins, facade skylight, commercial skylight installation, skylight contractors"
+    />
+
+    <link rel="canonical" href="https://thegoodwillfacade.com/services/Skylight" />
+    <meta name="robots" content="index, follow" />
+
+    {/* ✅ Open Graph (Social media / LinkedIn / Facebook) */}
+    <meta property="og:title" content="Skylight & Aluminium Fins | Architectural Skylight Solutions" />
+    <meta
+      property="og:description"
+      content="Bring natural light and modern elegance to your projects with skylights and aluminium fins."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://thegoodwillfacade.com/services/Skylight" />
+    <meta property="og:image" content="https://thegoodwillfacade.com/servicesimg/skylight/skylight.webp" />
+
+    {/* ✅ Twitter Card */}
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Skylight & Aluminium Fins | Modern Skylight Systems" />
+    <meta
+      name="twitter:description"
+      content="Premium skylight and aluminium fins installation — natural daylight, energy efficiency, modern design."
+    />
+    <meta name="twitter:image" content="https://thegoodwillfacade.com/servicesimg/skylight/skylight.webp" />
+  </Helmet>
+
+
+
       {/* 🔹 Hero Section */}
       <section className="relative w-full h-screen max-h-[75vh] overflow-hidden">
         <div className="absolute top-6 right-6 z-30">
@@ -105,7 +148,7 @@ const Skylight = () => {
         </div>
         <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 to-blue-800/60 z-10"></div>
         <img
-          src="/servicesimg/skylight/skylight.jpg"
+          src="/servicesimg/skylight/skylight.webp"
           alt="Skylight"
           className="w-full h-full object-cover"
         />
@@ -189,7 +232,7 @@ const Skylight = () => {
             >
               <div className="relative rounded-tl-4xl rounded-br-4xl overflow-hidden">
                 <img
-                  src="/servicesimg/skylight/skylight.jpg"
+                  src="/servicesimg/skylight/skylight.webp"
                   alt="MS_Structure"
                   className="w-full h-[600px] object-fill transition-transform duration-700 group-hover:scale-105"
                 />

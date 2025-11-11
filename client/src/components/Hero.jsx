@@ -8,9 +8,9 @@ const Hero = () => {
   const slides = useMemo(
     () => [
       {
-        leftImage: "/images/hero10.webp",
+        leftImage: "/images/hero10.jpg",
         rightImage: "/images/hero9.webp",
-        mobileImage: "/images/hero2.webp",
+        mobileImage: "/images/hero9.webp",
         leftTitle: "VIMAL LAXMI - BORIVALI(W) ",
         rightTitle: "SHREE VARDHMAN - BORIVALI(W)",
       },
@@ -36,7 +36,7 @@ const Hero = () => {
         rightTitle: "CANAL POINT - SURAT",
       },
       {
-        leftImage: "/hero6.jpg",
+        leftImage: "/images/hero6.jpg",
         rightImage: "/images/hero8.webp",
         mobileImage: "/images/hero8.webp",
         leftTitle: "SKY RISE - SURAT",

@@ -10,6 +10,8 @@ import {
 
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
+
 
 const Tensile_Fabrics = () => {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -50,7 +52,7 @@ const Tensile_Fabrics = () => {
     {
       id: 2,
       title: "CORPORATE FACADE",
-      img: "/servicesimg/tensile_img/Spider-Glazing-7-qz4i79fhb5jauuul8azngckxnptr5cecxd8uslcd0g.jpg",
+      img: "/servicesimg/tensile_img/Spider-Glazing-7.webp",
     },
     {
       id: 3,
@@ -60,12 +62,12 @@ const Tensile_Fabrics = () => {
     {
       id: 4,
       title: "RESIDENTIAL DESIGN",
-      img: "/servicesimg/tensile_img/SPYDER 2.jpeg",
+      img: "/servicesimg/tensile_img/SPYDER.webp",
     },
     {
       id: 5,
       title: "SHOP FRONT CLADDING",
-      img: "/servicesimg/tensile_img/tensile1.jpg",
+      img: "/servicesimg/tensile_img/tensile1.webp",
     },
   ];
 
@@ -93,6 +95,52 @@ const Tensile_Fabrics = () => {
 
   return (
     <div className="w-full font-sans -mt-8 bg-white">
+
+    <Helmet>
+  <title>Spider Glazing | Frameless Glass Facade System | The Goodwill Facades</title>
+
+  <meta
+    name="description"
+    content="Premium frameless Spider Glazing systems for transparent architectural facades. Modern, strong, and weather-resistant spider fitting glazing for commercial buildings, showrooms, atriums, skylights, canopies, and entrances."
+  />
+
+  <meta
+    name="keywords"
+    content="spider glazing, frameless glazing, spider facade, glass facade system, spider fitting, architectural glazing, tensile fabrics glazing, facade glazing company, glass canopy, spider fitting glass installation, The Goodwill Facades"
+  />
+
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="The Goodwill Facades" />
+
+  {/* ✅ Canonical URL for ranking */}
+  <link rel="canonical" href="https://thegoodwillfacade.com/services/Tensile_Fabrics" />
+
+  {/* ✅ Open Graph for social sharing */}
+  <meta property="og:title" content="Spider Glazing | Frameless Facade Glazing Experts" />
+  <meta
+    property="og:description"
+    content="Explore premium spider glazing façade solutions — modern, seamless, durable and weather-resistant."
+  />
+  <meta property="og:type" content="website" />
+  <meta
+    property="og:url"
+    content="https://thegoodwillfacade.com/services/Tensile_Fabrics"
+  />
+  <meta
+    property="og:image"
+    content="https://thegoodwillfacade.com/servicesimg/tensile_img/Spider-Glazing1.webp"
+  />
+
+  {/* ✅ Preload hero image for faster loading */}
+  <link
+    rel="preload"
+    as="image"
+    href="/servicesimg/tensile_img/Spider-Glazing1.webp"
+  />
+</Helmet>
+
+
+
       {/* 🔹 Hero Section */}
       <section className="relative w-full h-screen max-h-[75vh] overflow-hidden">
         <div className="absolute top-6 right-6 z-30">
@@ -187,7 +235,7 @@ const Tensile_Fabrics = () => {
             >
               <div className="relative rounded-tl-4xl rounded-br-4xl overflow-hidden">
                 <img
-                  src="/servicesimg/tensile_img/SPYDER 1.jpg"
+                  src="/servicesimg/tensile_img/SPYDER.webp"
                   alt="Stone Cladding"
                   className="w-full h-[600px] object-fill transition-transform duration-700 group-hover:scale-105"
                 />

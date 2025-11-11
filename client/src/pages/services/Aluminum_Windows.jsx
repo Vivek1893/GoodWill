@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { Helmet } from "react-helmet-async";
+
 
 import {
   FaStar,
@@ -51,12 +53,12 @@ const Aluminum_Windows = () => {
     {
       id: 2,
       title: "AMBIT VISTA ",
-      img: "/servicesimg/aluminum_img/AMBIT VISTA - SANTACRUZ (E).jpg",
+      img: "/servicesimg/aluminum_img/AMBIT VISTA - SANTACRUZ (E).webp",
     },
     {
       id: 3,
       title: "PARLE POINT A  ",
-      img: "/servicesimg/aluminum_img/PARLE POINT A  - BHARUCH 1.jpg",
+      img: "/servicesimg/aluminum_img/PARLE POINT A  - BHARUCH 1.webp",
     },
     {
       id: 4,
@@ -94,6 +96,54 @@ const Aluminum_Windows = () => {
 
   return (
     <div className="w-full font-sans -mt-8 bg-white">
+  <Helmet>
+    <title>Aluminum Windows | Premium Modern Aluminium Sliding & Casement Systems</title>
+
+    <meta
+      name="description"
+      content="Premium aluminum windows with slim frames, thermal break technology, noise reduction, weather resistance, modern design and long-lasting durability for commercial & residential projects."
+    />
+
+    <meta
+      name="keywords"
+      content="aluminum windows, aluminium window manufacturers, sliding aluminium windows, casement windows, modern slim frame windows, soundproof windows, thermal break windows, aluminium facade company, best aluminum windows india, architectural windows"
+    />
+
+    <link rel="canonical" href="https://thegoodwillfacade.com/services/Aluminum_Windows" />
+
+    {/* --- Open Graph (Facebook / LinkedIn Preview) --- */}
+    <meta property="og:title" content="Aluminum Windows | Premium Modern Aluminium Sliding & Casement Systems" />
+    <meta property="og:description" content="Modern, high-strength, noise-reducing, thermal-efficient aluminium windows for commercial and residential projects." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://thegoodwillfacade.com/services/Aluminum_Windows" />
+    <meta property="og:image" content="https://thegoodwillfacade.com/images/og/aluminum_windows.webp" />
+
+    {/* --- Twitter Card --- */}
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Aluminum Windows | Premium Modern Systems" />
+    <meta
+      name="twitter:description"
+      content="Premium aluminium windows — slim frames, sleek design, soundproof, energy-efficient."
+    />
+    <meta name="twitter:image" content="https://thegoodwillfacade.com/images/og/aluminum_windows.webp" />
+
+    {/* ✅ Local Business Schema Markup */}
+    <script type="application/ld+json">
+      {`
+        {
+          "@context": "https://schema.org",
+          "@type": "Product",
+          "name": "Aluminum Windows",
+          "brand": "The Goodwill Facades",
+          "description": "Premium slim-frame aluminium windows for modern architecture.",
+          "url": "https://thegoodwillfacade.com/services/Aluminum_Windows",
+          "image": "https://thegoodwillfacade.com/images/og/aluminum_windows.webp"
+        }
+      `}
+    </script>
+  </Helmet>
+ 
+
       {/* 🔹 Hero Section */}
       <section className="relative w-full h-screen max-h-[75vh] overflow-hidden">
         <div className="absolute top-6 right-6 z-30">
@@ -105,7 +155,7 @@ const Aluminum_Windows = () => {
         </div>
         <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 to-blue-800/60 z-10"></div>
         <img
-          src="/servicesimg/aluminum_img/PARLE POINT A  - BHARUCH 1.jpg"
+          src="/servicesimg/aluminum_img/PARLE POINT A  - BHARUCH 1.webp"
           alt="Aluminum_Windows"
           className="w-full h-full object-cover"
         />
@@ -255,15 +305,7 @@ const Aluminum_Windows = () => {
                 />
               </div>
 
-              {/* Title BELOW image — TEXT + UNDERLINE */}
-              {/* <div className="py-4 px-3 text-left">
-                <div className="inline-block">
-                  <h3 className="text-lg sm:text-xl md:text-2xl font-semibold text-[#0B3558]">
-                    {project.title}
-                  </h3>
-                  <div className="w-10 h-[3px] bg-[#F37021] mt-2 mx-auto rounded-full"></div>
-                </div>
-              </div> */}
+              
             </motion.div>
           ))}
         </motion.div>

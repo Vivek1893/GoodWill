@@ -6,6 +6,8 @@ import { AiOutlineDollar } from "react-icons/ai"; // from Ant Design icons
 
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
+
 
 const Stone_Cladding = () => {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -41,27 +43,27 @@ const Stone_Cladding = () => {
     {
       id: 1,
       title: "VELOCITY - NIGHT VIEW",
-      img: "/servicesimg/stone_img/stone5.jpg",
+      img: "/servicesimg/stone_img/stone5.webp",
     },
     {
       id: 2,
       title: "CORPORATE FACADE",
-      img: "/servicesimg/stone_img/stone2.png",
+      img: "/servicesimg/stone_img/stone2.webp",
     },
     {
       id: 3,
       title: "COMMERCIAL BUILDING",
-      img: "/servicesimg/stone_img/stone1.png",
+      img: "/servicesimg/stone_img/stone1.webp",
     },
     {
       id: 4,
       title: "RESIDENTIAL DESIGN",
-      img: "/servicesimg/stone_img/stone4.png",
+      img: "/servicesimg/stone_img/stone4.webp",
     },
     {
       id: 5,
       title: "SHOP FRONT CLADDING",
-      img: "/servicesimg/stone_img/stone3.jpg",
+      img: "/servicesimg/stone_img/stone3.webp",
     },
   ];
 
@@ -89,6 +91,47 @@ const Stone_Cladding = () => {
 
   return (
     <div className="w-full font-sans -mt-8 bg-white">
+
+    <Helmet>
+  <title>Stone Cladding | Premium Exterior & Interior Facade Solutions</title>
+
+  <meta
+    name="description"
+    content="Premium stone cladding solutions for commercial and residential facades. Durable, lightweight, weather-resistant, and low-maintenance architectural exterior finishes."
+  />
+
+  <meta
+    name="keywords"
+    content="stone cladding, exterior stone cladding, facade stone work, stone wall cladding, natural stone cladding, commercial building facade, residential stone cladding, architectural stone wall, The Goodwill Facades, facade company"
+  />
+
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="The Goodwill Facades" />
+
+  {/* ✅ Open Graph / Social Sharing */}
+  <meta property="og:title" content="Stone Cladding | Premium Facade Solutions" />
+  <meta
+    property="og:description"
+    content="Enhance your building with premium stone cladding — lightweight, weatherproof, elegant, and durable exterior & interior facade systems."
+  />
+  <meta property="og:image" content="https://thegoodwillfacade.com/servicesimg/stone_img/stone5.webp" />
+  <meta property="og:url" content="https://thegoodwillfacade.com/services/Stone_Cladding" />
+  <meta property="og:type" content="website" />
+
+  {/* ✅ Canonical URL for Google Ranking */}
+  <link rel="canonical" href="https://thegoodwillfacade.com/services/Stone_Cladding" />
+
+  {/* ✅ Preload hero image for faster loading */}
+  <link
+    rel="preload"
+    as="image"
+    href="/servicesimg/stone_img/stone5.webp"
+    imagesrcset="/servicesimg/stone_img/stone5.webp"
+  />
+</Helmet>
+
+
+
       {/* 🔹 Hero Section */}
       <section className="relative w-full h-screen max-h-[75vh] overflow-hidden">
         <div className="absolute top-6 right-6 z-30">
@@ -100,7 +143,7 @@ const Stone_Cladding = () => {
         </div>
         <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 to-blue-800/60 z-10"></div>
         <img
-          src="/servicesimg/stone_img/stone5.jpg"
+          src="/servicesimg/stone_img/stone5.webp"
           alt="Stone_Cladding"
           className="w-full h-full object-cover"
         />
@@ -183,7 +226,7 @@ const Stone_Cladding = () => {
             >
               <div className="relative rounded-tl-4xl rounded-br-4xl overflow-hidden">
                 <img
-                  src="/servicesimg/stone_img/stone.png"
+                  src="/servicesimg/stone_img/stone.webp"
                   alt="Stone Cladding"
                   className="w-full h-[600px] object-fill transition-transform duration-700 group-hover:scale-105"
                 />

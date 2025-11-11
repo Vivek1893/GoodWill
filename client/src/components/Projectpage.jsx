@@ -14,22 +14,22 @@ const Projects = () => {
     {
       id: 2,
       title: "ATHARV HEIGHTS",
-      img: "./images/project1.jpg",
+      img: "./images/project1.webp",
     },
     {
       id: 3,
       title: "MILESTONE INDIGO",
-      img: "./images/project3.jpg",
+      img: "./images/project3.webp",
     },
     {
       id: 4,
       title: "EVOQ",
-      img: "./images/project4.png",
+      img: "./images/project4.webp",
     },
     {
       id: 5,
       title: "VIVIANA VESU",
-      img: "./images/project2.png",
+      img: "./images/project2.webp",
     },
   ];
 

@@ -9,6 +9,7 @@ import {
 } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 const ACPCladding = () => {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -50,17 +51,17 @@ const ACPCladding = () => {
     {
       id: 2,
       title: "ANTM TEXTILE MARKET",
-      img: "/servicesimg/acp_img/ANTM TEXTILE MARKET - SURAT.jpg",
+      img: "/servicesimg/acp_img/ANTM TEXTILE MARKET - SURAT.webp",
     },
     {
       id: 3,
       title: "INFINIA",
-      img: "/servicesimg/acp_img/INFINIA - VAPI.jpg",
+      img: "/servicesimg/acp_img/INFINIA - VAPI.webp",
     },
     {
       id: 4,
       title: "VELOCITY ",
-      img: "/servicesimg/acp_img/VELOCITY - NIGHT VIEW 1.jpg",
+      img: "/servicesimg/acp_img/VELOCITY - NIGHT VIEW 1.webp",
     },
     {
       id: 5,
@@ -93,6 +94,57 @@ const ACPCladding = () => {
 
   return (
     <div className="w-full font-sans -mt-8 bg-white">
+      <Helmet>
+        <title>
+          ACP Cladding & Fundermax | Best ACP Facade Company in India
+        </title>
+
+        <meta
+          name="description"
+          content="ACP & Fundermax facade cladding experts. Premium architectural panels, long-lasting exterior ACP cladding, durable & modern facade glazing solutions."
+        />
+
+        <meta
+          name="keywords"
+          content="ACP cladding, Fundermax panels, aluminium composite panel, facade cladding company, exterior cladding, ACP installation, architectural panels, facade glazing company"
+        />
+
+        <link
+          rel="canonical"
+          href="https://thegoodwillfacade.com/services/ACP"
+        />
+
+        {/* ✅ Open Graph / Facebook / LinkedIn */}
+        <meta
+          property="og:title"
+          content="ACP Cladding & Fundermax | Facade Experts"
+        />
+        <meta
+          property="og:description"
+          content="Premium ACP & Fundermax facade cladding with modern finish & durability."
+        />
+        <meta
+          property="og:image"
+          content="https://thegoodwillfacade.com/og/hero6.webp"
+        />
+        <meta
+          property="og:url"
+          content="https://thegoodwillfacade.com/services/ACP"
+        />
+        <meta property="og:type" content="website" />
+
+        {/* ✅ Twitter / X */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="ACP Cladding & Fundermax | Facade Experts"
+        />
+        <meta
+          name="twitter:description"
+          content="Durable ACP & Fundermax exterior facade solutions."
+        />
+      </Helmet>
+
       {/* 🔹 Hero Section */}
       <section className="relative w-full h-[50vh] sm:h-[60vh] md:h-screen max-h-[75vh] overflow-hidden">
         <div className="absolute top-4 sm:top-6 right-4 sm:right-6 z-30">
@@ -104,7 +156,7 @@ const ACPCladding = () => {
         </div>
         <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 to-blue-800/60 z-10"></div>
         <img
-          src="/hero6.webp"
+          src="/images/hero6.webp"
           alt="ACP Cladding"
           className="w-full h-full object-cover"
         />
@@ -188,7 +240,7 @@ const ACPCladding = () => {
             >
               <div className="relative rounded-tl-2xl sm:rounded-tl-3xl md:rounded-tl-4xl rounded-br-2xl sm:rounded-br-3xl md:rounded-br-4xl overflow-hidden">
                 <img
-                  src="/servicesimg/acp_img/pre.jpg"
+                  src="/servicesimg/acp_img/pre.webp"
                   alt="ACP Example"
                   className="w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] object-cover transition-transform duration-700 group-hover:scale-105"
                 />

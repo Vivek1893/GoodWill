@@ -11,6 +11,7 @@ import {
 
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 const Railings = () => {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -46,27 +47,27 @@ const Railings = () => {
     {
       id: 1,
       title: "CITY CENTRE ",
-      img: "/servicesimg/railing_img/CITY CENTRE - BHARUCH.jpg",
+      img: "/servicesimg/railing_img/CITY CENTRE - BHARUCH.webp",
     },
     {
       id: 2,
       title: "ATHRAV LAXMI",
-      img: "/servicesimg/railing_img/ATHRAV LAXMI - VILE PARLE (E).jpg",
+      img: "/servicesimg/railing_img/ATHRAV LAXMI - VILE PARLE (E).webp",
     },
     {
       id: 3,
       title: "ATHRAV NAVSAMAJ ",
-      img: "/servicesimg/railing_img/ATHRAV NAVSAMAJ - VILE PARLE (E).jpg",
+      img: "/servicesimg/railing_img/ATHRAV NAVSAMAJ - VILE PARLE (E).webp",
     },
     {
       id: 4,
       title: "MAPLE SKY DECK ",
-      img: "/servicesimg/railing_img/MAPLE SKY DECK - BHARUCH.jpg",
+      img: "/servicesimg/railing_img/MAPLE SKY DECK - BHARUCH.webp",
     },
     {
       id: 5,
       title: "AMBIT PRIMORIS",
-      img: "/servicesimg/railing_img/AMBIT PRIMORIS - KANDIVALI (W).webp",
+      img: "/servicesimg/railing_img/railing.webp",
     },
   ];
 
@@ -94,6 +95,35 @@ const Railings = () => {
 
   return (
     <div className="w-full font-sans -mt-8 bg-white">
+
+    <Helmet>
+        <title>Modern Railings | Glass & SS Railings | The Goodwill Facades</title>
+
+        <meta
+          name="description"
+          content="We design and install premium glass and stainless steel railings for balconies, staircases, and terraces. Durable, modern, and low-maintenance railing solutions for commercial and residential projects."
+        />
+
+        <meta
+          name="keywords"
+          content="Railings, Glass Railings, Stainless Steel Railings, Balcony Railings, Terrace Railings, Modern Railings Design, Industrial Railings, Aluminium Railings, Commercial railing installation, railing contractors india"
+        />
+
+        <link rel="canonical" href="https://thegoodwillfacade.com/services/Railings" />
+        <meta name="robots" content="index, follow" />
+
+        {/* For social media sharing */}
+        <meta property="og:title" content="Modern Railings | Glass & SS Railings" />
+        <meta
+          property="og:description"
+          content="Premium railing installation — glass & stainless steel railings for buildings, balconies and terraces."
+        />
+        <meta property="og:url" content="https://thegoodwillfacade.com/services/Railings" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://thegoodwillfacade.com/preview/railing-banner.webp" />
+      </Helmet>
+
+
       {/* 🔹 Hero Section */}
       <section className="relative w-full h-screen max-h-[75vh] overflow-hidden">
         <div className="absolute top-6 right-6 z-30">
@@ -105,7 +135,7 @@ const Railings = () => {
         </div>
         <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 to-blue-800/60 z-10"></div>
         <img
-          src="/servicesimg/railing_img/railing.png"
+          src="/servicesimg/railing_img/railing.webp"
           alt="Railings"
           className="w-full h-full object-cover"
         />
@@ -188,7 +218,7 @@ const Railings = () => {
             >
               <div className="relative rounded-tl-4xl rounded-br-4xl overflow-hidden">
                 <img
-                  src="/servicesimg/railing_img/Screenshot 2025-11-08 195121.png"
+                  src="/servicesimg/railing_img/Screenshot 2025-11-08 195121.webp"
                   alt="MS_Structure"
                   className="w-full h-[600px] object-fill transition-transform duration-700 group-hover:scale-105"
                 />
