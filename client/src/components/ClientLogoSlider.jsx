@@ -13,6 +13,7 @@ const logosSet1 = [
   { src: "/clientlogo/logo6.jpg", alt: "Bagri", width: "w-48" },
   { src: "/clientlogo/logo7.jpg", alt: "Blue", width: "w-56" },
    { src: "/clientlogo/logo8.jpg", alt: "Bridge", width: "w-40" },
+   { src: "/clientlogo/logo18.jpg", alt: "Bridge", width: "w-50" },
   
 ];
 
@@ -27,6 +28,8 @@ const logosSet2 = [
   { src: "/clientlogo/logo14.jpg", alt: "HSBC", width: "w-40" },
    { src: "/clientlogo/logo15.jpg", alt: "HSBC", width: "w-40" },
     { src: "/clientlogo/logo16.jpg", alt: "Bridge", width: "w-40" },
+    { src: "/clientlogo/logo17.jpg", alt: "Bridge", width: "w-40" },
+    { src: "/clientlogo/logo19.jpg", alt: "Bridge", width: "w-40" },
   
 
 ];

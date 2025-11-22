@@ -250,7 +250,7 @@ const Navbar = () => {
                 <FaInstagram size={18} />
               </a>
               <a
-                href="https://wa.me/919876543210"
+                href="https://wa.me/919892118052"
                 target="_blank"
                 rel="noreferrer"
                 className="text-[#25D366] hover:opacity-80"
@@ -399,7 +399,7 @@ const Navbar = () => {
                 <FaInstagram size={20} />
               </a>
               <a
-                href="https://wa.me/919876543210"
+                href="https://wa.me/919892118052"
                 target="_blank"
                 rel="noreferrer"
                 className="text-[#25D366] hover:opacity-80"

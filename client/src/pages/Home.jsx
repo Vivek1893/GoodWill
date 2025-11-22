@@ -1,12 +1,14 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import Hero from "../components/Hero";
+import StatsSection from "../components/StatsSection";
 import About from "../components/About";
 
 import Servicespage from "../components/Servicespage";
 import Projectpage from "../components/Projectpage";
 
 import ClientLogoSlider from "../components/ClientLogoSlider";
+
 
 const Home = () => {
   return (
@@ -92,31 +94,8 @@ const Home = () => {
         </script>
       </Helmet>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
       <Hero />
+      <StatsSection />
       <About />
       <Projectpage />
 
