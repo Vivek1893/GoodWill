@@ -293,12 +293,30 @@ const ACPCladding = () => {
               variants={cardVariants}
               onClick={() => openImageModal(project.img)}
             >
-              <div className="w-full h-[250px] sm:h-[320px] md:h-[450px] overflow-hidden">
+              <div 
+                className="w-full h-[250px] sm:h-[320px] md:h-[450px] overflow-hidden relative"
+                onTouchStart={(e) => e.preventDefault()}
+                onTouchMove={(e) => e.preventDefault()}
+                style={{ WebkitTouchCallout: 'none', WebkitUserSelect: 'none', userSelect: 'none' }}
+              >
                 <img
                   src={project.img}
                   alt={project.title}
                   loading="lazy"
-                  className="w-full h-full object-cover object-center brightness-90 transform transition duration-500 group-hover:scale-110"
+                  className="w-full h-full object-cover object-center brightness-90 transform transition duration-500 group-hover:scale-110 pointer-events-none select-none"
+                  draggable="false"
+                  onContextMenu={(e) => e.preventDefault()}
+                  onTouchStart={(e) => e.preventDefault()}
+                  onTouchMove={(e) => e.preventDefault()}
+                  onTouchEnd={(e) => e.preventDefault()}
+                  style={{ WebkitTouchCallout: 'none', WebkitUserSelect: 'none', userSelect: 'none', touchAction: 'none' }}
+                />
+                {/* Transparent overlay to prevent direct image access on mobile */}
+                <div 
+                  className="absolute inset-0 z-10"
+                  onTouchStart={(e) => e.preventDefault()}
+                  onTouchMove={(e) => e.preventDefault()}
+                  style={{ WebkitTouchCallout: 'none' }}
                 />
               </div>
             </motion.div>
@@ -330,11 +348,26 @@ const ACPCladding = () => {
               animate={{ scale: 1 }}
               exit={{ scale: 0.9 }}
               className="relative max-w-4xl max-h-full"
+              onTouchStart={(e) => e.preventDefault()}
+              style={{ WebkitTouchCallout: 'none', WebkitUserSelect: 'none', userSelect: 'none' }}
             >
               <img
                 src={selectedImage}
                 alt="Enlarged view"
-                className="max-w-full max-h-[90vh] object-contain rounded-lg"
+                className="max-w-full max-h-[90vh] object-contain rounded-lg pointer-events-none select-none"
+                draggable="false"
+                onContextMenu={(e) => e.preventDefault()}
+                onTouchStart={(e) => e.preventDefault()}
+                onTouchMove={(e) => e.preventDefault()}
+                onTouchEnd={(e) => e.preventDefault()}
+                style={{ WebkitTouchCallout: 'none', WebkitUserSelect: 'none', userSelect: 'none', touchAction: 'none' }}
+              />
+              {/* Transparent overlay to prevent direct image access on mobile */}
+              <div 
+                className="absolute inset-0 z-10"
+                onTouchStart={(e) => e.preventDefault()}
+                onTouchMove={(e) => e.preventDefault()}
+                style={{ WebkitTouchCallout: 'none' }}
               />
               <button
                 onClick={closeImageModal}

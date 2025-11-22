@@ -212,16 +212,29 @@ const SearchBar = () => {
                 className="w-full text-left px-3 py-3 hover:bg-[#F37021]/10 transition-colors border-b border-gray-100 last:border-b-0 group rounded-md"
               >
                 <div className="flex items-start gap-3">
-                  <img
-                    src={project.img}
-                    alt={project.name}
-                    className="w-12 h-12 sm:w-16 sm:h-16 object-cover rounded-lg flex-shrink-0 border border-gray-200"
-                    onError={(e) => {
-                      e.target.src = "/fallback.jpg";
-                    }}
-                    draggable="false"
-                    onContextMenu={(e) => e.preventDefault()}
-                  />
+                  <div className="relative">
+                    <img
+                      src={project.img}
+                      alt={project.name}
+                      className="w-12 h-12 sm:w-16 sm:h-16 object-cover rounded-lg flex-shrink-0 border border-gray-200 pointer-events-none select-none"
+                      onError={(e) => {
+                        e.target.src = "/fallback.jpg";
+                      }}
+                      draggable="false"
+                      onContextMenu={(e) => e.preventDefault()}
+                      onTouchStart={(e) => e.preventDefault()}
+                      onTouchMove={(e) => e.preventDefault()}
+                      onTouchEnd={(e) => e.preventDefault()}
+                      style={{ WebkitTouchCallout: 'none', WebkitUserSelect: 'none', userSelect: 'none', touchAction: 'none' }}
+                    />
+                    {/* Transparent overlay to prevent direct image access on mobile */}
+                    <div 
+                      className="absolute inset-0 z-10"
+                      onTouchStart={(e) => e.preventDefault()}
+                      onTouchMove={(e) => e.preventDefault()}
+                      style={{ WebkitTouchCallout: 'none' }}
+                    />
+                  </div>
                   <div className="flex-1 min-w-0">
                     <h4 className="text-sm sm:text-base font-semibold text-[#0B3558] group-hover:text-[#F37021] transition-colors truncate">
                       {project.name}

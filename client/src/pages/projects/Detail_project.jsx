@@ -148,21 +148,38 @@ const Residential = () => {
               {projects.map((project) => (
                 <Link key={project.id} to={`/projects/detail/${project.id}`}>
                   <motion.div
-                    className="bg-white rounded-md p-4 flex flex-col items-center cursor-pointer shadow-xl hover:shadow"
+                    className="bg-white rounded-md p-4 flex flex-col items-center cursor-pointer shadow-xl hover:shadow relative"
                     whileHover={{ scale: 0.97 }}
                     transition={{ duration: 0.3 }}
+                    onTouchStart={(e) => e.preventDefault()}
+                    style={{ WebkitTouchCallout: 'none', WebkitUserSelect: 'none', userSelect: 'none' }}
                   >
-                    <motion.img
-                      src={project.img}
-                      alt={project.name}
-                      className="w-full h-98 object-cover rounded-md"
-                      loading="lazy"
-                      onError={(e) => (e.target.src = "/fallback.jpg")}
-                      initial={{ opacity: 0, scale: 1.05 }}
-                      whileInView={{ opacity: 1, scale: 1 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.6, ease: "easeOut" }}
-                    />
+                    <div className="relative w-full">
+                      <motion.img
+                        src={project.img}
+                        alt={project.name}
+                        className="w-full h-98 object-cover rounded-md pointer-events-none select-none"
+                        loading="lazy"
+                        onError={(e) => (e.target.src = "/fallback.jpg")}
+                        initial={{ opacity: 0, scale: 1.05 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.6, ease: "easeOut" }}
+                        draggable="false"
+                        onContextMenu={(e) => e.preventDefault()}
+                        onTouchStart={(e) => e.preventDefault()}
+                        onTouchMove={(e) => e.preventDefault()}
+                        onTouchEnd={(e) => e.preventDefault()}
+                        style={{ WebkitTouchCallout: 'none', WebkitUserSelect: 'none', userSelect: 'none', touchAction: 'none' }}
+                      />
+                      {/* Transparent overlay to prevent direct image access on mobile */}
+                      <div 
+                        className="absolute inset-0 z-10"
+                        onTouchStart={(e) => e.preventDefault()}
+                        onTouchMove={(e) => e.preventDefault()}
+                        style={{ WebkitTouchCallout: 'none' }}
+                      />
+                    </div>
                     <h3 className="mt-4 text-lg text-[#0B3558] font-semibold text-center">
                       {project.name}
                     </h3>

@@ -92,15 +92,31 @@ const Projects = () => {
             variants={cardVariants}
           >
             {/* Image */}
-            <div className="w-full h-[350px] sm:h-[350px] md:h-[320px] lg:h-[450px] overflow-hidden">
+            <div 
+              className="w-full h-[200px] sm:h-[250px] md:h-[320px] lg:h-[450px] overflow-hidden relative"
+              onTouchStart={(e) => e.preventDefault()}
+              onTouchMove={(e) => e.preventDefault()}
+              style={{ WebkitTouchCallout: 'none', WebkitUserSelect: 'none', userSelect: 'none' }}
+            >
               <img
                 src={project.img}
                 alt={project.title}
                 loading="lazy"
                 className="w-full h-full object-cover object-center brightness-90 
-                transform transition duration-500 group-hover:scale-110"
+                transform transition duration-500 group-hover:scale-110 pointer-events-none select-none"
                 draggable="false"
                 onContextMenu={(e) => e.preventDefault()}
+                onTouchStart={(e) => e.preventDefault()}
+                onTouchMove={(e) => e.preventDefault()}
+                onTouchEnd={(e) => e.preventDefault()}
+                style={{ WebkitTouchCallout: 'none', WebkitUserSelect: 'none', userSelect: 'none', touchAction: 'none' }}
+              />
+              {/* Transparent overlay to prevent direct image access on mobile */}
+              <div 
+                className="absolute inset-0 z-10"
+                onTouchStart={(e) => e.preventDefault()}
+                onTouchMove={(e) => e.preventDefault()}
+                style={{ WebkitTouchCallout: 'none' }}
               />
             </div>
 

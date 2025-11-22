@@ -174,17 +174,31 @@ const Projects = () => {
               >
                 {/* ✅ Image Hover Zoom + Click to Open Modal */}
                 <div
-                  className="h-48 sm:h-64 md:h-80 lg:h-96 w-full overflow-hidden cursor-pointer "
+                  className="h-48 sm:h-64 md:h-80 lg:h-96 w-full overflow-hidden cursor-pointer relative"
                   onClick={() => setSelectedImage(project.img)}
+                  onTouchStart={(e) => e.preventDefault()}
+                  onTouchMove={(e) => e.preventDefault()}
+                  style={{ WebkitTouchCallout: 'none', WebkitUserSelect: 'none', userSelect: 'none' }}
                 >
                   <img
                     src={project.img}
                     alt={project.name}
                     loading="lazy"
-                    className="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110 "
+                    className="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110 pointer-events-none select-none"
                     onError={(e) => (e.target.src = "/fallback.jpg")}
                     draggable="false"
                     onContextMenu={(e) => e.preventDefault()}
+                    onTouchStart={(e) => e.preventDefault()}
+                    onTouchMove={(e) => e.preventDefault()}
+                    onTouchEnd={(e) => e.preventDefault()}
+                    style={{ WebkitTouchCallout: 'none', WebkitUserSelect: 'none', userSelect: 'none', touchAction: 'none' }}
+                  />
+                  {/* Transparent overlay to prevent direct image access on mobile */}
+                  <div 
+                    className="absolute inset-0 z-10"
+                    onTouchStart={(e) => e.preventDefault()}
+                    onTouchMove={(e) => e.preventDefault()}
+                    style={{ WebkitTouchCallout: 'none' }}
                   />
                 </div>
 
@@ -210,14 +224,29 @@ const Projects = () => {
         <div
           className="fixed inset-0 bg-black/100 flex items-center justify-center z-[9999]"
           onClick={() => setSelectedImage(null)}
+          onTouchStart={(e) => e.preventDefault()}
+          style={{ WebkitTouchCallout: 'none', WebkitUserSelect: 'none', userSelect: 'none' }}
         >
-          <img
-            src={selectedImage}
-            alt="Selected Project Image"
-            className="max-w-3xl max-h-[90vh] object-contain rounded-lg shadow-xl"
-            draggable="false"
-            onContextMenu={(e) => e.preventDefault()}
-          />
+          <div className="relative">
+            <img
+              src={selectedImage}
+              alt="Selected Project Image"
+              className="max-w-3xl max-h-[90vh] object-contain rounded-lg shadow-xl pointer-events-none select-none"
+              draggable="false"
+              onContextMenu={(e) => e.preventDefault()}
+              onTouchStart={(e) => e.preventDefault()}
+              onTouchMove={(e) => e.preventDefault()}
+              onTouchEnd={(e) => e.preventDefault()}
+              style={{ WebkitTouchCallout: 'none', WebkitUserSelect: 'none', userSelect: 'none', touchAction: 'none' }}
+            />
+            {/* Transparent overlay to prevent direct image access on mobile */}
+            <div 
+              className="absolute inset-0 z-10"
+              onTouchStart={(e) => e.preventDefault()}
+              onTouchMove={(e) => e.preventDefault()}
+              style={{ WebkitTouchCallout: 'none' }}
+            />
+          </div>
 
           {/* Close Button */}
           <button

@@ -135,32 +135,66 @@ const ProjectDetailDynamic = () => {
           onMouseEnter={() => !isMobile && setShowInfo(true)}
           // onMouseLeave={() => !isMobile && setShowInfo(false)}
         >
-          <img
-            src={project.gallery?.[0] || project.img}
-            alt={project.name}
-            className="w-full h-auto max-h-[700px] object-contain rounded-xl mb-4 transition-transform duration-500 hover:scale-105 cursor-pointer"
-            onClick={() =>
-              handleImageInteraction(project.gallery?.[0] || project.img, 0)
-            }
-            draggable="false"
-            onContextMenu={(e) => e.preventDefault()}
-          />
+          <div className="relative">
+            <img
+              src={project.gallery?.[0] || project.img}
+              alt={project.name}
+              className="w-full h-auto max-h-[700px] object-contain rounded-xl mb-4 transition-transform duration-500 hover:scale-105 cursor-pointer pointer-events-none select-none"
+              onClick={() =>
+                handleImageInteraction(project.gallery?.[0] || project.img, 0)
+              }
+              draggable="false"
+              onContextMenu={(e) => e.preventDefault()}
+              onTouchStart={(e) => e.preventDefault()}
+              onTouchMove={(e) => e.preventDefault()}
+              onTouchEnd={(e) => e.preventDefault()}
+              style={{ WebkitTouchCallout: 'none', WebkitUserSelect: 'none', userSelect: 'none', touchAction: 'none' }}
+            />
+            {/* Transparent overlay to prevent direct image access on mobile */}
+            <div 
+              className="absolute inset-0 z-10 cursor-pointer"
+              onClick={() =>
+                handleImageInteraction(project.gallery?.[0] || project.img, 0)
+              }
+              onTouchStart={(e) => e.preventDefault()}
+              onTouchMove={(e) => e.preventDefault()}
+              style={{ WebkitTouchCallout: 'none' }}
+            />
+          </div>
 
           {/* Gallery Thumbnails */}
           {project.gallery && project.gallery.length > 1 && (
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 mt-4">
               {project.gallery.slice(1).map((img, index) => (
-                <motion.img
+                <motion.div
                   key={index}
-                  src={img}
-                  alt={`${project.name} - Image ${index + 2}`}
-                  className="w-full h-32 object-cover rounded-lg cursor-pointer transition-transform duration-300 hover:scale-105"
-                  onClick={() => handleImageInteraction(img, index + 1)}
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  draggable={false}
-                  onContextMenu={(e) => e.preventDefault()}
-                />
+                  className="relative"
+                  onTouchStart={(e) => e.preventDefault()}
+                  style={{ WebkitTouchCallout: 'none', WebkitUserSelect: 'none', userSelect: 'none' }}
+                >
+                  <motion.img
+                    src={img}
+                    alt={`${project.name} - Image ${index + 2}`}
+                    className="w-full h-32 object-cover rounded-lg cursor-pointer transition-transform duration-300 hover:scale-105 pointer-events-none select-none"
+                    onClick={() => handleImageInteraction(img, index + 1)}
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    draggable={false}
+                    onContextMenu={(e) => e.preventDefault()}
+                    onTouchStart={(e) => e.preventDefault()}
+                    onTouchMove={(e) => e.preventDefault()}
+                    onTouchEnd={(e) => e.preventDefault()}
+                    style={{ WebkitTouchCallout: 'none', WebkitUserSelect: 'none', userSelect: 'none', touchAction: 'none' }}
+                  />
+                  {/* Transparent overlay to prevent direct image access on mobile */}
+                  <div 
+                    className="absolute inset-0 z-10 cursor-pointer"
+                    onClick={() => handleImageInteraction(img, index + 1)}
+                    onTouchStart={(e) => e.preventDefault()}
+                    onTouchMove={(e) => e.preventDefault()}
+                    style={{ WebkitTouchCallout: 'none' }}
+                  />
+                </motion.div>
               ))}
             </div>
           )}
@@ -211,19 +245,34 @@ const ProjectDetailDynamic = () => {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
             className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4"
+            onTouchStart={(e) => e.preventDefault()}
+            style={{ WebkitTouchCallout: 'none', WebkitUserSelect: 'none', userSelect: 'none' }}
           >
             <motion.div
               initial={{ scale: 0.9 }}
               animate={{ scale: 1 }}
               exit={{ scale: 0.9 }}
               className="relative max-w-4xl max-h-full"
+              onTouchStart={(e) => e.preventDefault()}
+              style={{ WebkitTouchCallout: 'none', WebkitUserSelect: 'none', userSelect: 'none' }}
             >
               <img
                 src={selectedImage}
                 alt="Enlarged view"
-                className="max-w-full max-h-[90vh] object-contain rounded-lg"
+                className="max-w-full max-h-[90vh] object-contain rounded-lg pointer-events-none select-none"
                 draggable="false"
                 onContextMenu={(e) => e.preventDefault()}
+                onTouchStart={(e) => e.preventDefault()}
+                onTouchMove={(e) => e.preventDefault()}
+                onTouchEnd={(e) => e.preventDefault()}
+                style={{ WebkitTouchCallout: 'none', WebkitUserSelect: 'none', userSelect: 'none', touchAction: 'none' }}
+              />
+              {/* Transparent overlay to prevent direct image access on mobile */}
+              <div 
+                className="absolute inset-0 z-10"
+                onTouchStart={(e) => e.preventDefault()}
+                onTouchMove={(e) => e.preventDefault()}
+                style={{ WebkitTouchCallout: 'none' }}
               />
               {project.gallery && project.gallery.length > 1 && (
                 <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-black/50 text-white px-3 py-1 rounded-full text-sm">
