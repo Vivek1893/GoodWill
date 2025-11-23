@@ -15,7 +15,10 @@ const Footer = () => {
           <div className="flex justify-center lg:justify-start w-full lg:w-auto">
             <img
               src="/images/logo1.webp"
-              alt="Goodwill Logo"
+              alt="The Goodwill Facades - Premium Facade Glazing and Cladding Solutions Logo"
+              width="128"
+              height="128"
+              loading="lazy"
               className="w-16 sm:w-20 md:w-24 lg:w-28 xl:w-32 h-auto transition-all duration-300"
             />
           </div>

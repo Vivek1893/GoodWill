@@ -6,11 +6,14 @@ const ServicesAllInOne = () => {
   const servicesIcons = [
     {
       icon: (
-        <img
-          src="/images/lo.webp"
-          alt="ACP Cladding"
-          className="h-14 w-14 object-contain"
-        />
+                    <img
+                      src="/images/lo.webp"
+                      alt="ACP Cladding Service - The Goodwill Facades"
+                      width="56"
+                      height="56"
+                      loading="lazy"
+                      className="h-14 w-14 object-contain"
+                    />
       ),
       title: "ACP/Fundermax",
       description:

@@ -122,7 +122,7 @@ const Residential = () => {
         {/* Top banner */}
         <div className="relative w-full h-[45vh] -mt-8 sm:h-[60vh] md:h-[75vh]">
           <motion.img
-            src="/images/project.png"
+            src="/images/pro.png"
             alt="Projects"
             className="w-full h-full object-cover"
             loading="eager"

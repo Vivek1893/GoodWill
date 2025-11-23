@@ -58,8 +58,10 @@ const Marquee = ({ logos, direction = "rtl" }) => {
             >
               <img
                 src={logo.src}
-                alt={logo.alt}
+                alt={`${logo.alt} - Client of The Goodwill Facades`}
                 loading="lazy"
+                width="120"
+                height="80"
                 className="max-w-[80px] sm:max-w-[100px] md:max-w-[120px] max-h-16 sm:max-h-20 md:max-h-24 h-auto object-contain" 
               />
             </div>
@@ -75,8 +77,10 @@ const Marquee = ({ logos, direction = "rtl" }) => {
             >
               <img
                 src={logo.src}
-                alt={logo.alt}
+                alt={`${logo.alt} - Client of The Goodwill Facades`}
                 loading="lazy"
+                width="120"
+                height="80"
                 className="max-w-[80px] sm:max-w-[100px] md:max-w-[120px] max-h-16 sm:max-h-20 md:max-h-24 h-auto object-contain" 
               />
             </div>

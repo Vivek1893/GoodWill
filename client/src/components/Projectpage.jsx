@@ -170,9 +170,10 @@ const Projects = () => {
     },
     {
       id: 3,
-      title: "MILESTONE INDIGO - SURAT",
-      img: "./images/project3.webp",
+      title: "UNIQUE REGALIA - BORIVALI (W)",
+      img: "./images/hero1.webp",
     },
+    
     {
       id: 4,
       title: "EVOQ - SURAT",
@@ -185,9 +186,10 @@ const Projects = () => {
     },
     {
       id: 6,
-      title: "UNIQUE REGALIA - BORIVALI (W)",
-      img: "./images/hero1.webp",
+      title: "MILESTONE INDIGO - SURAT",
+      img: "./images/project3.webp",
     },
+    
   ];
 
   // 🔹 Animation Variants
@@ -241,15 +243,17 @@ const Projects = () => {
           >
             {/* Image */}
             <div 
-              className="w-full h-[200px] sm:h-[250px] md:h-[320px] lg:h-[450px] overflow-hidden relative"
+              className="w-full h-[400px] sm:h-[450px] md:h-[320px] lg:h-[450px] overflow-hidden relative"
               onTouchStart={(e) => e.preventDefault()}
               onTouchMove={(e) => e.preventDefault()}
               style={{ WebkitTouchCallout: 'none', WebkitUserSelect: 'none', userSelect: 'none' }}
             >
               <img
                 src={project.img}
-                alt={project.title}
+                alt={`${project.title} - Facade project by The Goodwill Facades - Premium architectural facade solutions`}
                 loading="lazy"
+                width="400"
+                height="450"
                 className="w-full h-full object-cover object-center brightness-90 
                 transform transition duration-500 group-hover:scale-110 pointer-events-none select-none"
                 draggable="false"

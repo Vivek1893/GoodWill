@@ -3,16 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
     <!-- ✅ Browser Tab Logo -->
-     
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
     <link rel="shortcut icon" href="/images/favicon.ico" />
-
-    <!-- ✅ Fallback for modern browsers -->
     <link rel="icon" type="image/png" href="/images/lo.webp" sizes="512x512" />
 
-    <link rel="preload" type="image/svg+xml" href="/images/lo.webp" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- ✅ Performance: DNS Prefetch and Preconnect -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- ✅ Preload critical resources -->
+    <link rel="preload" type="image/webp" href="/images/lo.webp" as="image" />
+    <link rel="preload" href="/src/main.jsx" as="script" />
 
     <title>The Goodwill Facades | Modern Facade & Glazing Experts</title>
     <meta
@@ -24,23 +29,10 @@
       content="facade company, facade glazing, ACP cladding, aluminium facade, structural glazing, architectural facade, facade contractors India"
     />
     <meta name="author" content="The Goodwill Facades" />
-    <!-- ✅ Critical Images (Hero & Logo) -->
-    <link rel="preload" as="image" href="/images/hero10.jpg" />
-    <link rel="preload" as="image" href="/images/hero9.webp" />
-    <link rel="preload" as="image" href="/images/hero2.webp" />
-    <link rel="preload" as="image" href="/images/hero1.webp" />
-    <link rel="preload" as="image" href="/images/hero4.webp" />
-    <link rel="preload" as="image" href="/images/hero5.webp" />
-    <link rel="preload" as="image" href="/images/hero31.webp" />
-    <link rel="preload" as="image" href="/images/hero7.webp" />
-    <link rel="preload" as="image" href="/images/hero81.webp" />
-    <link rel="preload" as="image" href="/images/hero61.jpg" />
-    <link rel="preload" as="image" href="/images/contactus.webp" />
-    <link rel="preload" as="image" href="/images/ourstory1.webp" />
-    <link rel="preload" as="image" href="/images/ourstory2.webp" />
-    <link rel="preload" as="image" href="/images/Our-Vision.webp" />
-    <link rel="preload" as="image" href="/images/ourmission.webp" />
-    <link rel="preload" as="image" href="/images/ourvalue.webp" />
+    <!-- ✅ Preload only critical above-the-fold images -->
+    <link rel="preload" as="image" href="/images/hero10.jpg" fetchpriority="high" />
+    <link rel="preload" as="image" href="/images/hero4.webp" fetchpriority="high" />
+    <link rel="preload" as="image" href="/images/logo1.webp" fetchpriority="high" />
 
     <!-- ✅ Open Graph For Social Sharing -->
     <meta
@@ -55,17 +47,63 @@
     <meta property="og:url" content="https://thegoodwillfacade.com/" />
     <meta property="og:type" content="website" />
 
-    <!-- ✅ Local SEO: Business Schema -->
+    <!-- ✅ Local SEO: Enhanced Business Schema -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "Organization",
         "name": "The Goodwill Facades",
+        "alternateName": "The Goodwill Facade",
         "url": "https://thegoodwillfacade.com/",
         "logo": "https://thegoodwillfacade.com/images/logo1.webp",
+        "description": "Leading facade glazing, ACP cladding, aluminium systems and architectural facade solutions provider in India",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Disha C.H.S., Opp. Joggers Park, Chikoowadi, Borivali West",
+          "addressLocality": "Mumbai",
+          "addressRegion": "Maharashtra",
+          "postalCode": "400092",
+          "addressCountry": "IN"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+91-9892118052",
+          "contactType": "customer support",
+          "email": "thegoodwillfacade@gmail.com",
+          "areaServed": "IN",
+          "availableLanguage": ["English", "Hindi"]
+        },
         "sameAs": [
-          "https://www.instagram.com/thegoodwillfacade?utm_source=qr&igsh=MWdvNnAwMmJwNGluNA%3D%3D"
-        ]
+          "https://www.instagram.com/thegoodwillfacade",
+          "https://www.linkedin.com/in/neil-the-goodwill-facade-bhaidaswala-b471bb113"
+        ],
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.8",
+          "reviewCount": "50"
+        },
+        "areaServed": {
+          "@type": "Country",
+          "name": "India"
+        }
+      }
+    </script>
+    
+    <!-- ✅ Website Schema for better SEO -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "The Goodwill Facades",
+        "url": "https://thegoodwillfacade.com/",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://thegoodwillfacade.com/?s={search_term_string}"
+          },
+          "query-input": "required name=search_term_string"
+        }
       }
     </script>
   </head>

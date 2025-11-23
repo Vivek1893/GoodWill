@@ -126,7 +126,10 @@ const Hero = () => {
         <div className="absolute top-4 md:top-6 right-4 md:right-6 z-30">
           <img
             src="/images/logo1.webp"
-            alt="The Goodwill Facades"
+            alt="The Goodwill Facades - Premium Facade Glazing and Cladding Solutions"
+            width="120"
+            height="80"
+            loading="eager"
             className="h-12 md:h-16 lg:h-20 w-auto"
           />
         </div>

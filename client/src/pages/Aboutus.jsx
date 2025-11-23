@@ -2,7 +2,6 @@
 // import { Helmet } from "react-helmet-async";
 // import { motion } from "framer-motion";
 
-
 // const About = () => {
 //   return (
 //     <>
@@ -29,7 +28,7 @@
 //           property="og:title"
 //           content="About The Goodwill Facades | Best Facade Glazing Company"
 //         />
-        
+
 //         {/* ✅ Preload all main images for faster first paint */}
 //         <link rel="preload" as="image" href="/images/project7.webp" />
 //         <link rel="preload" as="image" href="/images/logo1.webp" />
@@ -40,8 +39,6 @@
 //         <link rel="preload" as="image" href="/images/Our-Vision.webp" />
 //         <link rel="preload" as="image" href="/images/ourmission.webp" />
 //         <link rel="preload" as="image" href="/images/ourvalue.webp" />
-
-        
 
 //         <meta
 //           property="og:description"
@@ -305,9 +302,6 @@
 
 // export default About;
 
-
-
-
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
@@ -319,9 +313,9 @@ const containerVariants = {
     opacity: 1,
     transition: {
       staggerChildren: 0.2,
-      duration: 0.5
-    }
-  }
+      duration: 0.5,
+    },
+  },
 };
 
 const itemVariants = {
@@ -331,9 +325,9 @@ const itemVariants = {
     y: 0,
     transition: {
       duration: 0.6,
-      ease: "easeOut"
-    }
-  }
+      ease: "easeOut",
+    },
+  },
 };
 
 const slideInLeft = {
@@ -343,9 +337,9 @@ const slideInLeft = {
     x: 0,
     transition: {
       duration: 0.7,
-      ease: "easeOut"
-    }
-  }
+      ease: "easeOut",
+    },
+  },
 };
 
 const slideInRight = {
@@ -355,9 +349,9 @@ const slideInRight = {
     x: 0,
     transition: {
       duration: 0.7,
-      ease: "easeOut"
-    }
-  }
+      ease: "easeOut",
+    },
+  },
 };
 
 const scaleUp = {
@@ -367,9 +361,9 @@ const scaleUp = {
     scale: 1,
     transition: {
       duration: 0.6,
-      ease: "easeOut"
-    }
-  }
+      ease: "easeOut",
+    },
+  },
 };
 
 const About = () => {
@@ -398,11 +392,15 @@ const About = () => {
           property="og:title"
           content="About The Goodwill Facades | Best Facade Glazing Company"
         />
-        
+
         {/* ✅ Preload all main images for faster first paint */}
         <link rel="preload" as="image" href="/images/project7.webp" />
         <link rel="preload" as="image" href="/images/logo1.webp" />
-        <link rel="preload" as="image" href="/images/Structural-Glazing-Works.webp" />
+        <link
+          rel="preload"
+          as="image"
+          href="/images/Structural-Glazing-Works.webp"
+        />
         <link rel="preload" as="image" href="/images/about-bg.jpg" />
         <link rel="preload" as="image" href="/images/ourstory1.webp" />
         <link rel="preload" as="image" href="/images/ourstory2.webp" />
@@ -476,7 +474,7 @@ const About = () => {
         {/* Overlay */}
         <div className="absolute inset-0 bg-white/80"></div>
 
-        <motion.div 
+        <motion.div
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
@@ -484,7 +482,7 @@ const About = () => {
           className="relative max-w-7xl mx-auto flex flex-col md:flex-col lg:flex-row items-center gap-6 sm:gap-8 md:gap-10"
         >
           {/* Left Side - Image */}
-          <motion.div 
+          <motion.div
             variants={slideInLeft}
             className="w-full lg:w-1/2 flex justify-center order-1 md:order-1 lg:order-1"
           >
@@ -498,11 +496,11 @@ const About = () => {
           </motion.div>
 
           {/* Right Side - Content */}
-          <motion.div 
+          <motion.div
             variants={slideInRight}
             className="w-full lg:w-1/2 text-gray-900 space-y-4 sm:space-y-6 order-2 md:order-2 lg:order-2"
           >
-            <motion.div 
+            <motion.div
               variants={itemVariants}
               className="flex flex-col items-center"
             >
@@ -513,7 +511,7 @@ const About = () => {
               <div className="w-12 sm:w-15 h-[3px] sm:h-[3px] bg-[#F37021] mt-2 rounded-full"></div>
             </motion.div>
 
-            <motion.p 
+            <motion.p
               variants={itemVariants}
               className="text-sm sm:text-base md:text-lg leading-relaxed"
             >
@@ -526,8 +524,8 @@ const About = () => {
               And Main Contactor In The Field Of Architectural Facades &
               Building Maintenance Solutions.
             </motion.p>
-            
-            <motion.p 
+
+            <motion.p
               variants={itemVariants}
               className="text-sm sm:text-base md:text-lg leading-relaxed"
             >
@@ -537,16 +535,15 @@ const About = () => {
               durable, and visually striking building envelopes.{" "}
               <span className="font-medium"></span>{" "}
             </motion.p>
-            
-            <motion.p 
+
+            <motion.p
               variants={itemVariants}
               className="text-sm sm:text-base md:text-lg leading-relaxed"
             >
               With a client-centric approach, we provide end-to-end solutions —
-              from concept design to execution.
-                At THE GOODWILL FACADE, we aim to transform architectural
-                visions into reality while maintaining the highest standards of
-                and safety, quality, and efficiency.
+              from concept design to execution. At THE GOODWILL FACADE, we aim
+              to transform architectural visions into reality while maintaining
+              the highest standards of and safety, quality, and efficiency.
             </motion.p>
           </motion.div>
         </motion.div>
@@ -554,19 +551,19 @@ const About = () => {
 
       {/* 🔹 OUR STORY */}
       <section className="bg-gray-50 py-8 sm:py-12 md:py-16">
-        <motion.div 
+        <motion.div
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
           variants={containerVariants}
           className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12"
         >
-          <motion.div 
+          <motion.div
             variants={containerVariants}
             className="grid grid-cols-1 lg:grid-cols-2 items-start lg:items-center gap-4 mb-8 sm:mb-10 md:mb-12"
           >
             {/* Left column: H2 centered horizontally */}
-            <motion.div 
+            <motion.div
               variants={itemVariants}
               className="w-full flex flex-col items-center justify-center"
             >
@@ -579,10 +576,7 @@ const About = () => {
             </motion.div>
 
             {/* Right column: paragraph stays to the right on lg, below on small */}
-            <motion.div 
-              variants={itemVariants}
-              className="w-full"
-            >
+            <motion.div variants={itemVariants} className="w-full">
               <p className="mt-4 lg:mt-0 max-w-xl text-gray-900 text-sm sm:text-base md:text-lg">
                 At THE GOODWILL FACADE, we redefine architectural elegance with
                 cutting-edge façade engineering and design solutions.
@@ -590,16 +584,16 @@ const About = () => {
             </motion.div>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             variants={containerVariants}
             className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 md:gap-10 items-center"
           >
             {/* Left Text */}
-            <motion.div 
+            <motion.div
               variants={slideInLeft}
               className="space-y-4 sm:space-y-6 md:space-y-8"
             >
-              <motion.p 
+              <motion.p
                 variants={itemVariants}
                 className="text-gray-900 text-sm sm:text-base md:text-lg leading-relaxed"
               >
@@ -641,7 +635,7 @@ const About = () => {
             </motion.div>
 
             {/* Right Images */}
-            <motion.div 
+            <motion.div
               variants={slideInRight}
               className="grid grid-cols-2 gap-3 sm:gap-4 md:gap-6"
             >
@@ -664,110 +658,62 @@ const About = () => {
 
       {/* 🔹 Vision | Mission | Values */}
       <section className="py-8 sm:py-12 md:py-16 bg-white">
-        <motion.div 
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
-          variants={containerVariants}
-          className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12"
-        >
-          <motion.div 
-            variants={containerVariants}
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 md:gap-12 text-center"
-          >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 md:gap-12 text-center">
             {/* Vision */}
-            <motion.div 
-              variants={itemVariants}
-              className="space-y-4 sm:space-y-6 md:col-span-2 lg:col-span-1"
-            >
-              <motion.img
-                variants={scaleUp}
+            <div className="space-y-4 sm:space-y-6 md:col-span-2 lg:col-span-1">
+              <img
                 src="/images/Our-Vision.webp"
                 alt="Vision"
                 className="w-full h-40 sm:h-48 md:h-56 lg:h-64 xl:h-72 object-cover shadow-md rounded-tl-2xl sm:rounded-tl-3xl md:rounded-tl-4xl rounded-br-2xl sm:rounded-br-3xl md:rounded-br-4xl"
               />
-              <motion.h2 
-                variants={itemVariants}
-                className="text-lg sm:text-xl md:text-2xl font-bold text-[#171755] uppercase tracking-wide"
-              >
+              <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-[#171755] uppercase tracking-wide">
                 Our Vision
-              </motion.h2>
-              <motion.div 
-                variants={itemVariants}
-                className="w-12 sm:w-15 h-[2px] sm:h-[3px] bg-[#F37021] mx-auto"
-              ></motion.div>
-              <motion.p 
-                variants={itemVariants}
-                className="text-gray-900 text-sm sm:text-base md:text-lg text-left leading-relaxed px-2"
-              >
+              </h2>
+              <div className="w-12 sm:w-15 h-[2px] sm:h-[3px] bg-[#F37021] mx-auto"></div>
+              <p className="text-gray-900 text-sm sm:text-base md:text-lg text-left leading-relaxed px-2">
                 See Farther To Seek Out Competitive Business Advantages For Our
                 Clients Through The Innovative Use Of Technology And To Help
                 Them Achieve Long-term Success And Prosperity
-              </motion.p>
-            </motion.div>
+              </p>
+            </div>
 
             {/* Mission */}
-            <motion.div 
-              variants={itemVariants}
-              className="space-y-4 sm:space-y-6 md:col-span-2 lg:col-span-1 md:order-last lg:order-none"
-            >
-              <motion.img
-                variants={scaleUp}
+            <div className="space-y-4 sm:space-y-6 md:col-span-2 lg:col-span-1 md:order-last lg:order-none">
+              <img
                 src="/images/ourmission.webp"
                 alt="Mission"
                 className="w-full h-40 sm:h-48 md:h-56 lg:h-64 xl:h-72 object-cover shadow-md rounded-tl-2xl sm:rounded-tl-3xl md:rounded-tl-4xl rounded-br-2xl sm:rounded-br-3xl md:rounded-br-4xl"
               />
-              <motion.h2 
-                variants={itemVariants}
-                className="text-lg sm:text-xl md:text-2xl font-bold text-[#171755] uppercase tracking-wide"
-              >
+              <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-[#171755] uppercase tracking-wide">
                 Our Mission
-              </motion.h2>
-              <motion.div 
-                variants={itemVariants}
-                className="w-12 sm:w-15 h-[2px] sm:h-[3px] bg-[#F37021] mx-auto"
-              ></motion.div>
-              <motion.p 
-                variants={itemVariants}
-                className="text-gray-900 text-sm sm:text-base md:text-lg text-left leading-relaxed px-2"
-              >
+              </h2>
+              <div className="w-12 sm:w-15 h-[2px] sm:h-[3px] bg-[#F37021] mx-auto"></div>
+              <p className="text-gray-900 text-sm sm:text-base md:text-lg text-left leading-relaxed px-2">
                 To Deliver Best To The Our Clients Through Innovative Use Of New
                 Technologies, Support, Services And Customer Referrals; And Also
                 To Be The Best Facade Company In Our Markets
-              </motion.p>
-            </motion.div>
+              </p>
+            </div>
 
             {/* Core Values */}
-            <motion.div 
-              variants={itemVariants}
-              className="space-y-4 sm:space-y-6 md:col-span-2 lg:col-span-1"
-            >
-              <motion.img
-                variants={scaleUp}
+            <div className="space-y-4 sm:space-y-6 md:col-span-2 lg:col-span-1">
+              <img
                 src="/images/ourvalue.webp"
                 alt="Core Values"
                 className="w-full h-40 sm:h-48 md:h-56 lg:h-64 xl:h-72 object-cover shadow-md rounded-tl-2xl sm:rounded-tl-3xl md:rounded-tl-4xl rounded-br-2xl sm:rounded-br-3xl md:rounded-br-4xl"
               />
-              <motion.h2 
-                variants={itemVariants}
-                className="text-lg sm:text-xl md:text-2xl font-bold text-[#171755] uppercase tracking-wide"
-              >
+              <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-[#171755] uppercase tracking-wide">
                 Core Values
-              </motion.h2>
-              <motion.div 
-                variants={itemVariants}
-                className="w-12 sm:w-15 h-[2px] sm:h-[3px] bg-[#F37021] mx-auto"
-              ></motion.div>
-              <motion.p 
-                variants={itemVariants}
-                className="text-gray-900 text-sm sm:text-base md:text-lg text-left leading-relaxed px-2"
-              >
+              </h2>
+              <div className="w-12 sm:w-15 h-[2px] sm:h-[3px] bg-[#F37021] mx-auto"></div>
+              <p className="text-gray-900 text-sm sm:text-base md:text-lg text-left leading-relaxed px-2">
                 Our growth and success are based upon ethical practices,
                 integrity, respect, responsibility, safety, and trust.
-              </motion.p>
-            </motion.div>
-          </motion.div>
-        </motion.div>
+              </p>
+            </div>
+          </div>
+        </div>
       </section>
     </>
   );
