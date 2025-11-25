@@ -154,7 +154,7 @@ const StatsSection = () => {
   ];
 
   return (
-    <section className="w-full bg-white pt-4 md:pt-6 lg:pt-8 pb-0 -mb-4">
+    <section className="w-full bg-white pt-4 md:pt-6 lg:pt-5 pb-0 mb-15">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-0">
         {/* 4-Column Stats Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">

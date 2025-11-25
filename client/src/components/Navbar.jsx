@@ -234,7 +234,7 @@ const Navbar = () => {
             {/* Desktop Social Icons */}
             <div className="flex items-center space-x-4 pl-4 border-l border-gray-300">
               <a
-                href="https://www.facebook.com/"
+                href="https://www.facebook.com/share/1GHxQUFNAo/"
                 target="_blank"
                 rel="noreferrer"
                 className="text-[#4267B2] hover:opacity-80"
@@ -383,7 +383,7 @@ const Navbar = () => {
             {/* Mobile Social Icons */}
             <div className="flex justify-center items-center space-x-6 py-4 border-t-2 border-orange-200 rounded-b-3xl bg-orange-50">
               <a
-                href="https://www.facebook.com/"
+                href="https://www.facebook.com/share/1GHxQUFNAo/"
                 target="_blank"
                 rel="noreferrer"
                 className="text-[#4267B2] hover:opacity-80"

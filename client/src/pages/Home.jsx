@@ -121,11 +121,12 @@ const Home = () => {
       </Helmet>
 
       <Hero />
-      <StatsSection />
+    
       <About />
       <Projectpage />
 
       <Servicespage />
+      <StatsSection />
       <ClientLogoSlider />
 
       {/* <Contact/> */}
