@@ -131,7 +131,7 @@ const StatsSection = () => {
   // Stats data - static values for 3 cards, dynamic for Website Visitors
   const stats = [
     {
-      value: '500+',
+      value: '250+',
       label: 'Happy Clients',
       isStatic: true,
     },
@@ -147,7 +147,7 @@ const StatsSection = () => {
       isStatic: true,
     },
     {
-      value: '50+',
+      value: '100+',
       label: 'Completed Projects',
       isStatic: true,
     },
